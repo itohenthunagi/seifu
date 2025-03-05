@@ -1,0 +1,10 @@
+pytube
+yt-dlp
+ffmpeg-python
+whisper
+openai
+fastapi
+uvicorn
+python-multipart
+python-dotenv
+jinja2
