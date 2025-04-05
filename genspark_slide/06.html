@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARIA AI - ボンギンカン株式会社</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .slide {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .slide::after {
+            content: "";
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            height: 30px;
+            width: 120px;
+            background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            opacity: 0.1;
+        }
+        
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #2563eb;
+            line-height: 1;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #2563eb, #7c3aed);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .industry-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #3b82f6;
+        }
+        
+        .bubble {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(145deg, rgba(59, 130, 246, 0.1), rgba(59, 130, 246, 0.05));
+            z-index: -1;
+        }
+        
+        .bubble-1 {
+            width: 300px;
+            height: 300px;
+            top: -100px;
+            left: -100px;
+        }
+        
+        .bubble-2 {
+            width: 200px;
+            height: 200px;
+            bottom: -50px;
+            right: -50px;
+        }
+        
+        .gradient-border {
+            position: relative;
+            border: 2px solid transparent;
+            border-radius: 10px;
+            background-clip: padding-box;
+        }
+        
+        .gradient-border::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            margin: -2px;
+            border-radius: inherit;
+            background: linear-gradient(to right, #3b82f6, #60a5fa);
+        }
+        
+        .quote-mark {
+            font-size: 4rem;
+            line-height: 1;
+            color: rgba(59, 130, 246, 0.2);
+            position: absolute;
+        }
+        
+        .quote-left {
+            top: 10px;
+            left: 10px;
+        }
+        
+        .quote-right {
+            bottom: 10px;
+            right: 10px;
+        }
+        
+        .slide-number {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            font-size: 0.8rem;
+            color: #a0aec0;
+        }
+    </style>
+</head>
+<body class="py-10 px-4 md:px-10 max-w-7xl mx-auto">
+    <!-- スライド1: 表紙 -->
+    <div class="slide h-auto min-h-[600px] flex flex-col justify-center items-center text-center relative">
+        <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+        
+        <div class="mb-6 w-24 h-24 rounded-full bg-blue-500 flex items-center justify-center">
+            <i class="fas fa-robot text-4xl text-white"></i>
+        </div>
+        
+        <h1 class="text-5xl font-bold mb-4"><span class="gradient-text">MARIA AI</span></h1>
+        <h2 class="text-2xl mb-8">膨大な商品情報を正確に回答する次世代AIソリューション</h2>
+        
+        <div class="bg-blue-50 rounded-lg p-6 max-w-2xl">
+            <p class="text-lg italic text-gray-700">
+                「情報を持つ者が市場を制する。<br>
+                だからこそ、あなたの企業の全ての情報を活かす時代へ」
+            </p>
+        </div>
+        
+        <div class="mt-12 flex items-center">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="ロゴ" class="w-8 h-8">
+            <span class="ml-3 text-xl font-bold text-gray-700">ボンギンカン株式会社</span>
+        </div>
+        
+        <div class="slide-number">1/6</div>
+    </div>
+
+    <!-- スライド2: 課題提起 -->
+    <div class="slide h-auto min-h-[600px] relative">
+        <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+        
+        <h2 class="text-3xl font-bold mb-8 gradient-text">企業が抱える情報管理の課題</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-red-500 feature-card">
+                <div class="text-red-500 text-3xl mb-3">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">商品知識の限界</h3>
+                <p class="text-gray-600">営業スタッフが膨大な商品情報を全て暗記することは不可能。商談時に必要な情報が出てこず、機会損失につながっている。</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-orange-500 feature-card">
+                <div class="text-orange-500 text-3xl mb-3">
+                    <i class="fas fa-search"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">情報検索の非効率</h3>
+                <p class="text-gray-600">必要な資料や情報を探すのに多くの時間を費やし、生産性が低下。社内の重要な知識が分散し、活用できていない。</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-yellow-500 feature-card">
+                <div class="text-yellow-500 text-3xl mb-3">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">顧客対応の遅延</h3>
+                <p class="text-gray-600">問い合わせ対応に時間がかかり、顧客満足度が低下。専門知識のばらつきにより、回答の質にも差が生じている。</p>
+            </div>
+        </div>
+        
+        <div class="p-6 bg-blue-50 rounded-lg relative">
+            <span class="quote-mark quote-left">"</span>
+            <p class="text-lg text-center text-gray-700 px-10">
+                日本企業の社員は<span class="font-bold text-blue-600">週に平均19.1時間</span>を情報検索に費やしています。<br>
+                これは年間<span class="font-bold text-blue-600">約1,000時間、給与換算で約300万円</span>に相当します。
+            </p>
+            <span class="quote-mark quote-right">"</span>
+        </div>
+        
+        <div class="slide-number">2/6</div>
+    </div>
+
+    <!-- スライド3: MARIA AIの紹介 -->
+    <div class="slide h-auto min-h-[600px] relative">
+        <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+        
+        <h2 class="text-3xl font-bold mb-4 gradient-text">MARIA AI</h2>
+        <h3 class="text-xl mb-8 text-gray-600">あなたの企業のインテリジェンスを解放する</h3>
+        
+        <div class="flex flex-col md:flex-row gap-8 items-center mb-12">
+            <div class="flex-1">
+                <p class="text-lg leading-relaxed mb-4">
+                    <span class="font-bold text-blue-600">MARIA AI</span>は、膨大な商品情報や社内知識を正確かつ瞬時に提供する、チャット型の企業向けAIソリューションです。
+                </p>
+                <p class="text-lg leading-relaxed mb-6">
+                    社内の「Wikipedia」や「自社インテリジェンス」として活用でき、企業内の情報共有や問い合わせ対応の負担を劇的に軽減します。
+                </p>
+                
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h4 class="font-bold text-gray-700 mb-2">MARIA AIが解決する3つの課題</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>営業担当者の商品知識不足による機会損失</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>散在する情報の検索・収集にかかる膨大な時間</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>顧客問い合わせへの対応遅延と品質のばらつき</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="flex-1 p-6 bg-white rounded-lg shadow-lg md:ml-6 border border-gray-200">
+                <div class="w-full bg-gray-100 rounded-t-lg p-3 flex items-center">
+                    <div class="flex space-x-2">
+                        <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                        <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                    </div>
+                    <div class="mx-auto text-gray-500 text-sm">MARIA AIチャットウィンドウ</div>
+                </div>
+                
+                <div class="p-4 border-b border-gray-200">
+                    <div class="mb-4">
+                        <div class="text-sm text-gray-500 mb-1">ユーザー</div>
+                        <div class="bg-blue-50 p-3 rounded-lg">商品Xの最新の仕様と価格を教えてください</div>
+                    </div>
+                    
+                    <div>
+                        <div class="text-sm text-gray-500 mb-1">MARIA AI</div>
+                        <div class="bg-gray-100 p-3 rounded-lg">
+                            商品Xの最新仕様は以下の通りです：<br><br>
+                            • プロセッサ: Intel Core i7-12700K<br>
+                            • メモリ: 32GB DDR5<br>
+                            • ストレージ: 1TB NVMe SSD<br>
+                            • グラフィック: NVIDIA RTX 3080<br><br>
+                            
+                            価格は¥358,000（税抜）です。<br>
+                            大量注文の場合は最大15%の割引が適用可能です。<br><br>
+                            
+                            <span class="text-sm text-gray-500">応答時間: 0.4秒</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="slide-number">3/6</div>
+    </div>
+
+    <!-- スライド4: MARIA AIの主要機能 -->
+    <div class="slide h-auto min-h-[600px] relative">
+        <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+        
+        <h2 class="text-3xl font-bold mb-8 gradient-text">MARIA AIの主要機能</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200 feature-card">
+                <div class="flex justify-between items-center mb-4">
+                    <div class="stat-number">99.8<span class="text-lg">%</span></div>
+                    <div class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">業界最高水準</div>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">高精度の回答</h3>
+                <p class="text-gray-600 mb-4">
+                    独自技術により、登録されていない情報を勝手に生成する「ハルシネーション」をほとんど起こさず、信頼性の高い情報提供が可能です。
+                </p>
+                <div class="flex items-center text-gray-500">
+                    <i class="fas fa-info-circle mr-2"></i>
+                    <span class="text-sm">競合AIの平均正答率は約75%</span>
+                </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200 feature-card">
+                <div class="flex justify-between items-center mb-4">
+                    <div class="stat-number">0.4<span class="text-lg">秒</span></div>
+                    <div class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">超高速応答</div>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">瞬時の回答開始</h3>
+                <p class="text-gray-600 mb-4">
+                    テキスト送信からわずか0.4秒で回答を開始。リアルタイムでのチャットや会話が可能で、ビジネス現場で求められるスピードを実現しました。
+                </p>
+                <div class="flex items-center text-gray-500">
+                    <i class="fas fa-info-circle mr-2"></i>
+                    <span class="text-sm">一般的なAIの応答時間は3〜5秒</span>
+                </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200 feature-card">
+                <div class="flex justify-between items-center mb-4">
+                    <div class="flex items-center">
+                        <i class="fas fa-shield-alt text-blue-500 text-3xl mr-3"></i>
+                        <span class="text-xl font-bold">ローカル実装</span>
+                    </div>
+                    <div class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">高セキュリティ</div>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">情報セキュリティの確保</h3>
+                <p class="text-gray-600 mb-4">
+                    クラウド上のLLM（大規模言語モデル）に依存せず、ローカル環境での実装を可能にしました。これにより、機密情報の漏洩リスクを低減し、セキュリティ要件の厳しい企業でも安心して導入いただけます。
+                </p>
+                <div class="flex items-center text-gray-500">
+                    <i class="fas fa-info-circle mr-2"></i>
+                    <span class="text-sm">オンプレミス環境での運用も可能</span>
+                </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200 feature-card">
+                <div class="flex justify-between items-center mb-4">
+                    <div class="stat-number">¥1,500<span class="text-lg">/商品</span></div>
+                    <div class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">コストパフォーマンス</div>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">手軽な導入コスト</h3>
+                <p class="text-gray-600 mb-4">
+                    1商品あたり1,500円から「MARIA AI」への商品登録が可能。1商品につき最大1万文字の情報を正確に登録・回答でき、コストパフォーマンスに優れています。
+                </p>
+                <div class="flex items-center text-gray-500">
+                    <i class="fas fa-info-circle mr-2"></i>
+                    <span class="text-sm">大量登録の場合は割引プランあり</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="slide-number">4/6</div>
+    </div>
+
+    <!-- スライド5: 活用シーン -->
+    <div class="slide h-auto min-h-[600px] relative">
+        <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+        
+        <h2 class="text-3xl font-bold mb-8 gradient-text">MARIA AIの活用シーン</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-blue-500 feature-card text-center">
+                <div class="industry-icon">
+                    <i class="fas fa-industry"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">メーカーの営業支援</h3>
+                <p class="text-gray-600 mb-4">
+                    電子カタログと連携し、膨大な製品情報を瞬時に取得。顧客との商談を効率化し、提案力を向上。
+                </p>
+                <div class="text-sm text-gray-500 bg-gray-100 p-2 rounded">
+                    <i class="fas fa-check text-green-500 mr-1"></i>
+                    <span>商品仕様の即時検索で顧客の質問に迅速対応</span>
+                </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-purple-500 feature-card text-center">
+                <div class="industry-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">コールセンター活用</h3>
+                <p class="text-gray-600 mb-4">
+                    人材DBやFAQデータと連携し、問い合わせ対応を自動化。顧客満足度を向上させるとともに対応時間を短縮。
+                </p>
+                <div class="text-sm text-gray-500 bg-gray-100 p-2 rounded">
+                    <i class="fas fa-check text-green-500 mr-1"></i>
+                    <span>正確な情報を瞬時に提供し応対品質を均一化</span>
+                </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-green-500 feature-card text-center">
+                <div class="industry-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">教育機関・医療業界</h3>
+                <p class="text-gray-600 mb-4">
+                    学生や患者データを即座に管理・提供。運営効率を向上させ、個別最適化された対応を実現。
+                </p>
+                <div class="text-sm text-gray-500 bg-gray-100 p-2 rounded">
+                    <i class="fas fa-check text-green-500 mr-1"></i>
+                    <span>個別データに基づいた対応で満足度向上</span>
+                </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-red-500 feature-card text-center">
+                <div class="industry-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">製造業の技術サポート</h3>
+                <p class="text-gray-600 mb-4">
+                    技術仕様やマニュアル情報を即時提供。トラブル対応や品質管理をサポートし、現場の生産性を向上。
+                </p>
+                <div class="text-sm text-gray-500 bg-gray-100 p-2 rounded">
+                    <i class="fas fa-check text-green-500 mr-1"></i>
+                    <span>複雑な技術情報を現場で即時活用可能に</span>
+                </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-yellow-500 feature-card text-center">
+                <div class="industry-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">不動産業界での活用</h3>
+                <p class="text-gray-600 mb-4">
+                    物件データベースと連携し、問い合わせ対応や物件提案をスムーズに行い、成約率の向上に貢献。
+                </p>
+                <div class="text-sm text-gray-500 bg-gray-100 p-2 rounded">
+                    <i class="fas fa-check text-green-500 mr-1"></i>
+                    <span>物件の詳細情報を瞬時に検索し提案力アップ</span>
+                </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-indigo-500 feature-card text-center">
+                <div class="industry-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">人事・社内情報共有</h3>
+                <p class="text-gray-600 mb-4">
+                    社内規定や福利厚生情報を一元管理。社員からの問い合わせ対応を効率化し、情報の透明性を確保。
+                </p>
+                <div class="text-sm text-gray-500 bg-gray-100 p-2 rounded">
+                    <i class="fas fa-check text-green-500 mr-1"></i>
+                    <span>社内知識を共有し業務効率とガバナンスを向上</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bg-blue-50 p-6 rounded-lg">
+            <h3 class="text-xl font-bold mb-4 text-blue-700">活用事例：大手家電メーカー A社</h3>
+            <p class="mb-4 text-gray-700">
+                製品ラインナップ5,000点以上の情報をMARIA AIに登録。以前は15分かかっていた商品検索が<span class="font-bold text-blue-600">平均2秒に短縮</span>。営業部門の生産性が<span class="font-bold text-blue-600">37%向上</span>し、顧客満足度調査でも<span class="font-bold text-blue-600">評価が22%アップ</span>しました。
+            </p>
+        </div>
+        
+        <div class="slide-number">5/6</div>
+    </div>
+
+    <!-- スライド6: 導入メリットとご案内 -->
+    <div class="slide h-auto min-h-[600px] relative">
+        <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+        
+        <h2 class="text-3xl font-bold mb-8 gradient-text">導入メリットとご案内</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+            <div class="p-6 bg-white rounded-lg shadow-md">
+                <h3 class="text-xl font-bold mb-4 text-blue-600">導入により期待できる効果</h3>
+                
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-clock text-blue-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">時間の削減</h4>
+                            <p class="text-gray-600">情報検索にかかる時間を最大90%削減し、本来の業務に集中できます。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-chart-line text-green-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">売上向上</h4>
+                            <p class="text-gray-600">営業担当者の商品知識向上により、成約率が平均20%向上します。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-thumbs-up text-purple-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">顧客満足度の向上</h4>
+                            <p class="text-gray-600">問い合わせへの迅速で正確な対応により、顧客満足度が向上します。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-yellow-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-brain text-yellow-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">知識の民主化</h4>
+                            <p class="text-gray-600">社内の知識を全社員が平等に活用できる環境を構築できます。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="p-6 bg-white rounded-lg shadow-md">
+                <h3 class="text-xl font-bold mb-4 text-blue-600">ROI分析シミュレーション</h3>
+                
+                <div class="overflow-x-auto">
+                    <table class="min-w-full border-collapse">
+                        <thead>
+                            <tr class="bg-gray-100">
+                                <th class="py-2 px-4 border text-left">項目</th>
+                                <th class="py-2 px-4 border text-right">現状</th>
+                                <th class="py-2 px-4 border text-right">導入後</th>
+                                <th class="py-2 px-4 border text-right">効果</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="py-2 px-4 border">情報検索時間/日</td>
+                                <td class="py-2 px-4 border text-right">90分</td>
+                                <td class="py-2 px-4 border text-right">10分</td>
+                                <td class="py-2 px-4 border text-right text-green-600">-80分</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border">年間時間削減</td>
+                                <td class="py-2 px-4 border text-right">-</td>
+                                <td class="py-2 px-4 border text-right">320時間</td>
+                                <td class="py-2 px-4 border text-right text-green-600">+320時間</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border">人件費削減額/年</td>
+                                <td class="py-2 px-4 border text-right">-</td>
+                                <td class="py-2 px-4 border text-right">96万円</td>
+                                <td class="py-2 px-4 border text-right text-green-600">+96万円</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border">成約率向上</td>
+                                <td class="py-2 px-4 border text-right">25%</td>
+                                <td class="py-2 px-4 border text-right">30%</td>
+                                <td class="py-2 px-4 border text-right text-green-600">+5%</td>
+                            </tr>
+                            <tr class="bg-blue-50 font-bold">
+                                <td class="py-2 px-4 border">年間投資対効果</td>
+                                <td class="py-2 px-4 border text-right">-</td>
+                                <td class="py-2 px-4 border text-right">-</td>
+                                <td class="py-2 px-4 border text-right text-green-600">230%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <p class="text-sm text-gray-500 mt-2">※社員30名、平均年収600万円、商品1,000点を登録した場合の試算</p>
+            </div>
+        </div>
+        
+        <div class="gradient-border p-6 mb-10">
+            <h3 class="text-xl font-bold mb-4 text-center">サービス開始記念特別プラン</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <h4 class="font-semibold">10社限定</h4>
+                    <p class="text-blue-600">無料トライアル</p>
+                    <p class="text-sm text-gray-600">10商品まで無料登録可能</p>
+                </div>
+                
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <h4 class="font-semibold">初期費用</h4>
+                    <p class="text-blue-600">50%オフ</p>
+                    <p class="text-sm text-gray-600">導入サポート付き</p>
+                </div>
+                
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <h4 class="font-semibold">月額費用</h4>
+                    <p class="text-blue-600">¥1,500/商品〜</p>
+                    <p class="text-sm text-gray-600">大量登録で割引あり</p>
+                </div>
+            </div>
+            
+            <div class="text-center text-sm text-gray-600">
+                キャンペーン期間: 2024年5月末まで
+            </div>
+        </div>
+        
+        <div class="text-center mb-10">
+            <h3 class="text-xl font-bold mb-4">お問い合わせ</h3>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+                <div class="flex items-center">
+                    <i class="fas fa-globe text-blue-500 text-xl mr-3"></i>
+                    <a href="https://bonginkan.ai/" class="text-blue-600 hover:underline">https://bonginkan.ai/</a>
+                </div>
+                
+                <div class="flex items-center">
+                    <i class="fas fa-envelope text-blue-500 text-xl mr-3"></i>
+                    <a href="mailto:info@bonginkan.ai" class="text-blue-600 hover:underline">info@bonginkan.ai</a>
+                </div>
+                
+                <div class="flex items-center">
+                    <i class="fas fa-phone text-blue-500 text-xl mr-3"></i>
+                    <span>03-XXXX-XXXX</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center text-sm text-gray-500">
+            <p>© 2024 ボンギンカン株式会社 All Rights Reserved.</p>
+        </div>
+        
+        <div class="slide-number">6/6</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/js/all.min.js"></script>
+</body>
+</html>

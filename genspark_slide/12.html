@@ -1,0 +1,1721 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>社員向け保育園説明資料</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: linear-gradient(135deg, #fcf5ff 0%, #e8f7ff 100%);
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .cloud {
+            position: absolute;
+            animation: float 15s infinite ease-in-out;
+            opacity: 0.8;
+        }
+        .cloud1 {
+            top: 100px;
+            left: -100px;
+            animation-duration: 25s;
+        }
+        .cloud2 {
+            top: 200px;
+            right: -80px;
+            animation-duration: 20s;
+        }
+        .balloon {
+            position: absolute;
+            animation: bounce 3s infinite alternate ease-in-out;
+        }
+        .balloon1 {
+            top: 120px;
+            left: 100px;
+            animation-delay: 0.5s;
+        }
+        .balloon2 {
+            top: 80px;
+            right: 150px;
+            animation-delay: 1s;
+        }
+        .balloon3 {
+            bottom: 180px;
+            left: 200px;
+            animation-delay: 0.2s;
+        }
+        .balloon4 {
+            bottom: 150px;
+            right: 180px;
+            animation-delay: 0.7s;
+        }
+        @keyframes float {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(100px); }
+            100% { transform: translateX(0); }
+        }
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-20px); }
+        }
+        .title-animation {
+            animation: fadeInDown 1.5s;
+        }
+        .subtitle-animation {
+            animation: fadeIn 2s 0.5s both;
+        }
+        .bounce-in {
+            animation: bounceIn 1.5s 1s both;
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.3);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+            70% { transform: scale(0.9); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col items-center justify-center p-10 bg-gradient-to-br from-purple-50 to-blue-50">
+        <!-- Decorative background elements -->
+        <div class="cloud cloud1">
+            <svg width="180" height="100" viewBox="0 0 180 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30 60C13.4315 60 0 46.5685 0 30C0 13.4315 13.4315 0 30 0C36.5376 0 42.5914 2.15374 47.5 5.85786C52.4086 2.15374 58.4624 0 65 0C81.5685 0 95 13.4315 95 30C95 31.0828 94.9351 32.1514 94.8089 33.2022C106.046 37.3679 114 48.0098 114 60.5C114 76.2401 101.24 89 85.5 89C80.7037 89 76.1895 87.8231 72.2446 85.7524C67.0643 90.431 60.0353 93.1522 52.3333 93.1522C44.6313 93.1522 37.6022 90.431 32.422 85.7524C28.4771 87.8231 23.9629 89 19.1667 89C8.57835 89 0 80.4216 0 69.8333C0 64.7 2.4801 60.1277 6.30101 57.0948C2.32613 52.4892 0 46.6517 0 40.3333C0 29.7449 6.58224 20.7724 16 17.2281C16 17.2281 16.3333 27.6667 30 27.6667C43.6667 27.6667 38.3333 17.6667 47.5 17.2281C56.6667 16.7896 55 27.6667 65 27.6667C75 27.6667 79.5 17.2281 79.5 17.2281C83.0972 18.5919 86.2914 20.6699 88.9367 23.3126C92.3999 19.9082 94.6666 15.3333 95 10.3333" fill="#E6F7FF"/>
+            </svg>
+        </div>
+        <div class="cloud cloud2">
+            <svg width="150" height="80" viewBox="0 0 150 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C30.4481 0 35.4929 1.79478 39.5833 4.88155C43.6738 1.79478 48.7187 0 54.1667 0C67.9738 0 79.1667 11.1929 79.1667 25C79.1667 25.9023 79.1126 26.7929 79.0074 27.6685C88.3716 31.1399 95 40.0082 95 50.4167C95 63.5334 84.3501 74.1667 71.25 74.1667C67.2531 74.1667 63.4913 73.1859 60.2038 71.4603C55.8869 75.3592 50.0294 77.6268 43.6111 77.6268C37.1927 77.6268 31.3352 75.3592 27.0183 71.4603C23.7308 73.1859 19.9691 74.1667 15.9722 74.1667C7.14863 74.1667 0 67.018 0 58.1944C0 53.9167 2.0668 50.1064 5.25084 47.5789C1.93844 43.741 0 38.8764 0 33.6111C0 24.7875 5.48519 17.3103 13.3333 14.3567C13.3333 14.3567 13.6111 23.0556 25 23.0556C36.3889 23.0556 31.9444 14.7222 39.5833 14.3567C47.2222 13.9913 45.8333 23.0556 54.1667 23.0556C62.5 23.0556 66.25 14.3567 66.25 14.3567C69.2477 15.4932 71.9095 17.2249 74.1139 19.4272C76.9999 16.5902 78.8889 12.7777 79.1667 8.61108" fill="#F5E6FF"/>
+            </svg>
+        </div>
+        
+        <!-- Balloons -->
+        <div class="balloon balloon1">
+            <svg width="40" height="60" viewBox="0 0 40 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 0C8.954 0 0 8.954 0 20C0 31.046 8.954 40 20 40C31.046 40 40 31.046 40 20C40 8.954 31.046 0 20 0ZM20 45L15 55L20 60L25 55L20 45Z" fill="#FF6B6B"/>
+            </svg>
+        </div>
+        <div class="balloon balloon2">
+            <svg width="40" height="60" viewBox="0 0 40 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 0C8.954 0 0 8.954 0 20C0 31.046 8.954 40 20 40C31.046 40 40 31.046 40 20C40 8.954 31.046 0 20 0ZM20 45L15 55L20 60L25 55L20 45Z" fill="#4ECDC4"/>
+            </svg>
+        </div>
+        <div class="balloon balloon3">
+            <svg width="40" height="60" viewBox="0 0 40 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 0C8.954 0 0 8.954 0 20C0 31.046 8.954 40 20 40C31.046 40 40 31.046 40 20C40 8.954 31.046 0 20 0ZM20 45L15 55L20 60L25 55L20 45Z" fill="#FFD166"/>
+            </svg>
+        </div>
+        <div class="balloon balloon4">
+            <svg width="40" height="60" viewBox="0 0 40 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 0C8.954 0 0 8.954 0 20C0 31.046 8.954 40 20 40C31.046 40 40 31.046 40 20C40 8.954 31.046 0 20 0ZM20 45L15 55L20 60L25 55L20 45Z" fill="#06D6A0"/>
+            </svg>
+        </div>
+        
+        <!-- Main content -->
+        <div class="relative z-10 text-center">
+            <h1 class="text-7xl font-bold mb-6 text-center text-purple-600 title-animation" style="text-shadow: 3px 3px 0px rgba(0,0,0,0.1);">わくわく社内保育園</h1>
+            <h2 class="text-3xl text-blue-500 font-semibold mb-12 subtitle-animation">お子さまとお仕事、両方を大切に</h2>
+            
+            <div class="bounce-in">
+                <div class="w-96 h-96 mx-auto bg-white rounded-full shadow-xl flex items-center justify-center overflow-hidden">
+                    <div class="w-full h-full flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="text-pink-500">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <div class="absolute">
+                            <div class="text-3xl font-bold text-purple-700">株式会社<br>サンプル</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom decorative elements -->
+        <div class="absolute bottom-0 w-full">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 120" preserveAspectRatio="none" class="w-full h-20">
+                <path d="M0,0 Q320,120 640,60 T1280,120 V120 H0 V0" fill="#FFE6FB" opacity="0.5"></path>
+                <path d="M0,40 Q320,100 640,70 T1280,100 V120 H0 V40" fill="#E6FBFF" opacity="0.6"></path>
+            </svg>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>わくわく社内保育園 - 保育園の概要</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: linear-gradient(135deg, #fef8ff 0%, #e8f7ff 100%);
+            font-family: 'Hiragino Kaku Gothic Pro', 'メイリオ', sans-serif;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .cloud {
+            position: absolute;
+            animation: float 20s infinite ease-in-out;
+            opacity: 0.7;
+        }
+        .cloud1 {
+            top: 50px;
+            left: -100px;
+            animation-duration: 30s;
+        }
+        .cloud2 {
+            top: 150px;
+            right: -80px;
+            animation-duration: 25s;
+        }
+        .balloon {
+            position: absolute;
+            animation: bounce 4s infinite alternate ease-in-out;
+        }
+        .balloon1 {
+            top: 80px;
+            left: 80px;
+            animation-delay: 0.3s;
+        }
+        .balloon2 {
+            top: 40px;
+            right: 100px;
+            animation-delay: 1.2s;
+        }
+        .feature-card {
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            font-size: 2rem;
+        }
+        .heading-animation {
+            animation: fadeInDown 1.2s;
+        }
+        .card-animation-1 {
+            animation: fadeIn 1s 0.3s both;
+        }
+        .card-animation-2 {
+            animation: fadeIn 1s 0.6s both;
+        }
+        .card-animation-3 {
+            animation: fadeIn 1s 0.9s both;
+        }
+        .card-animation-4 {
+            animation: fadeIn 1s 1.2s both;
+        }
+        @keyframes float {
+            0% { transform: translateX(0) rotate(0deg); }
+            50% { transform: translateX(100px) rotate(5deg); }
+            100% { transform: translateX(0) rotate(0deg); }
+        }
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-15px); }
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .rainbow-text {
+            background: linear-gradient(to right, #ff9a9e, #fad0c4, #fad0c4, #a18cd1, #fbc2eb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% auto;
+            animation: rainbow 5s ease-in-out infinite;
+        }
+        @keyframes rainbow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col items-center justify-start p-10 bg-gradient-to-br from-purple-50 to-blue-50">
+        <!-- Decorative background elements -->
+        <div class="cloud cloud1">
+            <svg width="180" height="100" viewBox="0 0 180 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30 60C13.4315 60 0 46.5685 0 30C0 13.4315 13.4315 0 30 0C36.5376 0 42.5914 2.15374 47.5 5.85786C52.4086 2.15374 58.4624 0 65 0C81.5685 0 95 13.4315 95 30C95 31.0828 94.9351 32.1514 94.8089 33.2022C106.046 37.3679 114 48.0098 114 60.5C114 76.2401 101.24 89 85.5 89C80.7037 89 76.1895 87.8231 72.2446 85.7524C67.0643 90.431 60.0353 93.1522 52.3333 93.1522C44.6313 93.1522 37.6022 90.431 32.422 85.7524C28.4771 87.8231 23.9629 89 19.1667 89C8.57835 89 0 80.4216 0 69.8333C0 64.7 2.4801 60.1277 6.30101 57.0948C2.32613 52.4892 0 46.6517 0 40.3333C0 29.7449 6.58224 20.7724 16 17.2281C16 17.2281 16.3333 27.6667 30 27.6667C43.6667 27.6667 38.3333 17.6667 47.5 17.2281C56.6667 16.7896 55 27.6667 65 27.6667C75 27.6667 79.5 17.2281 79.5 17.2281C83.0972 18.5919 86.2914 20.6699 88.9367 23.3126C92.3999 19.9082 94.6666 15.3333 95 10.3333" fill="#FFE6FB"/>
+            </svg>
+        </div>
+        <div class="cloud cloud2">
+            <svg width="150" height="80" viewBox="0 0 150 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C30.4481 0 35.4929 1.79478 39.5833 4.88155C43.6738 1.79478 48.7187 0 54.1667 0C67.9738 0 79.1667 11.1929 79.1667 25C79.1667 25.9023 79.1126 26.7929 79.0074 27.6685C88.3716 31.1399 95 40.0082 95 50.4167C95 63.5334 84.3501 74.1667 71.25 74.1667C67.2531 74.1667 63.4913 73.1859 60.2038 71.4603C55.8869 75.3592 50.0294 77.6268 43.6111 77.6268C37.1927 77.6268 31.3352 75.3592 27.0183 71.4603C23.7308 73.1859 19.9691 74.1667 15.9722 74.1667C7.14863 74.1667 0 67.018 0 58.1944C0 53.9167 2.0668 50.1064 5.25084 47.5789C1.93844 43.741 0 38.8764 0 33.6111C0 24.7875 5.48519 17.3103 13.3333 14.3567C13.3333 14.3567 13.6111 23.0556 25 23.0556C36.3889 23.0556 31.9444 14.7222 39.5833 14.3567C47.2222 13.9913 45.8333 23.0556 54.1667 23.0556C62.5 23.0556 66.25 14.3567 66.25 14.3567C69.2477 15.4932 71.9095 17.2249 74.1139 19.4272C76.9999 16.5902 78.8889 12.7777 79.1667 8.61108" fill="#E6FBFF"/>
+            </svg>
+        </div>
+        
+        <!-- Balloons -->
+        <div class="balloon balloon1">
+            <svg width="30" height="45" viewBox="0 0 40 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 0C8.954 0 0 8.954 0 20C0 31.046 8.954 40 20 40C31.046 40 40 31.046 40 20C40 8.954 31.046 0 20 0ZM20 45L15 55L20 60L25 55L20 45Z" fill="#FF85A2"/>
+            </svg>
+        </div>
+        <div class="balloon balloon2">
+            <svg width="30" height="45" viewBox="0 0 40 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 0C8.954 0 0 8.954 0 20C0 31.046 8.954 40 20 40C31.046 40 40 31.046 40 20C40 8.954 31.046 0 20 0ZM20 45L15 55L20 60L25 55L20 45Z" fill="#85B6FF"/>
+            </svg>
+        </div>
+        
+        <!-- Main content -->
+        <div class="relative z-10 text-center w-full">
+            <h1 class="text-5xl font-bold mb-6 text-center rainbow-text heading-animation" style="text-shadow: 2px 2px 0px rgba(0,0,0,0.05);">保育園の概要</h1>
+            
+            <p class="text-xl text-gray-700 max-w-4xl mx-auto mb-12 card-animation-1">
+                わくわく社内保育園は、社員の皆様がお子様を安心して預けながら、仕事に集中できる環境を提供します。<br>
+                遊びと学びを組み合わせた独自のプログラムで、お子様の健やかな成長をサポートします。
+            </p>
+            
+            <div class="grid grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="feature-card p-8 card-animation-1">
+                    <div class="feature-icon bg-pink-100 mx-auto">
+                        <i class="fas fa-clock text-pink-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-pink-600 mb-4">充実の開園時間</h3>
+                    <p class="text-gray-600">朝7:30から夜19:30まで開園<br>残業や早朝会議にも対応可能</p>
+                    <div class="mt-4 text-pink-500 animate-bounce">
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                </div>
+                
+                <div class="feature-card p-8 card-animation-2">
+                    <div class="feature-icon bg-blue-100 mx-auto">
+                        <i class="fas fa-utensils text-blue-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-blue-600 mb-4">こだわりの給食</h3>
+                    <p class="text-gray-600">管理栄養士監修の栄養バランス食<br>アレルギー対応も万全</p>
+                    <div class="mt-4 text-blue-500" style="animation: bounce 2s infinite;">
+                        <i class="fas fa-carrot"></i> <i class="fas fa-apple-alt"></i> <i class="fas fa-bread-slice"></i>
+                    </div>
+                </div>
+                
+                <div class="feature-card p-8 card-animation-3">
+                    <div class="feature-icon bg-green-100 mx-auto">
+                        <i class="fas fa-chalkboard-teacher text-green-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-green-600 mb-4">専門スタッフ</h3>
+                    <p class="text-gray-600">有資格者による質の高い保育<br>英語や音楽の専門教育も提供</p>
+                    <div class="mt-4 text-green-500 animate-pulse">
+                        <i class="fas fa-music"></i> <i class="fas fa-language"></i> <i class="fas fa-paint-brush"></i>
+                    </div>
+                </div>
+                
+                <div class="feature-card p-8 card-animation-4">
+                    <div class="feature-icon bg-purple-100 mx-auto">
+                        <i class="fas fa-heart text-purple-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-purple-600 mb-4">安心のサポート</h3>
+                    <p class="text-gray-600">急な残業時の延長保育<br>体調不良児の看護体制も完備</p>
+                    <div class="mt-4 text-purple-500" style="animation: pulse 2s infinite;">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom decorative elements -->
+        <div class="absolute bottom-0 w-full">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 120" preserveAspectRatio="none" class="w-full h-20">
+                <path d="M0,0 Q320,120 640,60 T1280,120 V120 H0 V0" fill="#FFE6FB" opacity="0.5"></path>
+                <path d="M0,40 Q320,100 640,70 T1280,100 V120 H0 V40" fill="#E6FBFF" opacity="0.6"></path>
+            </svg>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>わくわく社内保育園 - 施設のご紹介</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: linear-gradient(135deg, #f0f8ff 0%, #fffaeb 100%);
+            font-family: 'Hiragino Kaku Gothic Pro', 'メイリオ', sans-serif;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .cloud {
+            position: absolute;
+            animation: float 25s infinite ease-in-out;
+            opacity: 0.7;
+        }
+        .cloud1 {
+            top: 70px;
+            left: -80px;
+            animation-duration: 30s;
+        }
+        .cloud2 {
+            top: 170px;
+            right: -100px;
+            animation-duration: 24s;
+        }
+        .star {
+            position: absolute;
+            animation: twinkle 1.5s infinite alternate ease-in-out;
+        }
+        .star1 {
+            top: 100px;
+            left: 200px;
+            animation-delay: 0.2s;
+        }
+        .star2 {
+            top: 150px;
+            right: 250px;
+            animation-delay: 0.7s;
+        }
+        .star3 {
+            bottom: 150px;
+            left: 150px;
+            animation-delay: 0.5s;
+        }
+        .star4 {
+            bottom: 200px;
+            right: 180px;
+            animation-delay: 1s;
+        }
+        .facility-card {
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            overflow: hidden;
+            transform-origin: center;
+        }
+        .facility-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+        }
+        .facility-image {
+            height: 180px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .heading-animation {
+            animation: fadeInDown 1.2s;
+        }
+        .card-animation-1 {
+            animation: zoomIn 1s 0.3s both;
+        }
+        .card-animation-2 {
+            animation: zoomIn 1s 0.6s both;
+        }
+        .card-animation-3 {
+            animation: zoomIn 1s 0.9s both;
+        }
+        .card-animation-4 {
+            animation: zoomIn 1s 1.2s both;
+        }
+        @keyframes float {
+            0% { transform: translateX(0) translateY(0); }
+            50% { transform: translateX(100px) translateY(-20px); }
+            100% { transform: translateX(0) translateY(0); }
+        }
+        @keyframes twinkle {
+            0% { transform: scale(0.8); opacity: 0.6; }
+            100% { transform: scale(1.1); opacity: 1; }
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes zoomIn {
+            from { 
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to { 
+                opacity: 1; 
+                transform: scale(1);
+            }
+        }
+        .rainbow-text {
+            background: linear-gradient(to right, #FF9AA2, #FFB7B2, #FFDAC1, #E2F0CB, #B5EAD7, #C7CEEA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 600% auto;
+            animation: rainbow 6s ease-in-out infinite;
+        }
+        @keyframes rainbow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .floating-shape {
+            position: absolute;
+            animation: float-rotate 10s infinite ease-in-out;
+            opacity: 0.8;
+        }
+        @keyframes float-rotate {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(10deg); }
+            100% { transform: translateY(0) rotate(0deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col items-center justify-start p-10 bg-gradient-to-br from-blue-50 to-yellow-50">
+        <!-- Decorative background elements -->
+        <div class="cloud cloud1">
+            <svg width="180" height="100" viewBox="0 0 180 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30 60C13.4315 60 0 46.5685 0 30C0 13.4315 13.4315 0 30 0C36.5376 0 42.5914 2.15374 47.5 5.85786C52.4086 2.15374 58.4624 0 65 0C81.5685 0 95 13.4315 95 30C95 31.0828 94.9351 32.1514 94.8089 33.2022C106.046 37.3679 114 48.0098 114 60.5C114 76.2401 101.24 89 85.5 89C80.7037 89 76.1895 87.8231 72.2446 85.7524C67.0643 90.431 60.0353 93.1522 52.3333 93.1522C44.6313 93.1522 37.6022 90.431 32.422 85.7524C28.4771 87.8231 23.9629 89 19.1667 89C8.57835 89 0 80.4216 0 69.8333C0 64.7 2.4801 60.1277 6.30101 57.0948C2.32613 52.4892 0 46.6517 0 40.3333C0 29.7449 6.58224 20.7724 16 17.2281C16 17.2281 16.3333 27.6667 30 27.6667C43.6667 27.6667 38.3333 17.6667 47.5 17.2281C56.6667 16.7896 55 27.6667 65 27.6667C75 27.6667 79.5 17.2281 79.5 17.2281C83.0972 18.5919 86.2914 20.6699 88.9367 23.3126C92.3999 19.9082 94.6666 15.3333 95 10.3333" fill="#E6F7FF" opacity="0.8"/>
+            </svg>
+        </div>
+        <div class="cloud cloud2">
+            <svg width="150" height="80" viewBox="0 0 150 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C30.4481 0 35.4929 1.79478 39.5833 4.88155C43.6738 1.79478 48.7187 0 54.1667 0C67.9738 0 79.1667 11.1929 79.1667 25C79.1667 25.9023 79.1126 26.7929 79.0074 27.6685C88.3716 31.1399 95 40.0082 95 50.4167C95 63.5334 84.3501 74.1667 71.25 74.1667C67.2531 74.1667 63.4913 73.1859 60.2038 71.4603C55.8869 75.3592 50.0294 77.6268 43.6111 77.6268C37.1927 77.6268 31.3352 75.3592 27.0183 71.4603C23.7308 73.1859 19.9691 74.1667 15.9722 74.1667C7.14863 74.1667 0 67.018 0 58.1944C0 53.9167 2.0668 50.1064 5.25084 47.5789C1.93844 43.741 0 38.8764 0 33.6111C0 24.7875 5.48519 17.3103 13.3333 14.3567C13.3333 14.3567 13.6111 23.0556 25 23.0556C36.3889 23.0556 31.9444 14.7222 39.5833 14.3567C47.2222 13.9913 45.8333 23.0556 54.1667 23.0556C62.5 23.0556 66.25 14.3567 66.25 14.3567C69.2477 15.4932 71.9095 17.2249 74.1139 19.4272C76.9999 16.5902 78.8889 12.7777 79.1667 8.61108" fill="#FFF5E0" opacity="0.8"/>
+            </svg>
+        </div>
+        
+        <!-- Stars -->
+        <div class="star star1">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#FFD700" />
+            </svg>
+        </div>
+        <div class="star star2">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#FF9A8B" />
+            </svg>
+        </div>
+        <div class="star star3">
+            <svg width="25" height="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#90D7FF" />
+            </svg>
+        </div>
+        <div class="star star4">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#B5EAD7" />
+            </svg>
+        </div>
+        
+        <!-- Floating shapes -->
+        <div class="floating-shape" style="top: 50px; right: 50px; animation-delay: 0.3s;">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" fill="#FFB7B2" fill-opacity="0.6" />
+            </svg>
+        </div>
+        <div class="floating-shape" style="bottom: 60px; left: 80px; animation-delay: 0.8s;">
+            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="12 2 22 12 12 22 2 12" fill="#B5EAD7" fill-opacity="0.6" />
+            </svg>
+        </div>
+        
+        <!-- Main content -->
+        <div class="relative z-10 text-center w-full">
+            <h1 class="text-5xl font-bold mb-8 text-center rainbow-text heading-animation" style="text-shadow: 2px 2px 0px rgba(0,0,0,0.05);">施設のご紹介</h1>
+            
+            <p class="text-xl text-gray-700 max-w-4xl mx-auto mb-10 animate__animated animate__fadeIn animate__delay-1s">
+                楽しく安全に過ごせる空間で、お子様の好奇心と創造性を育みます。<br>
+                各エリアは年齢に合わせた設計で、遊びながら学べる環境を整えています。
+            </p>
+            
+            <div class="grid grid-cols-2 gap-10 max-w-5xl mx-auto">
+                <div class="facility-card card-animation-1">
+                    <div class="facility-image bg-blue-100">
+                        <div class="w-full h-full flex items-center justify-center">
+                            <i class="fas fa-sun text-6xl text-yellow-400 animate-spin" style="animation-duration: 8s"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-blue-600 mb-3">あそびのひろば</h3>
+                        <p class="text-gray-600">広々とした室内プレイエリア。<br>年齢別に安全な遊具を配置し、のびのび遊べる空間です。</p>
+                        <div class="mt-4 flex justify-center space-x-3 text-blue-500">
+                            <i class="fas fa-puzzle-piece animate-bounce" style="animation-delay: 0.2s"></i>
+                            <i class="fas fa-car animate-bounce" style="animation-delay: 0.4s"></i>
+                            <i class="fas fa-baby animate-bounce" style="animation-delay: 0.6s"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="facility-card card-animation-2">
+                    <div class="facility-image bg-green-100">
+                        <div class="w-full h-full flex items-center justify-center">
+                            <i class="fas fa-tree text-6xl text-green-500" style="animation: float-rotate 5s infinite ease-in-out"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-green-600 mb-3">みどりの庭</h3>
+                        <p class="text-gray-600">安全な屋外スペース。<br>季節の植物に触れたり、砂場や水遊びを楽しんだりできます。</p>
+                        <div class="mt-4 flex justify-center space-x-3 text-green-500">
+                            <i class="fas fa-seedling animate-pulse"></i>
+                            <i class="fas fa-cloud-sun animate-pulse" style="animation-delay: 0.3s"></i>
+                            <i class="fas fa-tint animate-pulse" style="animation-delay: 0.6s"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="facility-card card-animation-3">
+                    <div class="facility-image bg-purple-100">
+                        <div class="w-full h-full flex items-center justify-center">
+                            <i class="fas fa-moon text-6xl text-purple-400" style="animation: twinkle 3s infinite alternate ease-in-out"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-purple-600 mb-3">おやすみルーム</h3>
+                        <p class="text-gray-600">静かで落ち着いた雰囲気のお昼寝スペース。<br>一人ひとりの睡眠リズムに合わせたケアを行います。</p>
+                        <div class="mt-4 flex justify-center space-x-3 text-purple-500">
+                            <i class="fas fa-bed" style="animation: fadeIn 2s infinite alternate"></i>
+                            <i class="fas fa-cloud" style="animation: fadeIn 2s 0.5s infinite alternate"></i>
+                            <i class="fas fa-star" style="animation: fadeIn 2s 1s infinite alternate"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="facility-card card-animation-4">
+                    <div class="facility-image bg-red-100">
+                        <div class="w-full h-full flex items-center justify-center">
+                            <i class="fas fa-utensils text-6xl text-red-400" style="animation: float-rotate 6s infinite ease-in-out"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-red-600 mb-3">給食ルーム</h3>
+                        <p class="text-gray-600">明るく清潔な食事スペース。<br>楽しく食事をしながら、食育も学べる環境です。</p>
+                        <div class="mt-4 flex justify-center space-x-3 text-red-500">
+                            <i class="fas fa-apple-alt" style="animation: float 3s infinite ease-in-out"></i>
+                            <i class="fas fa-carrot" style="animation: float 3s 0.5s infinite ease-in-out"></i>
+                            <i class="fas fa-cheese" style="animation: float 3s 1s infinite ease-in-out"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom decorative elements -->
+        <div class="absolute bottom-0 w-full">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 120" preserveAspectRatio="none" class="w-full h-20">
+                <path d="M0,0 Q320,120 640,60 T1280,120 V120 H0 V0" fill="#FFE6FB" opacity="0.5"></path>
+                <path d="M0,40 Q320,100 640,70 T1280,100 V120 H0 V40" fill="#E6FBFF" opacity="0.6"></path>
+            </svg>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>わくわく社内保育園 - 一日のスケジュール</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: linear-gradient(135deg, #fff5f5 0%, #e6f7ff 100%);
+            font-family: 'Hiragino Kaku Gothic Pro', 'メイリオ', sans-serif;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .cloud {
+            position: absolute;
+            animation: float 25s infinite ease-in-out;
+            opacity: 0.6;
+        }
+        .cloud1 {
+            top: 60px;
+            left: -80px;
+            animation-duration: 35s;
+        }
+        .cloud2 {
+            top: 140px;
+            right: -90px;
+            animation-duration: 28s;
+        }
+        .rainbow {
+            position: absolute;
+            top: 40px;
+            right: 200px;
+            width: 300px;
+            height: 150px;
+            opacity: 0.3;
+            animation: pulse 5s infinite alternate ease-in-out;
+        }
+        .schedule-item {
+            background-color: white;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            transition: all 0.4s ease;
+            overflow: hidden;
+            position: relative;
+        }
+        .schedule-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+        }
+        .time-badge {
+            border-radius: 20px;
+            padding: 5px 15px;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .schedule-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+        .heading-animation {
+            animation: fadeInDown 1.2s;
+        }
+        .item-animation-1 {
+            animation: slideInLeft 0.8s 0.1s both;
+        }
+        .item-animation-2 {
+            animation: slideInLeft 0.8s 0.3s both;
+        }
+        .item-animation-3 {
+            animation: slideInLeft 0.8s 0.5s both;
+        }
+        .item-animation-4 {
+            animation: slideInLeft 0.8s 0.7s both;
+        }
+        .item-animation-5 {
+            animation: slideInLeft 0.8s 0.9s both;
+        }
+        .item-animation-6 {
+            animation: slideInLeft 0.8s 1.1s both;
+        }
+        .sun {
+            position: absolute;
+            top: 80px;
+            left: 120px;
+            animation: rotate 20s linear infinite;
+        }
+        .moon {
+            position: absolute;
+            bottom: 80px;
+            right: 120px;
+            animation: pulse 5s infinite alternate;
+        }
+        @keyframes float {
+            0% { transform: translateX(0) translateY(0); }
+            50% { transform: translateX(80px) translateY(-15px); }
+            100% { transform: translateX(0) translateY(0); }
+        }
+        @keyframes pulse {
+            0% { transform: scale(0.95); opacity: 0.7; }
+            100% { transform: scale(1.05); opacity: 1; }
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes slideInLeft {
+            from { 
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to { 
+                opacity: 1; 
+                transform: translateX(0);
+            }
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .rainbow-text {
+            background: linear-gradient(to right, #FF9AA2, #FFB7B2, #FFDAC1, #E2F0CB, #B5EAD7, #C7CEEA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 600% auto;
+            animation: rainbow 6s ease-in-out infinite;
+        }
+        @keyframes rainbow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .timeline {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 150px;
+            width: 4px;
+            background: linear-gradient(to bottom, #FF9AA2, #FFB7B2, #FFDAC1, #E2F0CB, #B5EAD7, #C7CEEA);
+            border-radius: 4px;
+            margin-left: -2px;
+            z-index: 1;
+        }
+        .timeline-dot {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            left: -8px;
+            z-index: 2;
+            animation: pulse 2s infinite alternate;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col items-center justify-start p-10 bg-gradient-to-br from-pink-50 to-blue-50">
+        <!-- Decorative background elements -->
+        <div class="cloud cloud1">
+            <svg width="180" height="100" viewBox="0 0 180 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30 60C13.4315 60 0 46.5685 0 30C0 13.4315 13.4315 0 30 0C36.5376 0 42.5914 2.15374 47.5 5.85786C52.4086 2.15374 58.4624 0 65 0C81.5685 0 95 13.4315 95 30C95 31.0828 94.9351 32.1514 94.8089 33.2022C106.046 37.3679 114 48.0098 114 60.5C114 76.2401 101.24 89 85.5 89C80.7037 89 76.1895 87.8231 72.2446 85.7524C67.0643 90.431 60.0353 93.1522 52.3333 93.1522C44.6313 93.1522 37.6022 90.431 32.422 85.7524C28.4771 87.8231 23.9629 89 19.1667 89C8.57835 89 0 80.4216 0 69.8333C0 64.7 2.4801 60.1277 6.30101 57.0948C2.32613 52.4892 0 46.6517 0 40.3333C0 29.7449 6.58224 20.7724 16 17.2281C16 17.2281 16.3333 27.6667 30 27.6667C43.6667 27.6667 38.3333 17.6667 47.5 17.2281C56.6667 16.7896 55 27.6667 65 27.6667C75 27.6667 79.5 17.2281 79.5 17.2281C83.0972 18.5919 86.2914 20.6699 88.9367 23.3126C92.3999 19.9082 94.6666 15.3333 95 10.3333" fill="#FFE6FB" opacity="0.8"/>
+            </svg>
+        </div>
+        <div class="cloud cloud2">
+            <svg width="150" height="80" viewBox="0 0 150 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C30.4481 0 35.4929 1.79478 39.5833 4.88155C43.6738 1.79478 48.7187 0 54.1667 0C67.9738 0 79.1667 11.1929 79.1667 25C79.1667 25.9023 79.1126 26.7929 79.0074 27.6685C88.3716 31.1399 95 40.0082 95 50.4167C95 63.5334 84.3501 74.1667 71.25 74.1667C67.2531 74.1667 63.4913 73.1859 60.2038 71.4603C55.8869 75.3592 50.0294 77.6268 43.6111 77.6268C37.1927 77.6268 31.3352 75.3592 27.0183 71.4603C23.7308 73.1859 19.9691 74.1667 15.9722 74.1667C7.14863 74.1667 0 67.018 0 58.1944C0 53.9167 2.0668 50.1064 5.25084 47.5789C1.93844 43.741 0 38.8764 0 33.6111C0 24.7875 5.48519 17.3103 13.3333 14.3567C13.3333 14.3567 13.6111 23.0556 25 23.0556C36.3889 23.0556 31.9444 14.7222 39.5833 14.3567C47.2222 13.9913 45.8333 23.0556 54.1667 23.0556C62.5 23.0556 66.25 14.3567 66.25 14.3567C69.2477 15.4932 71.9095 17.2249 74.1139 19.4272C76.9999 16.5902 78.8889 12.7777 79.1667 8.61108" fill="#E6FFFA" opacity="0.8"/>
+            </svg>
+        </div>
+        
+        <!-- Rainbow -->
+        <div class="rainbow">
+            <svg viewBox="0 0 500 250" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,250 C150,50 350,50 500,250" fill="none" stroke="#FF9AA2" stroke-width="30" />
+                <path d="M0,250 C150,70 350,70 500,250" fill="none" stroke="#FFB7B2" stroke-width="25" />
+                <path d="M0,250 C150,90 350,90 500,250" fill="none" stroke="#FFDAC1" stroke-width="20" />
+                <path d="M0,250 C150,110 350,110 500,250" fill="none" stroke="#E2F0CB" stroke-width="15" />
+                <path d="M0,250 C150,130 350,130 500,250" fill="none" stroke="#B5EAD7" stroke-width="10" />
+                <path d="M0,250 C150,150 350,150 500,250" fill="none" stroke="#C7CEEA" stroke-width="5" />
+            </svg>
+        </div>
+        
+        <!-- Sun and Moon -->
+        <div class="sun">
+            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="5" fill="#FFD700" />
+                <g stroke="#FFD700" stroke-width="2" stroke-linecap="round">
+                    <line x1="12" y1="1" x2="12" y2="3" />
+                    <line x1="12" y1="21" x2="12" y2="23" />
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                    <line x1="1" y1="12" x2="3" y2="12" />
+                    <line x1="21" y1="12" x2="23" y2="12" />
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                </g>
+            </svg>
+        </div>
+        
+        <div class="moon">
+            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="#C7CEEA" stroke="#A7AEDC" stroke-width="2" />
+            </svg>
+        </div>
+        
+        <!-- Main content -->
+        <div class="relative z-10 text-center w-full mb-8">
+            <h1 class="text-5xl font-bold mb-6 text-center rainbow-text heading-animation" style="text-shadow: 2px 2px 0px rgba(0,0,0,0.05);">一日のスケジュール</h1>
+            
+            <p class="text-xl text-gray-700 max-w-4xl mx-auto mb-10 animate__animated animate__fadeIn animate__delay-1s">
+                お子様の健やかな成長を促す、バランスの取れたデイリープログラム<br>
+                年齢に合わせた活動内容で、楽しみながら学べる環境をご用意しています
+            </p>
+        </div>
+        
+        <div class="relative flex flex-col items-center justify-center w-full max-w-5xl">
+            <!-- Timeline -->
+            <div class="timeline"></div>
+            
+            <!-- Schedule items -->
+            <div class="grid grid-cols-1 gap-6 w-full pl-36 pr-10">
+                <div class="schedule-item p-5 flex items-center item-animation-1">
+                    <div class="timeline-dot bg-pink-400" style="top: 30px;"></div>
+                    <div class="time-badge bg-pink-100 text-pink-600 mr-4">07:30-09:00</div>
+                    <div class="schedule-icon bg-pink-100 text-pink-600">
+                        <i class="fas fa-door-open"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-pink-600">おはようタイム</h3>
+                        <p class="text-gray-600">登園・健康チェック・自由遊び</p>
+                    </div>
+                    <div class="ml-auto text-4xl text-pink-300 animate-bounce" style="animation-duration: 2s">
+                        <i class="far fa-laugh-beam"></i>
+                    </div>
+                </div>
+                
+                <div class="schedule-item p-5 flex items-center item-animation-2">
+                    <div class="timeline-dot bg-orange-400" style="top: 30px;"></div>
+                    <div class="time-badge bg-orange-100 text-orange-600 mr-4">09:00-10:00</div>
+                    <div class="schedule-icon bg-orange-100 text-orange-600">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-orange-600">朝の会・体操</h3>
+                        <p class="text-gray-600">朝のごあいさつ・歌・リズム体操</p>
+                    </div>
+                    <div class="ml-auto text-4xl text-orange-300" style="animation: float 3s infinite">
+                        <i class="fas fa-child"></i>
+                    </div>
+                </div>
+                
+                <div class="schedule-item p-5 flex items-center item-animation-3">
+                    <div class="timeline-dot bg-green-400" style="top: 30px;"></div>
+                    <div class="time-badge bg-green-100 text-green-600 mr-4">10:00-11:30</div>
+                    <div class="schedule-icon bg-green-100 text-green-600">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-green-600">活動タイム</h3>
+                        <p class="text-gray-600">季節の製作・お散歩・英語で遊ぼう(水曜日)</p>
+                    </div>
+                    <div class="ml-auto text-4xl text-green-300" style="animation: pulse 2.5s infinite alternate">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                </div>
+                
+                <div class="schedule-item p-5 flex items-center item-animation-4">
+                    <div class="timeline-dot bg-red-400" style="top: 30px;"></div>
+                    <div class="time-badge bg-red-100 text-red-600 mr-4">11:30-12:30</div>
+                    <div class="schedule-icon bg-red-100 text-red-600">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-red-600">お昼ごはん</h3>
+                        <p class="text-gray-600">バランスのとれた栄養満点給食</p>
+                    </div>
+                    <div class="ml-auto text-4xl text-red-300" style="animation: rotate 8s linear infinite">
+                        <i class="fas fa-apple-alt"></i>
+                    </div>
+                </div>
+                
+                <div class="schedule-item p-5 flex items-center item-animation-5">
+                    <div class="timeline-dot bg-blue-400" style="top: 30px;"></div>
+                    <div class="time-badge bg-blue-100 text-blue-600 mr-4">12:30-15:00</div>
+                    <div class="schedule-icon bg-blue-100 text-blue-600">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-600">お昼寝タイム</h3>
+                        <p class="text-gray-600">静かな環境でゆっくり休息</p>
+                    </div>
+                    <div class="ml-auto text-4xl text-blue-300 animate-pulse" style="animation-duration: 3s">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                </div>
+                
+                <div class="schedule-item p-5 flex items-center item-animation-6">
+                    <div class="timeline-dot bg-purple-400" style="top: 30px;"></div>
+                    <div class="time-badge bg-purple-100 text-purple-600 mr-4">15:00-19:30</div>
+                    <div class="schedule-icon bg-purple-100 text-purple-600">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-purple-600">おやつ・帰りの会</h3>
+                        <p class="text-gray-600">手作りおやつ・自由遊び・順次降園</p>
+                    </div>
+                    <div class="ml-auto text-4xl text-purple-300" style="animation: float 4s infinite ease-in-out">
+                        <i class="fas fa-cookie"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom decorative elements -->
+        <div class="absolute bottom-0 w-full">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 120" preserveAspectRatio="none" class="w-full h-20">
+                <path d="M0,0 Q320,120 640,60 T1280,120 V120 H0 V0" fill="#FFE6FB" opacity="0.5"></path>
+                <path d="M0,40 Q320,100 640,70 T1280,100 V120 H0 V40" fill="#E6FBFF" opacity="0.6"></path>
+            </svg>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>わくわく社内保育園 - 安全への取り組み</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: linear-gradient(135deg, #f5faff 0%, #fff5f7 100%);
+            font-family: 'Hiragino Kaku Gothic Pro', 'メイリオ', sans-serif;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .cloud {
+            position: absolute;
+            animation: float 25s infinite ease-in-out;
+            opacity: 0.7;
+        }
+        .cloud1 {
+            top: 80px;
+            left: -80px;
+            animation-duration: 32s;
+        }
+        .cloud2 {
+            top: 160px;
+            right: -90px;
+            animation-duration: 27s;
+        }
+        .shield {
+            position: absolute;
+            animation: pulse 4s infinite alternate ease-in-out;
+        }
+        .shield1 {
+            top: 120px;
+            left: 200px;
+            animation-delay: 0.2s;
+        }
+        .shield2 {
+            bottom: 150px;
+            right: 200px;
+            animation-delay: 0.7s;
+        }
+        .safety-card {
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+            transition: all 0.4s ease;
+            overflow: hidden;
+        }
+        .safety-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+        }
+        .safety-icon {
+            width: 64px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        .heading-animation {
+            animation: fadeInDown 1.2s;
+        }
+        .card-animation-1 {
+            animation: zoomIn 1s 0.3s both;
+        }
+        .card-animation-2 {
+            animation: zoomIn 1s 0.6s both;
+        }
+        .card-animation-3 {
+            animation: zoomIn 1s 0.9s both;
+        }
+        .card-animation-4 {
+            animation: zoomIn 1s 1.2s both;
+        }
+        @keyframes float {
+            0% { transform: translateX(0) translateY(0); }
+            50% { transform: translateX(80px) translateY(-15px); }
+            100% { transform: translateX(0) translateY(0); }
+        }
+        @keyframes pulse {
+            0% { transform: scale(0.95); opacity: 0.8; }
+            100% { transform: scale(1.05); opacity: 1; }
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes zoomIn {
+            from { 
+                opacity: 0;
+                transform: scale(0.85);
+            }
+            to { 
+                opacity: 1; 
+                transform: scale(1);
+            }
+        }
+        .rainbow-text {
+            background: linear-gradient(to right, #4F86C6, #6A67CE, #9D65C9, #CD6AC4, #E7628F, #F26C63);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 600% auto;
+            animation: rainbow 6s ease-in-out infinite;
+        }
+        @keyframes rainbow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .bubble {
+            position: absolute;
+            border-radius: 50%;
+            animation: float-bubble 15s infinite ease-in-out;
+            opacity: 0.6;
+        }
+        .bubble1 {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 182, 193, 0.3);
+            top: 100px;
+            right: 220px;
+            animation-duration: 18s;
+        }
+        .bubble2 {
+            width: 35px;
+            height: 35px;
+            background-color: rgba(173, 216, 230, 0.3);
+            top: 180px;
+            right: 280px;
+            animation-duration: 15s;
+            animation-delay: 2s;
+        }
+        .bubble3 {
+            width: 25px;
+            height: 25px;
+            background-color: rgba(152, 251, 152, 0.3);
+            bottom: 150px;
+            left: 220px;
+            animation-duration: 20s;
+            animation-delay: 1s;
+        }
+        @keyframes float-bubble {
+            0% { transform: translateY(0) translateX(0); }
+            25% { transform: translateY(-40px) translateX(20px); }
+            50% { transform: translateY(-80px) translateX(0); }
+            75% { transform: translateY(-40px) translateX(-20px); }
+            100% { transform: translateY(0) translateX(0); }
+        }
+        .badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+            color: white;
+            border-radius: 20px;
+            padding: 5px 15px;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col items-center justify-start p-10 bg-gradient-to-br from-blue-50 to-pink-50">
+        <!-- Decorative background elements -->
+        <div class="cloud cloud1">
+            <svg width="180" height="100" viewBox="0 0 180 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30 60C13.4315 60 0 46.5685 0 30C0 13.4315 13.4315 0 30 0C36.5376 0 42.5914 2.15374 47.5 5.85786C52.4086 2.15374 58.4624 0 65 0C81.5685 0 95 13.4315 95 30C95 31.0828 94.9351 32.1514 94.8089 33.2022C106.046 37.3679 114 48.0098 114 60.5C114 76.2401 101.24 89 85.5 89C80.7037 89 76.1895 87.8231 72.2446 85.7524C67.0643 90.431 60.0353 93.1522 52.3333 93.1522C44.6313 93.1522 37.6022 90.431 32.422 85.7524C28.4771 87.8231 23.9629 89 19.1667 89C8.57835 89 0 80.4216 0 69.8333C0 64.7 2.4801 60.1277 6.30101 57.0948C2.32613 52.4892 0 46.6517 0 40.3333C0 29.7449 6.58224 20.7724 16 17.2281C16 17.2281 16.3333 27.6667 30 27.6667C43.6667 27.6667 38.3333 17.6667 47.5 17.2281C56.6667 16.7896 55 27.6667 65 27.6667C75 27.6667 79.5 17.2281 79.5 17.2281C83.0972 18.5919 86.2914 20.6699 88.9367 23.3126C92.3999 19.9082 94.6666 15.3333 95 10.3333" fill="#E6F7FF" opacity="0.8"/>
+            </svg>
+        </div>
+        <div class="cloud cloud2">
+            <svg width="150" height="80" viewBox="0 0 150 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C30.4481 0 35.4929 1.79478 39.5833 4.88155C43.6738 1.79478 48.7187 0 54.1667 0C67.9738 0 79.1667 11.1929 79.1667 25C79.1667 25.9023 79.1126 26.7929 79.0074 27.6685C88.3716 31.1399 95 40.0082 95 50.4167C95 63.5334 84.3501 74.1667 71.25 74.1667C67.2531 74.1667 63.4913 73.1859 60.2038 71.4603C55.8869 75.3592 50.0294 77.6268 43.6111 77.6268C37.1927 77.6268 31.3352 75.3592 27.0183 71.4603C23.7308 73.1859 19.9691 74.1667 15.9722 74.1667C7.14863 74.1667 0 67.018 0 58.1944C0 53.9167 2.0668 50.1064 5.25084 47.5789C1.93844 43.741 0 38.8764 0 33.6111C0 24.7875 5.48519 17.3103 13.3333 14.3567C13.3333 14.3567 13.6111 23.0556 25 23.0556C36.3889 23.0556 31.9444 14.7222 39.5833 14.3567C47.2222 13.9913 45.8333 23.0556 54.1667 23.0556C62.5 23.0556 66.25 14.3567 66.25 14.3567C69.2477 15.4932 71.9095 17.2249 74.1139 19.4272C76.9999 16.5902 78.8889 12.7777 79.1667 8.61108" fill="#FFE6F7" opacity="0.8"/>
+            </svg>
+        </div>
+        
+        <!-- Shield decorations -->
+        <div class="shield shield1">
+            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="#E6F7FF" stroke="#4FB3F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <div class="shield shield2">
+            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="#FFE6F7" stroke="#F878B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        
+        <!-- Bubbles -->
+        <div class="bubble bubble1"></div>
+        <div class="bubble bubble2"></div>
+        <div class="bubble bubble3"></div>
+        
+        <!-- Main content -->
+        <div class="relative z-10 text-center w-full">
+            <h1 class="text-5xl font-bold mb-6 text-center rainbow-text heading-animation" style="text-shadow: 2px 2px 0px rgba(0,0,0,0.05);">お子さまの安全を第一に</h1>
+            
+            <p class="text-xl text-gray-700 max-w-4xl mx-auto mb-10 animate__animated animate__fadeIn animate__delay-1s">
+                わくわく社内保育園では、お子さまの安全を最優先に考え、<br>
+                様々な対策や取り組みを行っています。安心してお預けいただける環境づくりに努めています。
+            </p>
+            
+            <div class="grid grid-cols-2 gap-10 max-w-5xl mx-auto">
+                <div class="safety-card p-8 relative card-animation-1">
+                    <div class="safety-icon bg-blue-100 mx-auto text-blue-600">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-blue-600 mb-4">セキュリティ対策</h3>
+                    <ul class="text-gray-600 text-left space-y-2 pl-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <span>24時間監視カメラ設置</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <span>生体認証による入退室管理</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <span>お迎え時の身分確認徹底</span>
+                        </li>
+                    </ul>
+                    <div class="mt-4 text-center">
+                        <div class="inline-block bg-blue-100 text-blue-600 rounded-full p-3 animate-pulse">
+                            <i class="fas fa-shield-alt text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="safety-card p-8 relative card-animation-2">
+                    <div class="badge">毎月実施</div>
+                    <div class="safety-icon bg-red-100 mx-auto text-red-600">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-red-600 mb-4">緊急時対応</h3>
+                    <ul class="text-gray-600 text-left space-y-2 pl-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-red-500 mt-1 mr-2"></i>
+                            <span>全スタッフAED・救命講習終了</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-red-500 mt-1 mr-2"></i>
+                            <span>定期的な避難訓練の実施</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-red-500 mt-1 mr-2"></i>
+                            <span>災害時の保護者連絡システム完備</span>
+                        </li>
+                    </ul>
+                    <div class="mt-4 text-center">
+                        <div class="inline-block bg-red-100 text-red-600 rounded-full p-3" style="animation: pulse 2s infinite alternate">
+                            <i class="fas fa-ambulance text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="safety-card p-8 card-animation-3">
+                    <div class="safety-icon bg-green-100 mx-auto text-green-600">
+                        <i class="fas fa-capsules"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-green-600 mb-4">衛生管理</h3>
+                    <ul class="text-gray-600 text-left space-y-2 pl-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>看護師が常駐</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>毎日の検温・健康チェック</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>定期的な施設の除菌・消毒</span>
+                        </li>
+                    </ul>
+                    <div class="mt-4 text-center">
+                        <div class="inline-block bg-green-100 text-green-600 rounded-full p-3" style="animation: float 4s infinite ease-in-out">
+                            <i class="fas fa-hand-sparkles text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="safety-card p-8 card-animation-4">
+                    <div class="safety-icon bg-purple-100 mx-auto text-purple-600">
+                        <i class="fas fa-scroll"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-purple-600 mb-4">スタッフ体制</h3>
+                    <ul class="text-gray-600 text-left space-y-2 pl-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i>
+                            <span>保育士の人数基準を上回る配置</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i>
+                            <span>定期的な研修・教育プログラム</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i>
+                            <span>複数の目での見守り体制</span>
+                        </li>
+                    </ul>
+                    <div class="mt-4 text-center">
+                        <div class="inline-block bg-purple-100 text-purple-600 rounded-full p-3 animate-bounce" style="animation-duration: 3s">
+                            <i class="fas fa-users text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom decorative elements -->
+        <div class="absolute bottom-0 w-full">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 120" preserveAspectRatio="none" class="w-full h-20">
+                <path d="M0,0 Q320,120 640,60 T1280,120 V120 H0 V0" fill="#E6FBFF" opacity="0.5"></path>
+                <path d="M0,40 Q320,100 640,70 T1280,100 V120 H0 V40" fill="#FFE6FB" opacity="0.6"></path>
+            </svg>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>わくわく社内保育園 - 申し込み方法</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: linear-gradient(135deg, #ffe8f7 0%, #e9f9ff 100%);
+            font-family: 'Hiragino Kaku Gothic Pro', 'メイリオ', sans-serif;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .cloud {
+            position: absolute;
+            animation: float 30s infinite ease-in-out;
+            opacity: 0.6;
+        }
+        .cloud1 {
+            top: 100px;
+            left: -80px;
+            animation-duration: 35s;
+        }
+        .cloud2 {
+            top: 180px;
+            right: -90px;
+            animation-duration: 28s;
+        }
+        .balloon {
+            position: absolute;
+            animation: bounce 5s infinite alternate ease-in-out;
+        }
+        .balloon1 {
+            top: 80px;
+            left: 180px;
+            animation-delay: 0.2s;
+        }
+        .balloon2 {
+            top: 60px;
+            right: 200px;
+            animation-delay: 0.8s;
+        }
+        .balloon3 {
+            bottom: 100px;
+            left: 120px;
+            animation-delay: 0.5s;
+        }
+        .balloon4 {
+            bottom: 80px;
+            right: 150px;
+            animation-delay: 1.2s;
+        }
+        .application-card {
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            overflow: hidden;
+            transform-origin: center;
+        }
+        .application-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #FF85A2, #FF639B);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-right: 15px;
+        }
+        .heading-animation {
+            animation: fadeInDown 1.2s;
+        }
+        .card-animation {
+            animation: fadeInUp 1s 0.3s both;
+        }
+        .contact-animation {
+            animation: fadeIn 1.2s 0.8s both;
+        }
+        .cta-animation {
+            animation: pulse 2s 1.5s infinite alternate;
+        }
+        @keyframes float {
+            0% { transform: translateX(0) translateY(0); }
+            50% { transform: translateX(60px) translateY(-15px); }
+            100% { transform: translateX(0) translateY(0); }
+        }
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-20px); }
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.08); }
+        }
+        .rainbow-text {
+            background: linear-gradient(to right, #FF9AA2, #FFB7B2, #FFDAC1, #E2F0CB, #B5EAD7, #C7CEEA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 600% auto;
+            animation: rainbow 6s ease-in-out infinite;
+        }
+        @keyframes rainbow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .flying-character {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            animation: fly 15s linear infinite;
+        }
+        @keyframes fly {
+            0% { transform: translate(-100px, 20vh) rotate(0deg); }
+            100% { transform: translate(1380px, 40vh) rotate(20deg); }
+        }
+        .contact-item {
+            transition: all 0.3s ease;
+        }
+        .contact-item:hover {
+            transform: translateY(-5px);
+        }
+        .btn-apply {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-apply:before {
+            content: "";
+            position: absolute;
+            top: -25%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: rotate(30deg);
+            transition: all 0.6s ease;
+        }
+        .btn-apply:hover:before {
+            transform: rotate(30deg) translateX(50%);
+        }
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            opacity: 0;
+            animation: confetti-fall 5s ease-in-out infinite;
+        }
+        @keyframes confetti-fall {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(500px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col items-center justify-start p-10 bg-gradient-to-br from-pink-50 to-blue-50">
+        <!-- Decorative background elements -->
+        <div class="cloud cloud1">
+            <svg width="180" height="100" viewBox="0 0 180 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30 60C13.4315 60 0 46.5685 0 30C0 13.4315 13.4315 0 30 0C36.5376 0 42.5914 2.15374 47.5 5.85786C52.4086 2.15374 58.4624 0 65 0C81.5685 0 95 13.4315 95 30C95 31.0828 94.9351 32.1514 94.8089 33.2022C106.046 37.3679 114 48.0098 114 60.5C114 76.2401 101.24 89 85.5 89C80.7037 89 76.1895 87.8231 72.2446 85.7524C67.0643 90.431 60.0353 93.1522 52.3333 93.1522C44.6313 93.1522 37.6022 90.431 32.422 85.7524C28.4771 87.8231 23.9629 89 19.1667 89C8.57835 89 0 80.4216 0 69.8333C0 64.7 2.4801 60.1277 6.30101 57.0948C2.32613 52.4892 0 46.6517 0 40.3333C0 29.7449 6.58224 20.7724 16 17.2281C16 17.2281 16.3333 27.6667 30 27.6667C43.6667 27.6667 38.3333 17.6667 47.5 17.2281C56.6667 16.7896 55 27.6667 65 27.6667C75 27.6667 79.5 17.2281 79.5 17.2281C83.0972 18.5919 86.2914 20.6699 88.9367 23.3126C92.3999 19.9082 94.6666 15.3333 95 10.3333" fill="#FFE6FB" opacity="0.8"/>
+            </svg>
+        </div>
+        <div class="cloud cloud2">
+            <svg width="150" height="80" viewBox="0 0 150 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C30.4481 0 35.4929 1.79478 39.5833 4.88155C43.6738 1.79478 48.7187 0 54.1667 0C67.9738 0 79.1667 11.1929 79.1667 25C79.1667 25.9023 79.1126 26.7929 79.0074 27.6685C88.3716 31.1399 95 40.0082 95 50.4167C95 63.5334 84.3501 74.1667 71.25 74.1667C67.2531 74.1667 63.4913 73.1859 60.2038 71.4603C55.8869 75.3592 50.0294 77.6268 43.6111 77.6268C37.1927 77.6268 31.3352 75.3592 27.0183 71.4603C23.7308 73.1859 19.9691 74.1667 15.9722 74.1667C7.14863 74.1667 0 67.018 0 58.1944C0 53.9167 2.0668 50.1064 5.25084 47.5789C1.93844 43.741 0 38.8764 0 33.6111C0 24.7875 5.48519 17.3103 13.3333 14.3567C13.3333 14.3567 13.6111 23.0556 25 23.0556C36.3889 23.0556 31.9444 14.7222 39.5833 14.3567C47.2222 13.9913 45.8333 23.0556 54.1667 23.0556C62.5 23.0556 66.25 14.3567 66.25 14.3567C69.2477 15.4932 71.9095 17.2249 74.1139 19.4272C76.9999 16.5902 78.8889 12.7777 79.1667 8.61108" fill="#E6FBFF" opacity="0.8"/>
+            </svg>
+        </div>
+        
+        <!-- Balloons -->
+        <div class="balloon balloon1">
+            <svg width="40" height="60" viewBox="0 0 40 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 0C8.954 0 0 8.954 0 20C0 31.046 8.954 40 20 40C31.046 40 40 31.046 40 20C40 8.954 31.046 0 20 0ZM20 45L15 55L20 60L25 55L20 45Z" fill="#FF85A2"/>
+            </svg>
+        </div>
+        <div class="balloon balloon2">
+            <svg width="35" height="55" viewBox="0 0 40 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 0C8.954 0 0 8.954 0 20C0 31.046 8.954 40 20 40C31.046 40 40 31.046 40 20C40 8.954 31.046 0 20 0ZM20 45L15 55L20 60L25 55L20 45Z" fill="#85B6FF"/>
+            </svg>
+        </div>
+        <div class="balloon balloon3">
+            <svg width="30" height="45" viewBox="0 0 40 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 0C8.954 0 0 8.954 0 20C0 31.046 8.954 40 20 40C31.046 40 40 31.046 40 20C40 8.954 31.046 0 20 0ZM20 45L15 55L20 60L25 55L20 45Z" fill="#B5EAD7"/>
+            </svg>
+        </div>
+        <div class="balloon balloon4">
+            <svg width="25" height="40" viewBox="0 0 40 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 0C8.954 0 0 8.954 0 20C0 31.046 8.954 40 20 40C31.046 40 40 31.046 40 20C40 8.954 31.046 0 20 0ZM20 45L15 55L20 60L25 55L20 45Z" fill="#FFDAC1"/>
+            </svg>
+        </div>
+        
+        <!-- Flying character -->
+        <div class="flying-character">
+            <svg width="100" height="100" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" fill="#FFB7B2"/>
+                <circle cx="9" cy="10" r="1.5" fill="#333"/>
+                <circle cx="15" cy="10" r="1.5" fill="#333"/>
+                <path d="M8.5 15.5C10 17.5 14 17.5 15.5 15.5" stroke="#333" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M4 8.5C4 8.5 6 10.5 7 9.5C8 8.5 7 5.5 7 5.5" stroke="#FF85A2" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M20 8.5C20 8.5 18 10.5 17 9.5C16 8.5 17 5.5 17 5.5" stroke="#FF85A2" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+        </div>
+        
+        <!-- Confetti animations -->
+        <div class="confetti" style="left: 10%; animation-delay: 0.2s; background-color: #FF85A2;"></div>
+        <div class="confetti" style="left: 20%; animation-delay: 0.8s; background-color: #85B6FF;"></div>
+        <div class="confetti" style="left: 30%; animation-delay: 1.5s; background-color: #B5EAD7;"></div>
+        <div class="confetti" style="left: 40%; animation-delay: 0.5s; background-color: #FFDAC1;"></div>
+        <div class="confetti" style="left: 50%; animation-delay: 1.2s; background-color: #C7CEEA;"></div>
+        <div class="confetti" style="left: 60%; animation-delay: 0.7s; background-color: #FFB7B2;"></div>
+        <div class="confetti" style="left: 70%; animation-delay: 1.8s; background-color: #FF85A2;"></div>
+        <div class="confetti" style="left: 80%; animation-delay: 0.3s; background-color: #85B6FF;"></div>
+        <div class="confetti" style="left: 90%; animation-delay: 1.0s; background-color: #E2F0CB;"></div>
+        
+        <!-- Main content -->
+        <div class="relative z-10 text-center w-full">
+            <h1 class="text-5xl font-bold mb-6 text-center rainbow-text heading-animation" style="text-shadow: 2px 2px 0px rgba(0,0,0,0.05);">申し込み方法</h1>
+            
+            <p class="text-xl text-gray-700 max-w-4xl mx-auto mb-8 card-animation">
+                お子様を<span class="font-bold text-pink-600">わくわく社内保育園</span>に入園させるための簡単な手続きをご案内します。<br>
+                ご不明な点がございましたら、お気軽にお問い合わせください。
+            </p>
+            
+            <div class="application-card p-8 max-w-4xl mx-auto mb-10 card-animation">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="flex items-start p-4 bg-pink-50 rounded-xl transition-all duration-300 hover:bg-pink-100">
+                        <div class="step-number">1</div>
+                        <div class="text-left">
+                            <h3 class="text-xl font-bold text-pink-600 mb-2">申込書の入手</h3>
+                            <p class="text-gray-600">社内イントラネットまたは人事部窓口で申込書を入手してください。</p>
+                            <div class="mt-2 text-pink-500">
+                                <i class="fas fa-file-alt animate-pulse"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start p-4 bg-blue-50 rounded-xl transition-all duration-300 hover:bg-blue-100">
+                        <div class="step-number" style="background: linear-gradient(135deg, #85B6FF, #638DF8);">2</div>
+                        <div class="text-left">
+                            <h3 class="text-xl font-bold text-blue-600 mb-2">面談日の予約</h3>
+                            <p class="text-gray-600">専用フォームから面談の日時をご予約ください。</p>
+                            <div class="mt-2 text-blue-500">
+                                <i class="fas fa-calendar-check animate-bounce" style="animation-duration: 2s"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start p-4 bg-green-50 rounded-xl transition-all duration-300 hover:bg-green-100">
+                        <div class="step-number" style="background: linear-gradient(135deg, #B5EAD7, #57C4A0);">3</div>
+                        <div class="text-left">
+                            <h3 class="text-xl font-bold text-green-600 mb-2">面談・施設見学</h3>
+                            <p class="text-gray-600">お子様と一緒に保育園を見学し、簡単な面談を行います。</p>
+                            <div class="mt-2 text-green-500">
+                                <i class="fas fa-comments" style="animation: pulse 2s infinite alternate"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start p-4 bg-yellow-50 rounded-xl transition-all duration-300 hover:bg-yellow-100">
+                        <div class="step-number" style="background: linear-gradient(135deg, #FFDAC1, #FFBB7C);">4</div>
+                        <div class="text-left">
+                            <h3 class="text-xl font-bold text-yellow-600 mb-2">入園決定・通知</h3>
+                            <p class="text-gray-600">申込み後、2週間以内に入園可否の通知をお送りします。</p>
+                            <div class="mt-2 text-yellow-500">
+                                <i class="fas fa-envelope-open-text" style="animation: float 3s infinite ease-in-out"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-info mb-10 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto contact-animation">
+                <div class="contact-item p-5 bg-white rounded-2xl shadow-md">
+                    <div class="text-4xl text-purple-500 mb-3">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-purple-600 mb-2">お電話でのお問い合わせ</h3>
+                    <p class="text-gray-600">内線: 1234<br>外線: 03-1234-5678</p>
+                </div>
+                
+                <div class="contact-item p-5 bg-white rounded-2xl shadow-md">
+                    <div class="text-4xl text-blue-500 mb-3">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-600 mb-2">メールでのお問い合わせ</h3>
+                    <p class="text-gray-600">hoikuen@sample-company.co.jp</p>
+                </div>
+                
+                <div class="contact-item p-5 bg-white rounded-2xl shadow-md">
+                    <div class="text-4xl text-pink-500 mb-3">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-pink-600 mb-2">保育園所在地</h3>
+                    <p class="text-gray-600">本社ビル 3階<br>開園時間: 7:30-19:30</p>
+                </div>
+            </div>
+            
+            <div class="cta-animation">
+                <a href="#" class="btn-apply inline-block bg-gradient-to-r from-pink-500 to-purple-500 text-white text-xl font-bold py-4 px-12 rounded-full shadow-lg transform transition-all duration-300 hover:scale-105">
+                    <i class="fas fa-heart mr-2"></i> 今すぐ申し込む
+                </a>
+                <p class="text-gray-500 mt-4">※入園枠には限りがあります。お早めにお申し込みください。</p>
+            </div>
+        </div>
+        
+        <!-- Bottom decorative elements -->
+        <div class="absolute bottom-0 w-full">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 120" preserveAspectRatio="none" class="w-full h-20">
+                <path d="M0,0 Q320,120 640,60 T1280,120 V120 H0 V0" fill="#FFE6FB" opacity="0.5"></path>
+                <path d="M0,40 Q320,100 640,70 T1280,100 V120 H0 V40" fill="#E6FBFF" opacity="0.6"></path>
+            </svg>
+        </div>
+    </div>
+</body>
+</html>

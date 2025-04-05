@@ -1,0 +1,1471 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoNova Solutions - サービス案内</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+        }
+        
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .geometric-shape {
+            position: absolute;
+            opacity: 0.8;
+            z-index: 0;
+        }
+        
+        .shape-1 {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #84cc16 0%, #10b981 100%);
+            top: -150px;
+            right: -150px;
+            filter: blur(80px);
+        }
+        
+        .shape-2 {
+            width: 300px;
+            height: 300px;
+            background: #f97316;
+            bottom: -100px;
+            left: -100px;
+            transform: rotate(45deg);
+            filter: blur(70px);
+        }
+        
+        .shape-3 {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: #8b5cf6;
+            bottom: 100px;
+            right: 100px;
+            filter: blur(60px);
+        }
+        
+        .accent-line {
+            height: 4px;
+            width: 100px;
+            background-color: #10b981;
+            margin: 24px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container flex flex-col justify-center items-center p-16 relative">
+        <!-- Geometric shapes in background -->
+        <div class="geometric-shape shape-1"></div>
+        <div class="geometric-shape shape-2"></div>
+        <div class="geometric-shape shape-3"></div>
+        
+        <!-- Content container -->
+        <div class="z-10 text-center max-w-4xl">
+            <!-- Small header text -->
+            <p class="uppercase tracking-widest text-gray-600 mb-4">環境革新の未来へ</p>
+            
+            <!-- Main title -->
+            <h1 class="text-7xl font-bold mb-8 tracking-tight">
+                <span class="text-black">Eco</span><span class="text-green-500">Nova</span>
+            </h1>
+            
+            <!-- Accent line -->
+            <div class="accent-line mx-auto"></div>
+            
+            <!-- Subtitle -->
+            <h2 class="text-4xl font-light mb-12">
+                持続可能な未来を創造する<br>環境テクノロジーサービス
+            </h2>
+            
+            <!-- Description -->
+            <p class="text-xl text-gray-700 mb-10 max-w-2xl mx-auto">
+                従来の環境問題解決に挑戦する革新的アプローチ
+            </p>
+            
+            <!-- Visual element -->
+            <div class="mt-8 flex justify-center">
+                <div class="flex space-x-4">
+                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-purple-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-orange-500"></div>
+                </div>
+            </div>
+            
+            <!-- Footer text -->
+            <p class="absolute bottom-10 text-sm text-gray-500">© 2023 EcoNova Solutions</p>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoNova Solutions - ページ2</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .geometric-shape {
+            position: absolute;
+            z-index: 0;
+        }
+        
+        .shape-1 {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(132, 204, 22, 0.1);
+            top: -100px;
+            left: -100px;
+        }
+        
+        .shape-2 {
+            width: 200px;
+            height: 200px;
+            background: rgba(16, 185, 129, 0.1);
+            bottom: -50px;
+            right: 150px;
+            transform: rotate(45deg);
+        }
+        
+        .shape-3 {
+            width: 150px;
+            height: 150px;
+            border-radius: 20px;
+            background: rgba(139, 92, 246, 0.1);
+            top: 200px;
+            right: -50px;
+        }
+        
+        .problem-card {
+            background-color: #f8f9fa;
+            border-radius: 16px;
+            transition: transform 0.3s ease;
+        }
+        
+        .problem-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .accent-line {
+            height: 4px;
+            width: 80px;
+            background-color: #10b981;
+            margin: 16px 0;
+        }
+        
+        .stat-item {
+            position: relative;
+            border-left: 3px solid #10b981;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container flex flex-col p-16 relative">
+        <!-- Geometric shapes in background -->
+        <div class="geometric-shape shape-1"></div>
+        <div class="geometric-shape shape-2"></div>
+        <div class="geometric-shape shape-3"></div>
+        
+        <!-- Content container -->
+        <div class="z-10 flex flex-col h-full">
+            <!-- Header section -->
+            <div class="mb-10">
+                <p class="uppercase tracking-widest text-gray-600 mb-2">現状の課題</p>
+                <h2 class="text-5xl font-bold mb-4">環境危機の<span class="text-green-500">現実</span></h2>
+                <div class="accent-line"></div>
+                <p class="text-xl text-gray-600 mt-4 max-w-2xl">
+                    地球温暖化、資源枯渇、生物多様性の喪失 — 私たちの未来は今、岐路に立っています。
+                </p>
+            </div>
+            
+            <!-- Main content -->
+            <div class="flex justify-between items-center flex-1">
+                <!-- Left column - Problems -->
+                <div class="w-1/2 pr-8">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="problem-card p-6 shadow-sm">
+                            <i class="bx bx-water text-4xl text-blue-500 mb-3"></i>
+                            <h3 class="text-xl font-semibold mb-2">水質汚染</h3>
+                            <p class="text-gray-600">世界の淡水の45%が深刻な汚染に直面</p>
+                        </div>
+                        <div class="problem-card p-6 shadow-sm">
+                            <i class="bx bx-trash text-4xl text-orange-500 mb-3"></i>
+                            <h3 class="text-xl font-semibold mb-2">廃棄物問題</h3>
+                            <p class="text-gray-600">年間8億トンのプラスチックが海に流出</p>
+                        </div>
+                        <div class="problem-card p-6 shadow-sm">
+                            <i class="bx bxs-hot text-4xl text-red-500 mb-3"></i>
+                            <h3 class="text-xl font-semibold mb-2">温暖化進行</h3>
+                            <p class="text-gray-600">過去100年で地球の平均気温が1.0℃上昇</p>
+                        </div>
+                        <div class="problem-card p-6 shadow-sm">
+                            <i class="bx bxs-tree text-4xl text-green-500 mb-3"></i>
+                            <h3 class="text-xl font-semibold mb-2">森林減少</h3>
+                            <p class="text-gray-600">毎年の森林消失面積は東京都の約17倍</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right column - Stats -->
+                <div class="w-1/2 pl-8 border-l border-gray-200">
+                    <h3 class="text-2xl font-semibold mb-6">環境危機の<span class="text-green-500">データ</span></h3>
+                    
+                    <div class="space-y-8">
+                        <div class="stat-item">
+                            <h4 class="text-3xl font-bold mb-1">78<span class="text-green-500">%</span></h4>
+                            <p class="text-gray-600">の企業が環境対策の必要性を認識</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4 class="text-3xl font-bold mb-1">2050<span class="text-green-500">年</span></h4>
+                            <p class="text-gray-600">までにカーボンニュートラル達成が目標</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4 class="text-3xl font-bold mb-1">3.2<span class="text-green-500">兆円</span></h4>
+                            <p class="text-gray-600">日本の環境技術市場規模（2023年）</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer note -->
+            <div class="mt-10">
+                <p class="text-sm text-gray-500 italic">※データは参考値です</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoNova Solutions - ページ3</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .geometric-shape {
+            position: absolute;
+            z-index: 0;
+        }
+        
+        .shape-1 {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: rgba(16, 185, 129, 0.05);
+            top: -150px;
+            right: -100px;
+        }
+        
+        .shape-2 {
+            width: 250px;
+            height: 250px;
+            background: rgba(139, 92, 246, 0.05);
+            bottom: -50px;
+            left: 100px;
+            transform: rotate(45deg);
+        }
+        
+        .service-card {
+            background: #ffffff;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-color: rgba(16, 185, 129, 0.3);
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: #10b981;
+        }
+        
+        .accent-line {
+            height: 4px;
+            width: 80px;
+            background-color: #10b981;
+            margin: 16px 0;
+        }
+        
+        .service-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+        
+        .dot-pattern {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            opacity: 0.2;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container flex flex-col p-16 relative">
+        <!-- Geometric shapes in background -->
+        <div class="geometric-shape shape-1"></div>
+        <div class="geometric-shape shape-2"></div>
+        
+        <!-- Dot pattern -->
+        <div class="dot-pattern bottom-10 right-10">
+            <svg width="200" height="200" viewBox="0 0 100 100">
+                <pattern id="dot-pattern" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+                    <circle cx="2" cy="2" r="1" fill="#10b981" />
+                </pattern>
+                <rect x="0" y="0" width="100" height="100" fill="url(#dot-pattern)" />
+            </svg>
+        </div>
+        
+        <!-- Content container -->
+        <div class="z-10 flex flex-col h-full">
+            <!-- Header section -->
+            <div class="mb-12">
+                <p class="uppercase tracking-widest text-gray-600 mb-2">革新的なソリューション</p>
+                <h2 class="text-5xl font-bold mb-4">私たちの<span class="text-green-500">サービス</span></h2>
+                <div class="accent-line"></div>
+                <p class="text-xl text-gray-600 mt-4 max-w-2xl">
+                    テクノロジーと持続可能性を融合させた次世代の環境ソリューション
+                </p>
+            </div>
+            
+            <!-- Services grid -->
+            <div class="grid grid-cols-3 gap-8 mt-4">
+                <!-- Service 1 -->
+                <div class="service-card p-8">
+                    <div class="service-icon bg-green-50">
+                        <i class="bx bx-leaf text-3xl text-green-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">バイオモニタリング</h3>
+                    <p class="text-gray-600 mb-4">AIと生物センサーを活用した環境汚染のリアルタイム検知システム。従来の10倍の精度で汚染物質を特定します。</p>
+                    <div class="flex items-center text-green-500 font-medium mt-auto">
+                        <span>詳細を見る</span>
+                        <i class="bx bx-right-arrow-alt ml-1"></i>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card p-8">
+                    <div class="service-icon bg-purple-50">
+                        <i class="bx bx-recycle text-3xl text-purple-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">サーキュラーエコノミー</h3>
+                    <p class="text-gray-600 mb-4">廃棄物ゼロを目指す企業向け循環型ビジネスモデル構築支援。独自のAIアルゴリズムで最適な資源循環を設計します。</p>
+                    <div class="flex items-center text-purple-500 font-medium mt-auto">
+                        <span>詳細を見る</span>
+                        <i class="bx bx-right-arrow-alt ml-1"></i>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card p-8">
+                    <div class="service-icon bg-blue-50">
+                        <i class="bx bx-cloud text-3xl text-blue-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">カーボンキャプチャー</h3>
+                    <p class="text-gray-600 mb-4">革新的な大気中CO2回収技術。特許取得済みの多孔質材料を使用し、回収したCO2を有用な原料に変換します。</p>
+                    <div class="flex items-center text-blue-500 font-medium mt-auto">
+                        <span>詳細を見る</span>
+                        <i class="bx bx-right-arrow-alt ml-1"></i>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card p-8">
+                    <div class="service-icon bg-orange-50">
+                        <i class="bx bxs-sun text-3xl text-orange-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">次世代エネルギー</h3>
+                    <p class="text-gray-600 mb-4">建物の表面全体を発電に活用できる透明太陽光パネルと熱電変換システムの統合ソリューション。</p>
+                    <div class="flex items-center text-orange-500 font-medium mt-auto">
+                        <span>詳細を見る</span>
+                        <i class="bx bx-right-arrow-alt ml-1"></i>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card p-8">
+                    <div class="service-icon bg-red-50">
+                        <i class="bx bx-data text-3xl text-red-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">環境データ分析</h3>
+                    <p class="text-gray-600 mb-4">ビッグデータと量子コンピューティングを活用した環境予測モデル。精度95%以上の環境変化シミュレーションを実現。</p>
+                    <div class="flex items-center text-red-500 font-medium mt-auto">
+                        <span>詳細を見る</span>
+                        <i class="bx bx-right-arrow-alt ml-1"></i>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card p-8">
+                    <div class="service-icon bg-indigo-50">
+                        <i class="bx bx-water text-3xl text-indigo-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">水資源再生</h3>
+                    <p class="text-gray-600 mb-4">バイオミミクリー技術を応用した超低エネルギー水浄化システム。汚染水から99.9%の有害物質を除去します。</p>
+                    <div class="flex items-center text-indigo-500 font-medium mt-auto">
+                        <span>詳細を見る</span>
+                        <i class="bx bx-right-arrow-alt ml-1"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer note -->
+            <div class="mt-10 text-right">
+                <p class="text-sm text-gray-500">※すべてのサービスはカスタマイズ可能です</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoNova Solutions - ページ4</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .geometric-shape {
+            position: absolute;
+            z-index: 0;
+        }
+        
+        .shape-1 {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            background: rgba(249, 115, 22, 0.05);
+            top: -100px;
+            left: -100px;
+        }
+        
+        .shape-2 {
+            width: 200px;
+            height: 200px;
+            background: rgba(16, 185, 129, 0.05);
+            bottom: -50px;
+            right: 150px;
+            transform: rotate(45deg);
+        }
+        
+        .accent-line {
+            height: 4px;
+            width: 80px;
+            background-color: #10b981;
+            margin: 16px 0;
+        }
+        
+        .impact-card {
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0,0,0,0.05);
+            overflow: hidden;
+            height: 100%;
+        }
+        
+        .impact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+        }
+        
+        .impact-card-header {
+            padding: 20px;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .impact-card-body {
+            padding: 20px;
+        }
+        
+        .progress-bar {
+            height: 8px;
+            border-radius: 4px;
+            background-color: #e5e7eb;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .progress-bar-fill {
+            position: absolute;
+            height: 100%;
+            border-radius: 4px;
+            transition: width 1.5s ease;
+        }
+        
+        .graph-dots {
+            position: relative;
+            height: 200px;
+        }
+        
+        .graph-dot {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #10b981;
+            transition: all 0.5s ease;
+        }
+        
+        .connector {
+            position: absolute;
+            height: 2px;
+            background-color: rgba(16, 185, 129, 0.3);
+            transform-origin: left center;
+            transition: all 0.5s ease;
+        }
+        
+        .highlight-block {
+            border-left: 4px solid #10b981;
+            padding-left: 15px;
+        }
+        
+        .eco-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container flex flex-col p-16 relative">
+        <!-- Geometric shapes in background -->
+        <div class="geometric-shape shape-1"></div>
+        <div class="geometric-shape shape-2"></div>
+        
+        <!-- Content container -->
+        <div class="z-10 flex flex-col h-full">
+            <!-- Header section -->
+            <div class="mb-8">
+                <p class="uppercase tracking-widest text-gray-600 mb-2">測定可能なインパクト</p>
+                <h2 class="text-5xl font-bold mb-4">私たちの<span class="text-green-500">ソリューション効果</span></h2>
+                <div class="accent-line"></div>
+                <p class="text-lg text-gray-600 mt-4 max-w-2xl">
+                    導入企業が実現した具体的な環境・経済効果の実績データ
+                </p>
+            </div>
+            
+            <!-- Main content grid -->
+            <div class="grid grid-cols-12 gap-6 flex-1">
+                <!-- Impact metrics - Left column -->
+                <div class="col-span-7">
+                    <div class="grid grid-rows-3 gap-5 h-full">
+                        <!-- Metric 1 -->
+                        <div class="impact-card">
+                            <div class="impact-card-header flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <div class="eco-icon bg-green-50 mr-3">
+                                        <i class="bx bx-leaf text-2xl text-green-500"></i>
+                                    </div>
+                                    <h3 class="text-xl font-semibold">CO2排出削減</h3>
+                                </div>
+                                <span class="text-3xl font-bold text-green-500">-42<span class="text-xl">%</span></span>
+                            </div>
+                            <div class="impact-card-body">
+                                <div class="flex justify-between text-sm text-gray-500 mb-2">
+                                    <span>導入前</span>
+                                    <span>導入後</span>
+                                </div>
+                                <div class="progress-bar mb-2">
+                                    <div class="progress-bar-fill bg-green-500" style="width: 58%;"></div>
+                                </div>
+                                <p class="text-sm text-gray-600 mt-3">導入企業の平均値。バイオモニタリングとカーボンキャプチャー技術の併用により、従来比で大幅な削減を実現。</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Metric 2 -->
+                        <div class="impact-card">
+                            <div class="impact-card-header flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <div class="eco-icon bg-blue-50 mr-3">
+                                        <i class="bx bx-water text-2xl text-blue-500"></i>
+                                    </div>
+                                    <h3 class="text-xl font-semibold">水資源効率</h3>
+                                </div>
+                                <span class="text-3xl font-bold text-blue-500">+67<span class="text-xl">%</span></span>
+                            </div>
+                            <div class="impact-card-body">
+                                <div class="flex justify-between text-sm text-gray-500 mb-2">
+                                    <span>導入前</span>
+                                    <span>導入後</span>
+                                </div>
+                                <div class="progress-bar mb-2">
+                                    <div class="progress-bar-fill bg-blue-500" style="width: 67%;"></div>
+                                </div>
+                                <p class="text-sm text-gray-600 mt-3">水資源再生技術により、工場排水の67%を生産プロセスで再利用可能に。年間約2,400万リットルの水資源を節約。</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Metric 3 -->
+                        <div class="impact-card">
+                            <div class="impact-card-header flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <div class="eco-icon bg-purple-50 mr-3">
+                                        <i class="bx bx-line-chart text-2xl text-purple-500"></i>
+                                    </div>
+                                    <h3 class="text-xl font-semibold">資源循環率</h3>
+                                </div>
+                                <span class="text-3xl font-bold text-purple-500">+85<span class="text-xl">%</span></span>
+                            </div>
+                            <div class="impact-card-body">
+                                <div class="flex justify-between text-sm text-gray-500 mb-2">
+                                    <span>導入前</span>
+                                    <span>導入後</span>
+                                </div>
+                                <div class="progress-bar mb-2">
+                                    <div class="progress-bar-fill bg-purple-500" style="width: 85%;"></div>
+                                </div>
+                                <p class="text-sm text-gray-600 mt-3">サーキュラーエコノミーモデル導入により、廃棄物の85%を有価値資源として再活用。廃棄コストを年間平均34%削減。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right column - economic impact -->
+                <div class="col-span-5">
+                    <div class="impact-card h-full p-8">
+                        <h3 class="text-2xl font-semibold mb-6">経済的メリット</h3>
+                        
+                        <div class="graph-dots mb-8">
+                            <!-- Graph dots and connectors will be styled and positioned with JS -->
+                            <div class="graph-dot" style="top: 150px; left: 20px;"></div>
+                            <div class="connector" style="top: 155px; left: 25px; width: 75px; transform: rotate(-15deg);"></div>
+                            
+                            <div class="graph-dot" style="top: 130px; left: 100px;"></div>
+                            <div class="connector" style="top: 135px; left: 105px; width: 75px; transform: rotate(-20deg);"></div>
+                            
+                            <div class="graph-dot" style="top: 100px; left: 180px;"></div>
+                            <div class="connector" style="top: 105px; left: 185px; width: 75px; transform: rotate(-10deg);"></div>
+                            
+                            <div class="graph-dot" style="top: 85px; left: 260px;"></div>
+                            <div class="connector" style="top: 90px; left: 265px; width: 75px; transform: rotate(-30deg);"></div>
+                            
+                            <div class="graph-dot" style="top: 40px; left: 340px;"></div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between mb-8">
+                            <div class="text-center">
+                                <p class="text-gray-500 text-sm">初期投資回収期間</p>
+                                <p class="text-2xl font-bold">1.8<span class="text-lg font-normal">年</span></p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-gray-500 text-sm">5年間のROI</p>
+                                <p class="text-2xl font-bold">237<span class="text-lg font-normal">%</span></p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-gray-500 text-sm">コスト削減</p>
+                                <p class="text-2xl font-bold">32<span class="text-lg font-normal">%</span></p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-block mt-8 bg-gray-50 p-4 rounded">
+                            <h4 class="font-semibold text-lg mb-2">主な経済効果</h4>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="bx bx-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>エネルギーコスト削減: 年間平均24%</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="bx bx-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>廃棄物処理費用: 年間平均62%削減</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="bx bx-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>環境規制コンプライアンスコスト: 45%削減</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="bx bx-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>製品差別化によるプレミアム価格設定: +15%</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <p class="text-sm text-gray-500 mt-8 italic">※A社（製造業）、B社（小売業）、C社（飲食業）の平均値</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Animation for graph dots to show growth trend
+        document.addEventListener('DOMContentLoaded', function() {
+            const dots = document.querySelectorAll('.graph-dot');
+            const connectors = document.querySelectorAll('.connector');
+            
+            setTimeout(() => {
+                dots.forEach((dot, index) => {
+                    const initialTop = parseInt(dot.style.top);
+                    dot.style.top = `${initialTop + 50}px`;
+                    setTimeout(() => {
+                        dot.style.top = `${initialTop}px`;
+                    }, 100 * index);
+                });
+                
+                connectors.forEach((connector, index) => {
+                    setTimeout(() => {
+                        connector.style.opacity = '1';
+                    }, 300 + (100 * index));
+                });
+            }, 500);
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoNova Solutions - ページ5</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .geometric-shape {
+            position: absolute;
+            z-index: 0;
+        }
+        
+        .shape-1 {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            background: rgba(16, 185, 129, 0.08);
+            top: -100px;
+            right: -100px;
+        }
+        
+        .shape-2 {
+            width: 250px;
+            height: 250px;
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            background: rgba(139, 92, 246, 0.08);
+            bottom: -80px;
+            left: 100px;
+        }
+        
+        .accent-line {
+            height: 4px;
+            width: 80px;
+            background-color: #10b981;
+            margin: 16px 0;
+        }
+        
+        .case-study-card {
+            border-radius: 12px;
+            background: #ffffff;
+            border: 1px solid rgba(0,0,0,0.08);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .case-study-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+            border-color: rgba(16, 185, 129, 0.3);
+        }
+        
+        .case-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        
+        .testimonial-bubble {
+            position: relative;
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+        }
+        
+        .testimonial-bubble::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 30px;
+            width: 20px;
+            height: 20px;
+            background: #f8f9fa;
+            transform: rotate(45deg);
+        }
+        
+        .quote-mark {
+            position: absolute;
+            font-size: 60px;
+            opacity: 0.1;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+        
+        .quote-open {
+            top: 10px;
+            left: 10px;
+        }
+        
+        .quote-close {
+            bottom: 10px;
+            right: 10px;
+        }
+        
+        .timeline-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #10b981;
+            margin-right: 12px;
+            position: relative;
+        }
+        
+        .timeline-dot::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 12px;
+            width: 2px;
+            height: calc(100% - 12px);
+            background: rgba(16, 185, 129, 0.3);
+        }
+        
+        .timeline-item:last-child .timeline-dot::after {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container flex flex-col p-16 relative">
+        <!-- Geometric shapes in background -->
+        <div class="geometric-shape shape-1"></div>
+        <div class="geometric-shape shape-2"></div>
+        
+        <!-- Content container -->
+        <div class="z-10 flex flex-col h-full">
+            <!-- Header section -->
+            <div class="mb-8">
+                <p class="uppercase tracking-widest text-gray-600 mb-2">成功事例</p>
+                <h2 class="text-5xl font-bold mb-4">導入企業の<span class="text-green-500">変革</span></h2>
+                <div class="accent-line"></div>
+                <p class="text-lg text-gray-600 mt-4 max-w-2xl">
+                    EcoNovaのソリューション導入で実現した、環境と企業価値の両立
+                </p>
+            </div>
+            
+            <!-- Main content - case studies -->
+            <div class="grid grid-cols-2 gap-8 flex-1">
+                <!-- Left column - Featured case study -->
+                <div class="flex flex-col">
+                    <div class="case-study-card p-6 mb-6 flex-1">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="case-tag bg-green-50 text-green-600 mb-2">製造業</span>
+                                <h3 class="text-2xl font-semibold">大手電機メーカーA社</h3>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="bx bxs-star text-yellow-400"></i>
+                                <span class="text-lg font-semibold ml-1">注目事例</span>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-600 mb-4">
+                            半導体製造過程での水資源利用と廃棄物問題に直面していたA社は、EcoNovaの水資源再生システムとサーキュラーエコノミーモデルを統合導入。
+                        </p>
+                        
+                        <div class="bg-gray-50 p-4 rounded-lg mb-4">
+                            <h4 class="font-semibold mb-2 text-gray-800">課題と解決策</h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <i class="bx bx-x text-red-500 mt-1 mr-2 text-lg"></i>
+                                    <span class="text-gray-600 text-sm">製造工程で1日あたり12,000リットルの超純水を使用し、85%が廃水に</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="bx bx-x text-red-500 mt-1 mr-2 text-lg"></i>
+                                    <span class="text-gray-600 text-sm">廃水処理コストが年間6,500万円、環境規制強化で増加傾向</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="bx bx-check text-green-500 mt-1 mr-2 text-lg"></i>
+                                    <span class="text-gray-600 text-sm">バイオミミクリー水浄化技術で廃水の78%を再利用可能に転換</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="bx bx-check text-green-500 mt-1 mr-2 text-lg"></i>
+                                    <span class="text-gray-600 text-sm">AIによる水質モニタリングで純水品質を維持しながら循環利用を実現</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="flex justify-between items-center mt-auto">
+                            <div>
+                                <span class="text-gray-500 text-sm">導入期間</span>
+                                <p class="font-semibold">4ヶ月</p>
+                            </div>
+                            <div>
+                                <span class="text-gray-500 text-sm">投資回収期間</span>
+                                <p class="font-semibold">1.6年</p>
+                            </div>
+                            <div>
+                                <span class="text-gray-500 text-sm">水コスト削減</span>
+                                <p class="font-semibold text-green-500">-72%</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial -->
+                    <div class="testimonial-bubble relative">
+                        <span class="quote-mark quote-open">"</span>
+                        <p class="text-gray-700 italic px-6 py-2 text-lg">
+                            環境対応は単なるコストではなく、競争力の源泉になりました。EcoNovaのソリューションは技術的な問題解決だけでなく、社内の環境意識改革にも貢献しています。
+                        </p>
+                        <span class="quote-mark quote-close">"</span>
+                        <div class="flex items-center mt-6 ml-6">
+                            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
+                                <i class="bx bxs-user text-blue-500"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="font-semibold">佐藤 雄一</p>
+                                <p class="text-sm text-gray-500">A社 環境戦略部長</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right column - Multiple case studies -->
+                <div class="flex flex-col">
+                    <!-- Mini case studies -->
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <!-- Case 1 -->
+                        <div class="case-study-card p-4">
+                            <span class="case-tag bg-blue-50 text-blue-600 mb-2">小売業</span>
+                            <h3 class="text-lg font-semibold mb-2">B社（コンビニチェーン）</h3>
+                            <p class="text-sm text-gray-600 mb-3">
+                                全国5,000店舗でのカーボンニュートラル達成への道筋を構築
+                            </p>
+                            <div class="flex justify-between mt-auto">
+                                <span class="text-sm font-medium">CO2削減</span>
+                                <span class="text-green-500 font-semibold">-38%</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Case 2 -->
+                        <div class="case-study-card p-4">
+                            <span class="case-tag bg-purple-50 text-purple-600 mb-2">食品業</span>
+                            <h3 class="text-lg font-semibold mb-2">C社（食品メーカー）</h3>
+                            <p class="text-sm text-gray-600 mb-3">
+                                食品廃棄物の90%を肥料・エネルギーに転換する循環モデルを構築
+                            </p>
+                            <div class="flex justify-between mt-auto">
+                                <span class="text-sm font-medium">廃棄コスト</span>
+                                <span class="text-green-500 font-semibold">-64%</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Case 3 -->
+                        <div class="case-study-card p-4">
+                            <span class="case-tag bg-orange-50 text-orange-600 mb-2">物流業</span>
+                            <h3 class="text-lg font-semibold mb-2">D社（物流企業）</h3>
+                            <p class="text-sm text-gray-600 mb-3">
+                                次世代エネルギーシステムで物流センター20拠点のエネルギー自給率向上
+                            </p>
+                            <div class="flex justify-between mt-auto">
+                                <span class="text-sm font-medium">エネルギーコスト</span>
+                                <span class="text-green-500 font-semibold">-45%</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Case 4 -->
+                        <div class="case-study-card p-4">
+                            <span class="case-tag bg-red-50 text-red-600 mb-2">建設業</span>
+                            <h3 class="text-lg font-semibold mb-2">E社（大手ゼネコン）</h3>
+                            <p class="text-sm text-gray-600 mb-3">
+                                建設廃材のリサイクル率99%を実現する革新的分別・再資源化システム
+                            </p>
+                            <div class="flex justify-between mt-auto">
+                                <span class="text-sm font-medium">材料コスト</span>
+                                <span class="text-green-500 font-semibold">-27%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Implementation timeline -->
+                    <div class="case-study-card p-6 flex-1">
+                        <h3 class="text-xl font-semibold mb-4">導入プロセス</h3>
+                        <div class="space-y-6">
+                            <!-- Step 1 -->
+                            <div class="flex timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div>
+                                    <h4 class="font-semibold">初期環境診断</h4>
+                                    <p class="text-sm text-gray-600">現状分析とボトルネック特定、KPI設定（2〜3週間）</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Step 2 -->
+                            <div class="flex timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div>
+                                    <h4 class="font-semibold">カスタムソリューション設計</h4>
+                                    <p class="text-sm text-gray-600">企業特性に合わせた最適システム構築（3〜4週間）</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Step 3 -->
+                            <div class="flex timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div>
+                                    <h4 class="font-semibold">段階的導入</h4>
+                                    <p class="text-sm text-gray-600">パイロット運用からの全面展開（2〜3ヶ月）</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Step 4 -->
+                            <div class="flex timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div>
+                                    <h4 class="font-semibold">継続的最適化</h4>
+                                    <p class="text-sm text-gray-600">データ分析による定期的なシステム改善（継続的）</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom section - Key achievements -->
+            <div class="mt-8 bg-gray-50 p-4 rounded-lg">
+                <div class="flex justify-between">
+                    <div class="text-center">
+                        <p class="text-4xl font-bold text-green-500">68</p>
+                        <p class="text-sm text-gray-600">導入企業数</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-4xl font-bold text-green-500">47<span class="text-2xl">万t</span></p>
+                        <p class="text-sm text-gray-600">年間CO2削減量</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-4xl font-bold text-green-500">98<span class="text-2xl">%</span></p>
+                        <p class="text-sm text-gray-600">顧客満足度</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-4xl font-bold text-green-500">4<span class="text-2xl">件</span></p>
+                        <p class="text-sm text-gray-600">環境技術特許</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoNova Solutions - ページ6</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .geometric-shape {
+            position: absolute;
+            z-index: 0;
+        }
+        
+        .shape-1 {
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+            top: -200px;
+            right: -200px;
+        }
+        
+        .shape-2 {
+            width: 300px;
+            height: 300px;
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            background: rgba(249, 115, 22, 0.08);
+            bottom: -100px;
+            left: -100px;
+        }
+        
+        .accent-line {
+            height: 4px;
+            width: 80px;
+            background-color: #10b981;
+            margin: 16px 0;
+        }
+        
+        .contact-card {
+            border-radius: 12px;
+            background: #ffffff;
+            border: 1px solid rgba(0,0,0,0.05);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+            border-color: rgba(16, 185, 129, 0.3);
+        }
+        
+        .benefit-item {
+            position: relative;
+            padding-left: 24px;
+        }
+        
+        .benefit-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #10b981;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            background: #f3f4f6;
+        }
+        
+        .social-icon:hover {
+            background: #10b981;
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .dot-pattern {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            opacity: 0.15;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container flex flex-col p-16 relative">
+        <!-- Geometric shapes in background -->
+        <div class="geometric-shape shape-1"></div>
+        <div class="geometric-shape shape-2"></div>
+        
+        <!-- Dot pattern -->
+        <div class="dot-pattern top-40 right-40">
+            <svg width="200" height="200" viewBox="0 0 100 100">
+                <pattern id="dot-pattern" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+                    <circle cx="2" cy="2" r="1" fill="#10b981" />
+                </pattern>
+                <rect x="0" y="0" width="100" height="100" fill="url(#dot-pattern)" />
+            </svg>
+        </div>
+        
+        <!-- Content container -->
+        <div class="z-10 flex flex-col h-full">
+            <!-- Header section -->
+            <div class="mb-6 text-center">
+                <p class="uppercase tracking-widest text-gray-600 mb-2">次のステップへ</p>
+                <h2 class="text-5xl font-bold mb-4">環境革新の<span class="text-green-500">パートナー</span>に</h2>
+                <div class="accent-line mx-auto"></div>
+                <p class="text-lg text-gray-600 mt-4 max-w-3xl mx-auto">
+                    持続可能な未来のための第一歩を、EcoNova Solutionsと共に踏み出しましょう
+                </p>
+            </div>
+            
+            <!-- Main content - Two columns -->
+            <div class="grid grid-cols-12 gap-8 flex-1 mt-6">
+                <!-- Left column - Benefits recap -->
+                <div class="col-span-7">
+                    <h3 class="text-2xl font-semibold mb-6">持続可能性と<span class="text-green-500">事業成長</span>の両立</h3>
+                    
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="benefit-item">
+                            <h4 class="text-lg font-semibold mb-1">環境負荷削減</h4>
+                            <p class="text-gray-600 text-sm">最先端技術による環境フットプリントの大幅削減</p>
+                        </div>
+                        <div class="benefit-item">
+                            <h4 class="text-lg font-semibold mb-1">コスト最適化</h4>
+                            <p class="text-gray-600 text-sm">資源・エネルギー効率化による運用コスト削減</p>
+                        </div>
+                        <div class="benefit-item">
+                            <h4 class="text-lg font-semibold mb-1">企業価値向上</h4>
+                            <p class="text-gray-600 text-sm">ESG評価と企業ブランド価値の向上</p>
+                        </div>
+                        <div class="benefit-item">
+                            <h4 class="text-lg font-semibold mb-1">規制対応</h4>
+                            <p class="text-gray-600 text-sm">将来の環境規制強化に先行した対応</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h3 class="text-2xl font-semibold mb-4">導入までの流れ</h3>
+                        <div class="flex items-center space-x-8 mt-6">
+                            <div class="text-center">
+                                <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-2">
+                                    <i class="bx bx-conversation text-2xl text-green-500"></i>
+                                </div>
+                                <p class="text-sm font-medium">無料相談</p>
+                            </div>
+                            <div class="flex-grow h-px bg-gray-200"></div>
+                            <div class="text-center">
+                                <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-2">
+                                    <i class="bx bx-analyse text-2xl text-green-500"></i>
+                                </div>
+                                <p class="text-sm font-medium">環境診断</p>
+                            </div>
+                            <div class="flex-grow h-px bg-gray-200"></div>
+                            <div class="text-center">
+                                <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-2">
+                                    <i class="bx bx-detail text-2xl text-green-500"></i>
+                                </div>
+                                <p class="text-sm font-medium">提案・設計</p>
+                            </div>
+                            <div class="flex-grow h-px bg-gray-200"></div>
+                            <div class="text-center">
+                                <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-2">
+                                    <i class="bx bx-rocket text-2xl text-green-500"></i>
+                                </div>
+                                <p class="text-sm font-medium">導入支援</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right column - Contact information -->
+                <div class="col-span-5">
+                    <div class="contact-card p-8 h-full flex flex-col">
+                        <h3 class="text-2xl font-semibold mb-6">お問い合わせ</h3>
+                        
+                        <p class="text-gray-600 mb-6">
+                            貴社の環境目標達成に向けたソリューションについて、お気軽にご相談ください。
+                        </p>
+                        
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                                    <i class="bx bx-envelope text-xl text-green-500"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500 mb-1">メールアドレス</p>
+                                    <p class="font-medium">contact@econova-solutions.jp</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                                    <i class="bx bx-phone text-xl text-green-500"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500 mb-1">お電話</p>
+                                    <p class="font-medium">03-1234-5678</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                                    <i class="bx bx-map text-xl text-green-500"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500 mb-1">本社所在地</p>
+                                    <p class="font-medium">東京都千代田区丸の内1-1-1<br>エコイノベーションタワー15階</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="#" class="cta-button text-white font-medium py-4 px-6 rounded-lg text-center flex items-center justify-center mb-8">
+                            <i class="bx bx-calendar-check mr-2 text-xl"></i>
+                            無料相談のご予約
+                        </a>
+                        
+                        <div class="mt-auto">
+                            <p class="text-sm text-gray-500 mb-3">ソーシャルメディアでもご連絡いただけます</p>
+                            <div class="flex space-x-3">
+                                <a href="#" class="social-icon">
+                                    <i class="bx bxl-twitter text-gray-600 text-xl"></i>
+                                </a>
+                                <a href="#" class="social-icon">
+                                    <i class="bx bxl-linkedin text-gray-600 text-xl"></i>
+                                </a>
+                                <a href="#" class="social-icon">
+                                    <i class="bx bxl-facebook text-gray-600 text-xl"></i>
+                                </a>
+                                <a href="#" class="social-icon">
+                                    <i class="bx bxl-instagram text-gray-600 text-xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer section -->
+            <div class="mt-10 flex justify-between items-center">
+                <div>
+                    <h4 class="text-3xl font-bold">
+                        <span class="text-black">Eco</span><span class="text-green-500">Nova</span>
+                    </h4>
+                    <p class="text-sm text-gray-500">持続可能な未来のために、今行動を</p>
+                </div>
+                
+                <div class="flex items-center">
+                    <div class="mr-6">
+                        <div class="flex space-x-2">
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-purple-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-orange-500"></div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-500">© 2023 EcoNova Solutions. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

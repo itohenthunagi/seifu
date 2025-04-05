@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOYOTAの中古車商談資料</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .toyota-red {
+            color: #EB0A1E;
+        }
+        .bg-toyota-red {
+            background-color: #EB0A1E;
+        }
+        .toyota-gradient {
+            background: linear-gradient(135deg, #ffffff 0%, #f2f2f2 100%);
+        }
+        .info-table tr td:first-child {
+            width: 35%;
+            font-weight: 600;
+        }
+        .info-table tr td {
+            padding: 10px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .info-table tr:last-child td {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="slide-container toyota-gradient flex flex-col">
+        <!-- Header -->
+        <header class="px-10 pt-8 pb-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-12 h-12 bg-toyota-red rounded-full flex items-center justify-center mr-4">
+                    <svg class="w-8 h-8" viewBox="0 0 512 512" fill="#fff">
+                        <path d="M256,56c110.4,0,200,89.6,200,200s-89.6,200-200,200S56,366.4,56,256S145.6,56,256,56 M256,16C123.5,16,16,123.5,16,256 s107.5,240,240,240s240-107.5,240-240S388.5,16,256,16L256,16z"/>
+                        <path d="M315,191c-1.4-25.1-10.4-56-60-56c-49.6,0-57.5,30.9-59,56H315z M196,231c1.4,29.1,10.4,56,60,56 c49.6,0,58.6-26.9,60-56H196z M376,231v-40c0-10-2-40-23-65.5C333,101,303,95,255,95s-78,6-98,30.5c-21,25.5-23,55.5-23,65.5v40 v40c0,10,2,40,23,65.5c20,24.5,50,30.5,98,30.5s78-6,98-30.5c21-25.5,23-55.5,23-65.5V231z"/>
+                    </svg>
+                </div>
+                <h1 class="text-3xl font-bold">TOYOTAの中古車商談資料</h1>
+            </div>
+            <div class="text-right">
+                <p class="text-gray-500">高品質・高信頼性の中古車</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow flex p-8">
+            <!-- Car Image Left Side -->
+            <div class="w-1/2 flex items-center justify-center">
+                <img src="https://i.ytimg.com/vi/mgnNH4mci2M/sddefault.jpg" alt="Toyota Corolla" class="max-w-full max-h-96 rounded-lg shadow-lg">
+            </div>
+
+            <!-- Information Right Side -->
+            <div class="w-1/2 pl-10 flex flex-col justify-center">
+                <h2 class="text-2xl font-bold mb-6 toyota-red">カローラ <span class="text-gray-700">- 高品質・高性能なセダン</span></h2>
+                
+                <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                    <table class="info-table w-full">
+                        <tr>
+                            <td>モデル</td>
+                            <td>カローラ LE</td>
+                        </tr>
+                        <tr>
+                            <td>年式</td>
+                            <td>2022年</td>
+                        </tr>
+                        <tr>
+                            <td>走行距離</td>
+                            <td>23,500km</td>
+                        </tr>
+                        <tr>
+                            <td>車両価格</td>
+                            <td>¥1,850,000</td>
+                        </tr>
+                        <tr>
+                            <td>外装グレード</td>
+                            <td>★★★★☆</td>
+                        </tr>
+                        <tr>
+                            <td>内装グレード</td>
+                            <td>★★★★★</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <p class="text-gray-700 mb-6">
+                    トヨタの優れた技術と高い品質管理のもとで生産されたカローラは、燃費性能と走行安定性を両立させた実用的なセダンです。定期的なメンテナンスが行われており、安心してお乗りいただけます。
+                </p>
+
+                <div class="flex space-x-4">
+                    <div class="bg-toyota-red text-white px-6 py-2 rounded-md shadow-sm font-bold">詳細情報</div>
+                    <div class="border border-gray-300 bg-white px-6 py-2 rounded-md shadow-sm font-bold">試乗予約</div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="p-4 flex justify-between items-center border-t border-gray-200">
+            <div>
+                <p class="text-sm text-gray-500">© TOYOTA認定中古車</p>
+            </div>
+            <div class="flex items-center">
+                <span class="bg-toyota-red text-white rounded-full w-8 h-8 flex items-center justify-center">1</span>
+                <span class="ml-2 text-gray-500">/6</span>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOYOTAの中古車商談資料</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .toyota-red {
+            color: #EB0A1E;
+        }
+        .bg-toyota-red {
+            background-color: #EB0A1E;
+        }
+        .toyota-gradient {
+            background: linear-gradient(135deg, #ffffff 0%, #f2f2f2 100%);
+        }
+        .info-table tr td:first-child {
+            width: 35%;
+            font-weight: 600;
+        }
+        .info-table tr td {
+            padding: 10px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .info-table tr:last-child td {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="slide-container toyota-gradient flex flex-col">
+        <!-- Header -->
+        <header class="px-10 pt-8 pb-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-12 h-12 bg-toyota-red rounded-full flex items-center justify-center mr-4">
+                    <svg class="w-8 h-8" viewBox="0 0 512 512" fill="#fff">
+                        <path d="M256,56c110.4,0,200,89.6,200,200s-89.6,200-200,200S56,366.4,56,256S145.6,56,256,56 M256,16C123.5,16,16,123.5,16,256 s107.5,240,240,240s240-107.5,240-240S388.5,16,256,16L256,16z"/>
+                        <path d="M315,191c-1.4-25.1-10.4-56-60-56c-49.6,0-57.5,30.9-59,56H315z M196,231c1.4,29.1,10.4,56,60,56 c49.6,0,58.6-26.9,60-56H196z M376,231v-40c0-10-2-40-23-65.5C333,101,303,95,255,95s-78,6-98,30.5c-21,25.5-23,55.5-23,65.5v40 v40c0,10,2,40,23,65.5c20,24.5,50,30.5,98,30.5s78-6,98-30.5c21-25.5,23-55.5,23-65.5V231z"/>
+                    </svg>
+                </div>
+                <h1 class="text-3xl font-bold">TOYOTAの中古車商談資料</h1>
+            </div>
+            <div class="text-right">
+                <p class="text-gray-500">高品質・高信頼性の中古車</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow flex p-8">
+            <!-- Car Image Left Side -->
+            <div class="w-1/2 flex items-center justify-center">
+                <img src="https://www.kbb.com/wp-content/uploads/2023/11/2025-toyota-camry-xse-driving-front-3qtr.jpg" alt="Toyota Camry" class="max-w-full max-h-96 rounded-lg shadow-lg">
+            </div>
+
+            <!-- Information Right Side -->
+            <div class="w-1/2 pl-10 flex flex-col justify-center">
+                <h2 class="text-2xl font-bold mb-6 toyota-red">カムリ <span class="text-gray-700">- 高級感あふれるミドルセダン</span></h2>
+                
+                <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                    <table class="info-table w-full">
+                        <tr>
+                            <td>モデル</td>
+                            <td>カムリ G "レザーパッケージ"</td>
+                        </tr>
+                        <tr>
+                            <td>年式</td>
+                            <td>2021年</td>
+                        </tr>
+                        <tr>
+                            <td>走行距離</td>
+                            <td>31,200km</td>
+                        </tr>
+                        <tr>
+                            <td>車両価格</td>
+                            <td>¥2,680,000</td>
+                        </tr>
+                        <tr>
+                            <td>外装グレード</td>
+                            <td>★★★★☆</td>
+                        </tr>
+                        <tr>
+                            <td>内装グレード</td>
+                            <td>★★★★★</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <p class="text-gray-700 mb-6">
+                    カムリは高級感とスポーティさを両立した人気のミドルセダンです。ハイブリッド機構により優れた燃費性能を発揮しながら、力強い加速と静粛性の高い走りを実現しています。本革シートやパノラマルーフなど充実した装備が魅力です。
+                </p>
+
+                <div class="flex space-x-4">
+                    <div class="bg-toyota-red text-white px-6 py-2 rounded-md shadow-sm font-bold">詳細情報</div>
+                    <div class="border border-gray-300 bg-white px-6 py-2 rounded-md shadow-sm font-bold">試乗予約</div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="p-4 flex justify-between items-center border-t border-gray-200">
+            <div>
+                <p class="text-sm text-gray-500">© TOYOTA認定中古車</p>
+            </div>
+            <div class="flex items-center">
+                <span class="bg-toyota-red text-white rounded-full w-8 h-8 flex items-center justify-center">2</span>
+                <span class="ml-2 text-gray-500">/6</span>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOYOTAの中古車商談資料</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .toyota-red {
+            color: #EB0A1E;
+        }
+        .bg-toyota-red {
+            background-color: #EB0A1E;
+        }
+        .toyota-gradient {
+            background: linear-gradient(135deg, #ffffff 0%, #f2f2f2 100%);
+        }
+        .info-table tr td:first-child {
+            width: 35%;
+            font-weight: 600;
+        }
+        .info-table tr td {
+            padding: 10px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .info-table tr:last-child td {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="slide-container toyota-gradient flex flex-col">
+        <!-- Header -->
+        <header class="px-10 pt-8 pb-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-12 h-12 bg-toyota-red rounded-full flex items-center justify-center mr-4">
+                    <svg class="w-8 h-8" viewBox="0 0 512 512" fill="#fff">
+                        <path d="M256,56c110.4,0,200,89.6,200,200s-89.6,200-200,200S56,366.4,56,256S145.6,56,256,56 M256,16C123.5,16,16,123.5,16,256 s107.5,240,240,240s240-107.5,240-240S388.5,16,256,16L256,16z"/>
+                        <path d="M315,191c-1.4-25.1-10.4-56-60-56c-49.6,0-57.5,30.9-59,56H315z M196,231c1.4,29.1,10.4,56,60,56 c49.6,0,58.6-26.9,60-56H196z M376,231v-40c0-10-2-40-23-65.5C333,101,303,95,255,95s-78,6-98,30.5c-21,25.5-23,55.5-23,65.5v40 v40c0,10,2,40,23,65.5c20,24.5,50,30.5,98,30.5s78-6,98-30.5c21-25.5,23-55.5,23-65.5V231z"/>
+                    </svg>
+                </div>
+                <h1 class="text-3xl font-bold">TOYOTAの中古車商談資料</h1>
+            </div>
+            <div class="text-right">
+                <p class="text-gray-500">高品質・高信頼性の中古車</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow flex p-8">
+            <!-- Car Image Left Side -->
+            <div class="w-1/2 flex items-center justify-center">
+                <img src="https://cdn.jdpower.com/JDPA_2021%20Toyota%20RAV4%20Prime%20Red%20Front%20Quarter%20View.jpg" alt="Toyota RAV4" class="max-w-full max-h-96 rounded-lg shadow-lg">
+            </div>
+
+            <!-- Information Right Side -->
+            <div class="w-1/2 pl-10 flex flex-col justify-center">
+                <h2 class="text-2xl font-bold mb-6 toyota-red">RAV4 <span class="text-gray-700">- 万能性を備えたSUV</span></h2>
+                
+                <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                    <table class="info-table w-full">
+                        <tr>
+                            <td>モデル</td>
+                            <td>RAV4 Adventure</td>
+                        </tr>
+                        <tr>
+                            <td>年式</td>
+                            <td>2021年</td>
+                        </tr>
+                        <tr>
+                            <td>走行距離</td>
+                            <td>28,500km</td>
+                        </tr>
+                        <tr>
+                            <td>車両価格</td>
+                            <td>¥3,250,000</td>
+                        </tr>
+                        <tr>
+                            <td>外装グレード</td>
+                            <td>★★★★★</td>
+                        </tr>
+                        <tr>
+                            <td>内装グレード</td>
+                            <td>★★★★☆</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <p class="text-gray-700 mb-6">
+                    RAV4はあらゆる道路状況に対応するオフロード性能と街中での扱いやすさを両立したSUVです。広々とした室内空間と大容量のラゲッジスペースで、アウトドアやレジャーにも最適。強力な四駆システムでどんな天候でも安心してドライブできます。
+                </p>
+
+                <div class="flex space-x-4">
+                    <div class="bg-toyota-red text-white px-6 py-2 rounded-md shadow-sm font-bold">詳細情報</div>
+                    <div class="border border-gray-300 bg-white px-6 py-2 rounded-md shadow-sm font-bold">試乗予約</div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="p-4 flex justify-between items-center border-t border-gray-200">
+            <div>
+                <p class="text-sm text-gray-500">© TOYOTA認定中古車</p>
+            </div>
+            <div class="flex items-center">
+                <span class="bg-toyota-red text-white rounded-full w-8 h-8 flex items-center justify-center">3</span>
+                <span class="ml-2 text-gray-500">/6</span>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOYOTAの中古車商談資料</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            overflow: hidden;
+            background: linear-gradient(135deg, #ffffff 0%, #f2f2f2 100%);
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+        .toyota-red {
+            color: #EB0A1E;
+        }
+        .bg-toyota-red {
+            background-color: #EB0A1E;
+        }
+        .info-table tr td:first-child {
+            width: 35%;
+            font-weight: 600;
+        }
+        .info-table tr td {
+            padding: 10px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .info-table tr:last-child td {
+            border-bottom: none;
+        }
+        .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- Header -->
+        <header class="px-10 pt-8 pb-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-12 h-12 bg-toyota-red rounded-full flex items-center justify-center mr-4">
+                    <svg class="w-8 h-8" viewBox="0 0 512 512" fill="#fff">
+                        <path d="M256,56c110.4,0,200,89.6,200,200s-89.6,200-200,200S56,366.4,56,256S145.6,56,256,56 M256,16C123.5,16,16,123.5,16,256 s107.5,240,240,240s240-107.5,240-240S388.5,16,256,16L256,16z"/>
+                        <path d="M315,191c-1.4-25.1-10.4-56-60-56c-49.6,0-57.5,30.9-59,56H315z M196,231c1.4,29.1,10.4,56,60,56 c49.6,0,58.6-26.9,60-56H196z M376,231v-40c0-10-2-40-23-65.5C333,101,303,95,255,95s-78,6-98,30.5c-21,25.5-23,55.5-23,65.5v40 v40c0,10,2,40,23,65.5c20,24.5,50,30.5,98,30.5s78-6,98-30.5c21-25.5,23-55.5,23-65.5V231z"/>
+                    </svg>
+                </div>
+                <h1 class="text-3xl font-bold">TOYOTAの中古車商談資料</h1>
+            </div>
+            <div class="text-right">
+                <p class="text-gray-500">高品質・高信頼性の中古車</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow flex p-8">
+            <!-- Car Image Left Side -->
+            <div class="w-1/2 flex items-center justify-center">
+                <img src="https://www.carpro.com/hs-fs/hubfs/2022-toyota-prius-nightshade-exterior2-carprousa..png?width=1020&name=2022-toyota-prius-nightshade-exterior2-carprousa..png" alt="Toyota Prius" class="max-w-full max-h-96 rounded-lg shadow-lg">
+            </div>
+
+            <!-- Information Right Side -->
+            <div class="w-1/2 pl-10 flex flex-col justify-center">
+                <h2 class="text-2xl font-bold mb-6 toyota-red">プリウス <span class="text-gray-700">- 環境性能に優れたハイブリッド</span></h2>
+                
+                <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                    <table class="info-table w-full">
+                        <tr>
+                            <td>モデル</td>
+                            <td>プリウス Sツーリングセレクション</td>
+                        </tr>
+                        <tr>
+                            <td>年式</td>
+                            <td>2022年</td>
+                        </tr>
+                        <tr>
+                            <td>走行距離</td>
+                            <td>19,800km</td>
+                        </tr>
+                        <tr>
+                            <td>車両価格</td>
+                            <td>¥2,450,000</td>
+                        </tr>
+                        <tr>
+                            <td>外装グレード</td>
+                            <td>★★★★★</td>
+                        </tr>
+                        <tr>
+                            <td>内装グレード</td>
+                            <td>★★★★☆</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="mb-4">
+                    <span class="tag bg-green-100 text-green-800">低燃費</span>
+                    <span class="tag bg-blue-100 text-blue-800">ハイブリッド</span>
+                    <span class="tag bg-purple-100 text-purple-800">トヨタセーフティセンス</span>
+                    <span class="tag bg-yellow-100 text-yellow-800">禁煙車</span>
+                </div>
+
+                <p class="text-gray-700 mb-6">
+                    環境性能と走行性能を高次元で両立したハイブリッドのパイオニア。優れた燃費性能と低排出ガスを実現しながら、スムーズで静かな走りが特徴です。最新の安全装備と快適装備を搭載し、日常ドライブでの使い勝手も抜群です。
+                </p>
+
+                <div class="flex space-x-4">
+                    <div class="bg-toyota-red text-white px-6 py-2 rounded-md shadow-sm font-bold">詳細情報</div>
+                    <div class="border border-gray-300 bg-white px-6 py-2 rounded-md shadow-sm font-bold">試乗予約</div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="p-4 flex justify-between items-center border-t border-gray-200">
+            <div>
+                <p class="text-sm text-gray-500">© TOYOTA認定中古車</p>
+            </div>
+            <div class="flex items-center">
+                <span class="bg-toyota-red text-white rounded-full w-8 h-8 flex items-center justify-center">4</span>
+                <span class="ml-2 text-gray-500">/6</span>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOYOTAの中古車商談資料</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            overflow: hidden;
+            background: linear-gradient(135deg, #ffffff 0%, #f2f2f2 100%);
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+        .toyota-red {
+            color: #EB0A1E;
+        }
+        .bg-toyota-red {
+            background-color: #EB0A1E;
+        }
+        .info-table tr td:first-child {
+            width: 35%;
+            font-weight: 600;
+        }
+        .info-table tr td {
+            padding: 10px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .info-table tr:last-child td {
+            border-bottom: none;
+        }
+        .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+        .highlight-box {
+            border-left: 4px solid #EB0A1E;
+            background-color: #fff9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- Header -->
+        <header class="px-10 pt-8 pb-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-12 h-12 bg-toyota-red rounded-full flex items-center justify-center mr-4">
+                    <svg class="w-8 h-8" viewBox="0 0 512 512" fill="#fff">
+                        <path d="M256,56c110.4,0,200,89.6,200,200s-89.6,200-200,200S56,366.4,56,256S145.6,56,256,56 M256,16C123.5,16,16,123.5,16,256 s107.5,240,240,240s240-107.5,240-240S388.5,16,256,16L256,16z"/>
+                        <path d="M315,191c-1.4-25.1-10.4-56-60-56c-49.6,0-57.5,30.9-59,56H315z M196,231c1.4,29.1,10.4,56,60,56 c49.6,0,58.6-26.9,60-56H196z M376,231v-40c0-10-2-40-23-65.5C333,101,303,95,255,95s-78,6-98,30.5c-21,25.5-23,55.5-23,65.5v40 v40c0,10,2,40,23,65.5c20,24.5,50,30.5,98,30.5s78-6,98-30.5c21-25.5,23-55.5,23-65.5V231z"/>
+                    </svg>
+                </div>
+                <h1 class="text-3xl font-bold">TOYOTAの中古車商談資料</h1>
+            </div>
+            <div class="text-right">
+                <p class="text-gray-500">高品質・高信頼性の中古車</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow flex p-8">
+            <!-- Car Image Left Side -->
+            <div class="w-1/2 flex items-center justify-center">
+                <img src="https://i.ytimg.com/vi/8bUeMqz78HU/maxresdefault.jpg" alt="Toyota Land Cruiser" class="max-w-full max-h-96 rounded-lg shadow-lg">
+            </div>
+
+            <!-- Information Right Side -->
+            <div class="w-1/2 pl-10 flex flex-col justify-center">
+                <h2 class="text-2xl font-bold mb-6 toyota-red">ランドクルーザー <span class="text-gray-700">- 究極のオフローダー</span></h2>
+                
+                <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                    <table class="info-table w-full">
+                        <tr>
+                            <td>モデル</td>
+                            <td>ランドクルーザー ZX</td>
+                        </tr>
+                        <tr>
+                            <td>年式</td>
+                            <td>2020年</td>
+                        </tr>
+                        <tr>
+                            <td>走行距離</td>
+                            <td>42,500km</td>
+                        </tr>
+                        <tr>
+                            <td>車両価格</td>
+                            <td>¥6,780,000</td>
+                        </tr>
+                        <tr>
+                            <td>外装グレード</td>
+                            <td>★★★★☆</td>
+                        </tr>
+                        <tr>
+                            <td>内装グレード</td>
+                            <td>★★★★★</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="mb-4">
+                    <span class="tag bg-gray-100 text-gray-800">4WD</span>
+                    <span class="tag bg-blue-100 text-blue-800">ディーゼルターボ</span>
+                    <span class="tag bg-red-100 text-red-800">7人乗り</span>
+                    <span class="tag bg-green-100 text-green-800">サンルーフ</span>
+                </div>
+
+                <div class="highlight-box p-4 mb-5">
+                    <p class="text-gray-700">
+                        世界中の過酷な環境で活躍するトヨタの最高級SUV。優れたオフロード性能と洗練された乗り心地を両立し、どんな道でも余裕の走破性を発揮します。高級感あふれる内装と最新の安全装備・快適装備を搭載した一台です。
+                    </p>
+                </div>
+
+                <div class="flex space-x-4">
+                    <div class="bg-toyota-red text-white px-6 py-2 rounded-md shadow-sm font-bold">詳細情報</div>
+                    <div class="border border-gray-300 bg-white px-6 py-2 rounded-md shadow-sm font-bold">試乗予約</div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="p-4 flex justify-between items-center border-t border-gray-200">
+            <div>
+                <p class="text-sm text-gray-500">© TOYOTA認定中古車</p>
+            </div>
+            <div class="flex items-center">
+                <span class="bg-toyota-red text-white rounded-full w-8 h-8 flex items-center justify-center">5</span>
+                <span class="ml-2 text-gray-500">/6</span>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOYOTAの中古車商談資料</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            overflow: hidden;
+            background: linear-gradient(135deg, #ffffff 0%, #f2f2f2 100%);
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+        .toyota-red {
+            color: #EB0A1E;
+        }
+        .bg-toyota-red {
+            background-color: #EB0A1E;
+        }
+        .info-table tr td:first-child {
+            width: 35%;
+            font-weight: 600;
+        }
+        .info-table tr td {
+            padding: 10px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .info-table tr:last-child td {
+            border-bottom: none;
+        }
+        .feature-item {
+            position: relative;
+            padding-left: 30px;
+        }
+        .feature-item:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 18px;
+            height: 18px;
+            background-color: #EB0A1E;
+            border-radius: 50%;
+        }
+        .feature-item:after {
+            content: '✓';
+            position: absolute;
+            left: 4px;
+            top: 1px;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- Header -->
+        <header class="px-10 pt-8 pb-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-12 h-12 bg-toyota-red rounded-full flex items-center justify-center mr-4">
+                    <svg class="w-8 h-8" viewBox="0 0 512 512" fill="#fff">
+                        <path d="M256,56c110.4,0,200,89.6,200,200s-89.6,200-200,200S56,366.4,56,256S145.6,56,256,56 M256,16C123.5,16,16,123.5,16,256 s107.5,240,240,240s240-107.5,240-240S388.5,16,256,16L256,16z"/>
+                        <path d="M315,191c-1.4-25.1-10.4-56-60-56c-49.6,0-57.5,30.9-59,56H315z M196,231c1.4,29.1,10.4,56,60,56 c49.6,0,58.6-26.9,60-56H196z M376,231v-40c0-10-2-40-23-65.5C333,101,303,95,255,95s-78,6-98,30.5c-21,25.5-23,55.5-23,65.5v40 v40c0,10,2,40,23,65.5c20,24.5,50,30.5,98,30.5s78-6,98-30.5c21-25.5,23-55.5,23-65.5V231z"/>
+                    </svg>
+                </div>
+                <h1 class="text-3xl font-bold">TOYOTAの中古車商談資料</h1>
+            </div>
+            <div class="text-right">
+                <p class="text-gray-500">高品質・高信頼性の中古車</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow flex p-8">
+            <!-- Car Image Left Side -->
+            <div class="w-1/2 flex items-center justify-center">
+                <img src="https://dealer-content.s3.amazonaws.com/images/models/toyota/2022/highlander/colors/magnetic-gray-metallic.png" alt="Toyota Highlander" class="max-w-full max-h-96 rounded-lg shadow-lg">
+            </div>
+
+            <!-- Information Right Side -->
+            <div class="w-1/2 pl-10 flex flex-col justify-center">
+                <h2 class="text-2xl font-bold mb-6 toyota-red">ハイランダー <span class="text-gray-700">- 上質な7人乗りSUV</span></h2>
+                
+                <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                    <table class="info-table w-full">
+                        <tr>
+                            <td>モデル</td>
+                            <td>ハイランダー Limited</td>
+                        </tr>
+                        <tr>
+                            <td>年式</td>
+                            <td>2022年</td>
+                        </tr>
+                        <tr>
+                            <td>走行距離</td>
+                            <td>15,300km</td>
+                        </tr>
+                        <tr>
+                            <td>車両価格</td>
+                            <td>¥4,980,000</td>
+                        </tr>
+                        <tr>
+                            <td>外装グレード</td>
+                            <td>★★★★★</td>
+                        </tr>
+                        <tr>
+                            <td>内装グレード</td>
+                            <td>★★★★★</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="grid grid-cols-2 gap-2 mb-6">
+                    <div class="feature-item">安全性能</div>
+                    <div class="feature-item">燃費性能</div>
+                    <div class="feature-item">静粛性</div>
+                    <div class="feature-item">乗り心地</div>
+                    <div class="feature-item">内装の質感</div>
+                    <div class="feature-item">走行安定性</div>
+                </div>
+
+                <p class="text-gray-700 mb-6">
+                    ハイブリッドエンジンを搭載した3列シートSUVの最高峰。優れた燃費性能と走行性能に加え、上質なインテリアと最新のテクノロジーを装備。広々とした室内空間と快適な乗り心地で、家族でのお出かけやレジャーに最適な一台です。
+                </p>
+
+                <div class="flex space-x-4">
+                    <div class="bg-toyota-red text-white px-6 py-2 rounded-md shadow-sm font-bold">詳細情報</div>
+                    <div class="border border-gray-300 bg-white px-6 py-2 rounded-md shadow-sm font-bold">試乗予約</div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="p-4 flex justify-between items-center border-t border-gray-200">
+            <div>
+                <p class="text-sm text-gray-500">© TOYOTA認定中古車</p>
+            </div>
+            <div class="flex items-center">
+                <span class="bg-toyota-red text-white rounded-full w-8 h-8 flex items-center justify-center">6</span>
+                <span class="ml-2 text-gray-500">/6</span>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

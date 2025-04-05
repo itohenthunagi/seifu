@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Timepieces Collection</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #000;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #000000 100%);
+        }
+        .title {
+            font-family: 'Playfair Display', serif;
+            color: #f0f0f0;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+            letter-spacing: 3px;
+        }
+        .subtitle {
+            font-family: 'Montserrat', sans-serif;
+            color: #c0c0c0;
+            letter-spacing: 2px;
+        }
+        .sparkle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background-color: white;
+            box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
+            animation: twinkle 6s infinite;
+            opacity: 0;
+        }
+        @keyframes twinkle {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        .watch-container {
+            position: relative;
+            filter: drop-shadow(0 0 15px rgba(192, 192, 192, 0.6));
+        }
+        .glitter-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://static.vecteezy.com/system/resources/thumbnails/006/763/321/small/gold-glittering-dots-sparkles-particles-and-stars-on-a-black-background-vector.jpg');
+            background-size: cover;
+            opacity: 0.2;
+            mix-blend-mode: screen;
+            pointer-events: none;
+        }
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(192, 192, 192, 0.7), transparent);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container flex flex-col justify-center items-center relative">
+        <!-- Sparkle effects -->
+        <div class="glitter-overlay"></div>
+        
+        <!-- Dynamic sparkles -->
+        <script>
+            function createSparkles() {
+                const container = document.querySelector('.slide-container');
+                for (let i = 0; i < 50; i++) {
+                    const sparkle = document.createElement('div');
+                    sparkle.classList.add('sparkle');
+                    sparkle.style.left = `${Math.random() * 100}%`;
+                    sparkle.style.top = `${Math.random() * 100}%`;
+                    sparkle.style.animationDelay = `${Math.random() * 6}s`;
+                    container.appendChild(sparkle);
+                }
+            }
+            document.addEventListener('DOMContentLoaded', createSparkles);
+        </script>
+
+        <!-- Main content -->
+        <div class="z-10 text-center px-12 mb-10">
+            <h1 class="title text-6xl mb-4 tracking-wider">LUXURY TIMEPIECES</h1>
+            <div class="divider w-1/2 mx-auto mb-4"></div>
+            <h2 class="subtitle text-xl mb-10 tracking-widest">COLLECTION 2024</h2>
+        </div>
+
+        <div class="watch-container z-10 mb-12">
+            <img src="https://previews.123rf.com/images/aaronamat/aaronamat0905/aaronamat090500607/4937770-luxury-watch-on-black-background.jpg" alt="Luxury Silver Watch" class="max-w-lg transform hover:scale-105 transition-transform duration-500">
+        </div>
+
+        <div class="z-10 text-center px-12">
+            <p class="subtitle text-sm tracking-widest mb-6 text-gray-400">PRECISION • ELEGANCE • CRAFTSMANSHIP</p>
+            <div class="divider w-1/3 mx-auto"></div>
+        </div>
+
+        <!-- Decorative elements -->
+        <div class="absolute left-5 top-1/4">
+            <i class="fas fa-circle text-gray-300 opacity-20 text-6xl"></i>
+        </div>
+        <div class="absolute right-10 bottom-1/4">
+            <i class="fas fa-circle text-gray-300 opacity-20 text-5xl"></i>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport Collection - Luxury Timepieces</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #000;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #000000 100%);
+        }
+        .title {
+            font-family: 'Playfair Display', serif;
+            color: #f0f0f0;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+            letter-spacing: 3px;
+        }
+        .subtitle {
+            font-family: 'Montserrat', sans-serif;
+            color: #c0c0c0;
+            letter-spacing: 2px;
+        }
+        .text-content {
+            font-family: 'Montserrat', sans-serif;
+            color: #a0a0a0;
+            line-height: 1.6;
+        }
+        .sparkle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background-color: white;
+            box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
+            animation: twinkle 6s infinite;
+            opacity: 0;
+        }
+        @keyframes twinkle {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        .watch-card {
+            transition: all 0.3s ease;
+            overflow: hidden;
+            background: rgba(10, 10, 10, 0.7);
+            border: 1px solid rgba(192, 192, 192, 0.2);
+        }
+        .watch-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(192, 192, 192, 0.2);
+        }
+        .watch-img {
+            transition: transform 0.5s ease;
+        }
+        .watch-card:hover .watch-img {
+            transform: scale(1.05);
+        }
+        .glitter-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://static.vecteezy.com/system/resources/thumbnails/006/763/321/small/gold-glittering-dots-sparkles-particles-and-stars-on-a-black-background-vector.jpg');
+            background-size: cover;
+            opacity: 0.15;
+            mix-blend-mode: screen;
+            pointer-events: none;
+        }
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(192, 192, 192, 0.7), transparent);
+        }
+        .price-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            color: #c0c0c0;
+        }
+        .feature-badge {
+            background: linear-gradient(135deg, #303030, #1a1a1a);
+            border: 1px solid rgba(192, 192, 192, 0.3);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.65rem;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container flex flex-col p-10 relative">
+        <!-- Sparkle effects -->
+        <div class="glitter-overlay"></div>
+        
+        <!-- Dynamic sparkles -->
+        <script>
+            function createSparkles() {
+                const container = document.querySelector('.slide-container');
+                for (let i = 0; i < 50; i++) {
+                    const sparkle = document.createElement('div');
+                    sparkle.classList.add('sparkle');
+                    sparkle.style.left = `${Math.random() * 100}%`;
+                    sparkle.style.top = `${Math.random() * 100}%`;
+                    sparkle.style.animationDelay = `${Math.random() * 6}s`;
+                    container.appendChild(sparkle);
+                }
+            }
+            document.addEventListener('DOMContentLoaded', createSparkles);
+        </script>
+
+        <!-- Header -->
+        <div class="z-10 text-center mb-8">
+            <h2 class="title text-4xl mb-2">SPORT COLLECTION</h2>
+            <div class="divider w-1/4 mx-auto mb-4"></div>
+            <p class="subtitle text-sm tracking-widest">PERFORMANCE • PRECISION • DURABILITY</p>
+        </div>
+
+        <!-- Watch Collection -->
+        <div class="grid grid-cols-3 gap-8 z-10 mt-4">
+            <!-- Watch 1 -->
+            <div class="watch-card rounded-lg p-4">
+                <div class="overflow-hidden rounded-lg mb-4">
+                    <img src="https://img.freepik.com/premium-photo/luxury-black-silver-mens-watch-black-table-monochromatic-concept-complementary-color-conce_237502-65.jpg" alt="Sport Chronograph Watch" class="watch-img w-full h-48 object-cover">
+                </div>
+                <h3 class="title text-xl mb-1">VELOCITY</h3>
+                <p class="text-content text-xs mb-2">Titanium case with integrated chronograph. Ceramic bezel with tachymeter scale.</p>
+                <div class="flex flex-wrap gap-2 mb-3">
+                    <span class="feature-badge rounded-full px-2 py-1 text-gray-300">CHRONOGRAPH</span>
+                    <span class="feature-badge rounded-full px-2 py-1 text-gray-300">200M WATER RESISTANT</span>
+                </div>
+                <p class="price-tag text-right text-sm">$15,800</p>
+            </div>
+
+            <!-- Watch 2 -->
+            <div class="watch-card rounded-lg p-4">
+                <div class="overflow-hidden rounded-lg mb-4">
+                    <img src="https://images.pexels.com/photos/16958879/pexels-photo-16958879/free-photo-of-silver-watch-on-black-background.jpeg" alt="Sport Dive Watch" class="watch-img w-full h-48 object-cover">
+                </div>
+                <h3 class="title text-xl mb-1">AQUAMASTER</h3>
+                <p class="text-content text-xs mb-2">Professional dive watch with helium escape valve. Luminous hands and markers.</p>
+                <div class="flex flex-wrap gap-2 mb-3">
+                    <span class="feature-badge rounded-full px-2 py-1 text-gray-300">DIVER'S</span>
+                    <span class="feature-badge rounded-full px-2 py-1 text-gray-300">300M WATER RESISTANT</span>
+                </div>
+                <p class="price-tag text-right text-sm">$11,200</p>
+            </div>
+
+            <!-- Watch 3 -->
+            <div class="watch-card rounded-lg p-4">
+                <div class="overflow-hidden rounded-lg mb-4">
+                    <img src="https://thumbs.dreamstime.com/b/silvery-luxury-watch-black-background-166280644.jpg" alt="Sport Racing Watch" class="watch-img w-full h-48 object-cover">
+                </div>
+                <h3 class="title text-xl mb-1">SPEEDLINE</h3>
+                <p class="text-content text-xs mb-2">Racing-inspired chronograph with split-second function. Carbon fiber dial.</p>
+                <div class="flex flex-wrap gap-2 mb-3">
+                    <span class="feature-badge rounded-full px-2 py-1 text-gray-300">TACHYMETER</span>
+                    <span class="feature-badge rounded-full px-2 py-1 text-gray-300">FLYBACK</span>
+                </div>
+                <p class="price-tag text-right text-sm">$14,500</p>
+            </div>
+        </div>
+
+        <!-- Footer Description -->
+        <div class="z-10 text-center mt-10">
+            <p class="text-content text-sm max-w-2xl mx-auto">
+                Our Sport Collection combines cutting-edge technology with robust construction. 
+                Designed for active lifestyles, these timepieces offer exceptional reliability under extreme conditions 
+                without compromising on luxury or style.
+            </p>
+            <div class="divider w-1/5 mx-auto mt-6"></div>
+        </div>
+
+        <!-- Decorative elements -->
+        <div class="absolute -left-10 top-1/4 opacity-20">
+            <svg width="200" height="200" viewBox="0 0 100 100" class="text-gray-300">
+                <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="0.5" fill="none" />
+                <circle cx="50" cy="50" r="35" stroke="currentColor" stroke-width="0.3" fill="none" />
+            </svg>
+        </div>
+        <div class="absolute -right-20 bottom-1/4 opacity-20">
+            <svg width="250" height="250" viewBox="0 0 100 100" class="text-gray-300">
+                <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="0.5" fill="none" />
+                <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="0.3" fill="none" />
+            </svg>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Collection - Luxury Timepieces</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #000;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #000000 100%);
+        }
+        .title {
+            font-family: 'Playfair Display', serif;
+            color: #f0f0f0;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+            letter-spacing: 3px;
+        }
+        .subtitle {
+            font-family: 'Montserrat', sans-serif;
+            color: #c0c0c0;
+            letter-spacing: 2px;
+        }
+        .text-content {
+            font-family: 'Montserrat', sans-serif;
+            color: #a0a0a0;
+            line-height: 1.6;
+        }
+        .sparkle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background-color: white;
+            box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
+            animation: twinkle 6s infinite;
+            opacity: 0;
+        }
+        @keyframes twinkle {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        .watch-card {
+            transition: all 0.3s ease;
+            overflow: hidden;
+            background: rgba(10, 10, 10, 0.7);
+            border: 1px solid rgba(192, 192, 192, 0.2);
+        }
+        .watch-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(192, 192, 192, 0.2);
+        }
+        .watch-img {
+            transition: transform 0.5s ease;
+        }
+        .watch-card:hover .watch-img {
+            transform: scale(1.05);
+        }
+        .glitter-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3N2MjE3NjkwLWltYWdlLWt3dnVjNjNrLmpwZw.jpg');
+            background-size: cover;
+            opacity: 0.15;
+            mix-blend-mode: screen;
+            pointer-events: none;
+        }
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(192, 192, 192, 0.7), transparent);
+        }
+        .price-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            color: #c0c0c0;
+        }
+        .feature-badge {
+            background: linear-gradient(135deg, #303030, #1a1a1a);
+            border: 1px solid rgba(192, 192, 192, 0.3);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.65rem;
+            letter-spacing: 1px;
+        }
+        .premium-tag {
+            background: linear-gradient(135deg, #3a3a3a, #1a1a1a);
+            border-left: 3px solid #c0c0c0;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .shimmer {
+            position: relative;
+            overflow: hidden;
+        }
+        .shimmer::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to bottom right,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.1) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: rotate(30deg);
+            animation: shimmer 3s infinite;
+        }
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) rotate(30deg); }
+            100% { transform: translateX(100%) rotate(30deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container flex flex-col p-10 relative">
+        <!-- Sparkle effects -->
+        <div class="glitter-overlay"></div>
+        
+        <!-- Dynamic sparkles -->
+        <script>
+            function createSparkles() {
+                const container = document.querySelector('.slide-container');
+                for (let i = 0; i < 50; i++) {
+                    const sparkle = document.createElement('div');
+                    sparkle.classList.add('sparkle');
+                    sparkle.style.left = `${Math.random() * 100}%`;
+                    sparkle.style.top = `${Math.random() * 100}%`;
+                    sparkle.style.animationDelay = `${Math.random() * 6}s`;
+                    container.appendChild(sparkle);
+                }
+            }
+            document.addEventListener('DOMContentLoaded', createSparkles);
+        </script>
+
+        <!-- Header -->
+        <div class="z-10 text-center mb-8">
+            <h2 class="title text-4xl mb-2">PREMIUM COLLECTION</h2>
+            <div class="divider w-1/4 mx-auto mb-4"></div>
+            <p class="subtitle text-sm tracking-widest">EXCEPTIONAL CRAFTSMANSHIP • RARE MATERIALS • PRESTIGE</p>
+        </div>
+
+        <!-- Watch Collection -->
+        <div class="grid grid-cols-3 gap-8 z-10 mt-4">
+            <!-- Watch 1 -->
+            <div class="watch-card rounded-lg p-4 shimmer">
+                <div class="overflow-hidden rounded-lg mb-4">
+                    <img src="https://i.redd.it/pxb35zyv0yb71.jpg" alt="Premium Platinum Watch" class="watch-img w-full h-48 object-cover">
+                </div>
+                <h3 class="title text-xl mb-1">CELESTIAL</h3>
+                <p class="text-content text-xs mb-2">Perpetual calendar with moonphase. Platinum case with diamond indices.</p>
+                <div class="premium-tag pl-3 py-2 mb-3 text-xs text-gray-300">
+                    Incorporates 18K white gold movement parts
+                </div>
+                <p class="price-tag text-right text-sm">$75,800</p>
+            </div>
+
+            <!-- Watch 2 -->
+            <div class="watch-card rounded-lg p-4 shimmer">
+                <div class="overflow-hidden rounded-lg mb-4">
+                    <img src="https://static.theceomagazine.net/wp-content/uploads/2020/04/24144254/rolex-collection.jpg" alt="Premium Tourbillon Watch" class="watch-img w-full h-48 object-cover">
+                </div>
+                <h3 class="title text-xl mb-1">MASTERPIECE</h3>
+                <p class="text-content text-xs mb-2">Flying tourbillon visible at 6 o'clock. Hand-polished rhodium-plated movement.</p>
+                <div class="premium-tag pl-3 py-2 mb-3 text-xs text-gray-300">
+                    Limited production of 50 pieces annually
+                </div>
+                <p class="price-tag text-right text-sm">$128,500</p>
+            </div>
+
+            <!-- Watch 3 -->
+            <div class="watch-card rounded-lg p-4 shimmer">
+                <div class="overflow-hidden rounded-lg mb-4">
+                    <img src="https://www.swisswatchexpo.com/thewatchclub/wp-content/uploads/2024/12/Luxury-Watch-Trends-2025-Patek-Philippe-Complications-Chronograph-White-Gold-Mens-Watch-5172G-scaled.jpg" alt="Premium Skeleton Watch" class="watch-img w-full h-48 object-cover">
+                </div>
+                <h3 class="title text-xl mb-1">LUMINANCE</h3>
+                <p class="text-content text-xs mb-2">Fully skeletonized movement with 18K white gold bridges. Sapphire case back.</p>
+                <div class="premium-tag pl-3 py-2 mb-3 text-xs text-gray-300">
+                    336 hours of hand-finishing per timepiece
+                </div>
+                <p class="price-tag text-right text-sm">$96,300</p>
+            </div>
+        </div>
+
+        <!-- Footer Description -->
+        <div class="z-10 text-center mt-10">
+            <p class="text-content text-sm max-w-2xl mx-auto">
+                Our Premium Collection represents the pinnacle of horological excellence. 
+                Each timepiece is meticulously crafted by master watchmakers using rare materials 
+                and featuring complications that showcase extraordinary technical achievement.
+            </p>
+            <div class="divider w-1/5 mx-auto mt-6"></div>
+        </div>
+
+        <!-- Decorative elements -->
+        <div class="absolute -left-10 top-1/3 opacity-10">
+            <svg width="300" height="300" viewBox="0 0 100 100" class="text-gray-300">
+                <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="0.5" fill="none" />
+                <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="0.3" fill="none" />
+                <circle cx="50" cy="50" r="35" stroke="currentColor" stroke-width="0.2" fill="none" />
+            </svg>
+        </div>
+        <div class="absolute -right-20 bottom-1/3 opacity-10">
+            <svg width="350" height="350" viewBox="0 0 100 100" class="text-gray-300">
+                <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="0.5" fill="none" />
+                <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="0.3" fill="none" />
+                <circle cx="50" cy="50" r="35" stroke="currentColor" stroke-width="0.2" fill="none" />
+            </svg>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limited Edition Collection - Luxury Timepieces</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #000;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #000000 100%);
+        }
+        .title {
+            font-family: 'Playfair Display', serif;
+            color: #f0f0f0;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+            letter-spacing: 3px;
+        }
+        .subtitle {
+            font-family: 'Montserrat', sans-serif;
+            color: #c0c0c0;
+            letter-spacing: 2px;
+        }
+        .text-content {
+            font-family: 'Montserrat', sans-serif;
+            color: #a0a0a0;
+            line-height: 1.6;
+        }
+        .sparkle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background-color: white;
+            box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
+            animation: twinkle 6s infinite;
+            opacity: 0;
+        }
+        @keyframes twinkle {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        .watch-card {
+            transition: all 0.3s ease;
+            overflow: hidden;
+            background: rgba(10, 10, 10, 0.7);
+            border: 1px solid rgba(192, 192, 192, 0.2);
+        }
+        .watch-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(192, 192, 192, 0.2);
+        }
+        .watch-img {
+            transition: transform 0.5s ease;
+        }
+        .watch-card:hover .watch-img {
+            transform: scale(1.05);
+        }
+        .glitter-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://cdn.vectorstock.com/i/1000v/75/97/sparkle-light-effect-stars-set-on-black-background-vector-46157597.jpg');
+            background-size: cover;
+            opacity: 0.15;
+            mix-blend-mode: screen;
+            pointer-events: none;
+        }
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(192, 192, 192, 0.7), transparent);
+        }
+        .price-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            color: #c0c0c0;
+        }
+        .limited-badge {
+            background: linear-gradient(135deg, #3a3a3a, #1a1a1a);
+            border-left: 3px solid #c0c0c0;
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+        .limited-badge::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to bottom right,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.1) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: rotate(30deg);
+            animation: shimmer 2s infinite;
+        }
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) rotate(30deg); }
+            100% { transform: translateX(100%) rotate(30deg); }
+        }
+        .edition-number {
+            font-family: 'Playfair Display', serif;
+            color: #e0e0e0;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+        }
+        .glow-border {
+            position: relative;
+        }
+        .glow-border::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            border-radius: 0.5rem;
+            background: linear-gradient(45deg, transparent, rgba(192, 192, 192, 0.3), transparent);
+            z-index: -1;
+            animation: border-glow 3s infinite;
+        }
+        @keyframes border-glow {
+            0% { opacity: 0.3; }
+            50% { opacity: 0.7; }
+            100% { opacity: 0.3; }
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container flex flex-col p-10 relative">
+        <!-- Sparkle effects -->
+        <div class="glitter-overlay"></div>
+        
+        <!-- Dynamic sparkles -->
+        <script>
+            function createSparkles() {
+                const container = document.querySelector('.slide-container');
+                for (let i = 0; i < 50; i++) {
+                    const sparkle = document.createElement('div');
+                    sparkle.classList.add('sparkle');
+                    sparkle.style.left = `${Math.random() * 100}%`;
+                    sparkle.style.top = `${Math.random() * 100}%`;
+                    sparkle.style.animationDelay = `${Math.random() * 6}s`;
+                    container.appendChild(sparkle);
+                }
+            }
+            document.addEventListener('DOMContentLoaded', createSparkles);
+        </script>
+
+        <!-- Header -->
+        <div class="z-10 text-center mb-8">
+            <h2 class="title text-4xl mb-2">LIMITED EDITION</h2>
+            <div class="divider w-1/4 mx-auto mb-4"></div>
+            <p class="subtitle text-sm tracking-widest">EXCLUSIVE DESIGNS • NUMBERED PIECES • COLLECTIBLE HERITAGE</p>
+        </div>
+
+        <!-- Watch Collection -->
+        <div class="grid grid-cols-3 gap-8 z-10 mt-4">
+            <!-- Watch 1 -->
+            <div class="watch-card rounded-lg p-4 glow-border">
+                <div class="overflow-hidden rounded-lg mb-4">
+                    <img src="https://c8.alamy.com/comp/2F5ANT8/luxury-watch-isolated-on-a-black-background-2F5ANT8.jpg" alt="Limited Edition Platinum Watch" class="watch-img w-full h-48 object-cover">
+                </div>
+                <h3 class="title text-xl mb-1">LUNAR ECLIPSE</h3>
+                <p class="text-content text-xs mb-2">Platinum case with meteorite dial. Moonphase complication with diamond dust indexes.</p>
+                <div class="limited-badge pl-3 py-2 mb-3 text-xs text-gray-300 flex justify-between items-center">
+                    <span>Anniversary Edition</span>
+                    <span class="edition-number pr-3">No. 7/25</span>
+                </div>
+                <p class="price-tag text-right text-sm">$145,000</p>
+            </div>
+
+            <!-- Watch 2 -->
+            <div class="watch-card rounded-lg p-4 glow-border">
+                <div class="overflow-hidden rounded-lg mb-4">
+                    <img src="https://magazine.chrono24.com/cdn-cgi/image/f=auto,metadata=none,fit=cover,q=65,w=1200,h=600,dpr=2.0/2024/09/Type-of-collector-2-1.jpg" alt="Limited Edition Tourbillon" class="watch-img w-full h-48 object-cover">
+                </div>
+                <h3 class="title text-xl mb-1">CENTENNIAL</h3>
+                <p class="text-content text-xs mb-2">Triple axis tourbillon with hand-engraved movement. Sapphire crystal case reveals inner mechanics.</p>
+                <div class="limited-badge pl-3 py-2 mb-3 text-xs text-gray-300 flex justify-between items-center">
+                    <span>Founder's Collection</span>
+                    <span class="edition-number pr-3">No. 3/10</span>
+                </div>
+                <p class="price-tag text-right text-sm">$285,000</p>
+            </div>
+
+            <!-- Watch 3 -->
+            <div class="watch-card rounded-lg p-4 glow-border">
+                <div class="overflow-hidden rounded-lg mb-4">
+                    <img src="https://thumbs.dreamstime.com/b/luxury-watch-polished-silver-band-round-black-dial-dark-marble-background-fashion-lifestyle-luxury-watch-348316095.jpg" alt="Limited Edition Art Watch" class="watch-img w-full h-48 object-cover">
+                </div>
+                <h3 class="title text-xl mb-1">HERITAGE 1888</h3>
+                <p class="text-content text-xs mb-2">Minute repeater with Westminster chime. Hand-painted enamel dial featuring celestial map.</p>
+                <div class="limited-badge pl-3 py-2 mb-3 text-xs text-gray-300 flex justify-between items-center">
+                    <span>Museum Collection</span>
+                    <span class="edition-number pr-3">No. 1/5</span>
+                </div>
+                <p class="price-tag text-right text-sm">$320,000</p>
+            </div>
+        </div>
+
+        <!-- Footer Description -->
+        <div class="z-10 text-center mt-10">
+            <p class="text-content text-sm max-w-2xl mx-auto">
+                Our Limited Edition timepieces represent the epitome of exclusivity and artistic vision. 
+                Each watch is individually numbered and features unique design elements or complications 
+                that will never be reproduced in exactly the same way. These extraordinary creations are destined 
+                to become treasured heirlooms and investment pieces.
+            </p>
+            <div class="divider w-1/5 mx-auto mt-6"></div>
+        </div>
+
+        <!-- Decorative elements -->
+        <div class="absolute -left-10 top-1/3 opacity-10">
+            <svg width="300" height="300" viewBox="0 0 100 100" class="text-gray-300">
+                <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="0.5" fill="none" />
+                <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="0.3" fill="none" />
+                <circle cx="50" cy="50" r="35" stroke="currentColor" stroke-width="0.2" fill="none" />
+            </svg>
+        </div>
+        <div class="absolute -right-20 bottom-1/3 opacity-10">
+            <svg width="350" height="350" viewBox="0 0 100 100" class="text-gray-300">
+                <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="0.5" fill="none" />
+                <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="0.3" fill="none" />
+                <circle cx="50" cy="50" r="35" stroke="currentColor" stroke-width="0.2" fill="none" />
+            </svg>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Timepieces - Experience Excellence</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #000;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #000000 100%);
+        }
+        .title {
+            font-family: 'Playfair Display', serif;
+            color: #f0f0f0;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+            letter-spacing: 3px;
+        }
+        .subtitle {
+            font-family: 'Montserrat', sans-serif;
+            color: #c0c0c0;
+            letter-spacing: 2px;
+        }
+        .text-content {
+            font-family: 'Montserrat', sans-serif;
+            color: #a0a0a0;
+            line-height: 1.6;
+        }
+        .sparkle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background-color: white;
+            box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
+            animation: twinkle 6s infinite;
+            opacity: 0;
+        }
+        @keyframes twinkle {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        .glitter-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://cdn.vectorstock.com/i/1000v/75/97/sparkle-light-effect-stars-set-on-black-background-vector-46157597.jpg');
+            background-size: cover;
+            opacity: 0.15;
+            mix-blend-mode: screen;
+            pointer-events: none;
+        }
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(192, 192, 192, 0.7), transparent);
+        }
+        .collection-card {
+            background: rgba(20, 20, 20, 0.6);
+            border: 1px solid rgba(192, 192, 192, 0.2);
+            transition: all 0.3s ease;
+        }
+        .collection-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(192, 192, 192, 0.2);
+            border: 1px solid rgba(192, 192, 192, 0.4);
+        }
+        .benefit-item {
+            background: linear-gradient(135deg, rgba(30, 30, 30, 0.7), rgba(10, 10, 10, 0.7));
+            border-left: 2px solid rgba(192, 192, 192, 0.5);
+            transition: all 0.3s ease;
+        }
+        .benefit-item:hover {
+            background: linear-gradient(135deg, rgba(40, 40, 40, 0.7), rgba(20, 20, 20, 0.7));
+        }
+        .cta-button {
+            background: linear-gradient(135deg, #303030, #1a1a1a);
+            border: 1px solid rgba(192, 192, 192, 0.4);
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-button::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to bottom right,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.1) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: rotate(30deg);
+            animation: shimmer 3s infinite;
+        }
+        .cta-button:hover {
+            background: linear-gradient(135deg, #404040, #2a2a2a);
+            box-shadow: 0 0 15px rgba(192, 192, 192, 0.3);
+        }
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) rotate(30deg); }
+            100% { transform: translateX(100%) rotate(30deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container flex flex-col p-10 relative">
+        <!-- Sparkle effects -->
+        <div class="glitter-overlay"></div>
+        
+        <!-- Dynamic sparkles -->
+        <script>
+            function createSparkles() {
+                const container = document.querySelector('.slide-container');
+                for (let i = 0; i < 50; i++) {
+                    const sparkle = document.createElement('div');
+                    sparkle.classList.add('sparkle');
+                    sparkle.style.left = `${Math.random() * 100}%`;
+                    sparkle.style.top = `${Math.random() * 100}%`;
+                    sparkle.style.animationDelay = `${Math.random() * 6}s`;
+                    container.appendChild(sparkle);
+                }
+            }
+            document.addEventListener('DOMContentLoaded', createSparkles);
+        </script>
+
+        <!-- Header -->
+        <div class="z-10 text-center mb-8">
+            <h2 class="title text-4xl mb-2">EXPERIENCE EXCELLENCE</h2>
+            <div class="divider w-1/4 mx-auto mb-4"></div>
+            <p class="subtitle text-sm tracking-widest">CRAFTSMANSHIP • HERITAGE • DISTINCTION</p>
+        </div>
+
+        <!-- Collections Summary -->
+        <div class="grid grid-cols-4 gap-4 z-10 mb-8">
+            <div class="collection-card p-4 rounded-lg text-center">
+                <h3 class="title text-lg mb-2">CLASSIC</h3>
+                <p class="text-content text-xs">Timeless designs with refined elegance</p>
+            </div>
+            <div class="collection-card p-4 rounded-lg text-center">
+                <h3 class="title text-lg mb-2">SPORT</h3>
+                <p class="text-content text-xs">Performance timepieces for active lifestyles</p>
+            </div>
+            <div class="collection-card p-4 rounded-lg text-center">
+                <h3 class="title text-lg mb-2">PREMIUM</h3>
+                <p class="text-content text-xs">Exceptional craftsmanship with rare materials</p>
+            </div>
+            <div class="collection-card p-4 rounded-lg text-center">
+                <h3 class="title text-lg mb-2">LIMITED</h3>
+                <p class="text-content text-xs">Exclusive numbered editions for collectors</p>
+            </div>
+        </div>
+
+        <!-- Exclusive Benefits -->
+        <div class="z-10 mb-8">
+            <h3 class="subtitle text-center text-lg mb-4">EXCLUSIVE OWNERSHIP BENEFITS</h3>
+            <div class="grid grid-cols-3 gap-4">
+                <div class="benefit-item p-4 rounded-lg">
+                    <h4 class="title text-base mb-1"><i class="fas fa-gem mr-2"></i>LIFETIME SERVICING</h4>
+                    <p class="text-content text-xs">Complimentary maintenance for all collections</p>
+                </div>
+                <div class="benefit-item p-4 rounded-lg">
+                    <h4 class="title text-base mb-1"><i class="fas fa-certificate mr-2"></i>AUTHENTICITY GUARANTEE</h4>
+                    <p class="text-content text-xs">Certificate of origin with every timepiece</p>
+                </div>
+                <div class="benefit-item p-4 rounded-lg">
+                    <h4 class="title text-base mb-1"><i class="fas fa-globe-americas mr-2"></i>GLOBAL WARRANTY</h4>
+                    <p class="text-content text-xs">5-year international warranty on all models</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Featured Watch -->
+        <div class="flex justify-center items-center z-10 mb-8">
+            <div class="w-1/3">
+                <img src="https://images.pexels.com/photos/16958879/pexels-photo-16958879/free-photo-of-silver-watch-on-black-background.jpeg" alt="Featured Luxury Watch" class="w-full object-cover rounded-lg shadow-2xl">
+            </div>
+            <div class="w-2/3 pl-8">
+                <h3 class="title text-2xl mb-2">DISCOVER YOUR PERFECT TIMEPIECE</h3>
+                <p class="text-content mb-4">
+                    Our curated selection of luxury timepieces offers unparalleled craftsmanship and design. Each watch represents the pinnacle of horological excellence and serves as both a functional instrument and a statement of personal style.
+                </p>
+                <div class="flex justify-start">
+                    <button class="cta-button text-white py-3 px-6 rounded-lg text-sm">
+                        REQUEST PRIVATE VIEWING
+                    </button>
+                    <button class="cta-button text-white py-3 px-6 rounded-lg text-sm ml-4">
+                        EXPLORE FULL CATALOGUE
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="z-10 text-center mt-auto">
+            <div class="divider w-1/3 mx-auto mb-4"></div>
+            <p class="text-content text-xs">
+                FLAGSHIP BOUTIQUES: NEW YORK • PARIS • TOKYO • LONDON • GENEVA
+            </p>
+            <p class="subtitle text-sm mt-2">
+                WWW.LUXURYTIMEPIECES.COM
+            </p>
+        </div>
+
+        <!-- Decorative elements -->
+        <div class="absolute -left-20 top-1/3 opacity-10">
+            <svg width="350" height="350" viewBox="0 0 100 100" class="text-gray-300">
+                <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="0.5" fill="none" />
+                <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="0.3" fill="none" />
+                <circle cx="50" cy="50" r="35" stroke="currentColor" stroke-width="0.2" fill="none" />
+            </svg>
+        </div>
+        <div class="absolute -right-10 bottom-1/3 opacity-10">
+            <svg width="300" height="300" viewBox="0 0 100 100" class="text-gray-300">
+                <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="0.5" fill="none" />
+                <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="0.3" fill="none" />
+            </svg>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>企業の生成AI導入 提案資料</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Segoe UI', 'Meiryo UI', sans-serif;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #0078d4 0%, #5c2d91 100%);
+        }
+        .geometric-shape {
+            position: absolute;
+            opacity: 0.15;
+            z-index: 0;
+        }
+        .circle {
+            border-radius: 50%;
+            background: white;
+        }
+        .rectangle {
+            transform: rotate(45deg);
+            background: white;
+        }
+        .grid-lines {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: 0;
+        }
+        .content {
+            position: relative;
+            z-index: 10;
+        }
+        .title-glow {
+            text-shadow: 0 0 15px rgba(255,255,255,0.5);
+        }
+        .tech-line {
+            height: 4px;
+            background: linear-gradient(90deg, transparent, #ffffff, transparent);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container gradient-bg flex flex-col items-center justify-center">
+        <!-- Geometric background elements -->
+        <div class="grid-lines"></div>
+        <div class="geometric-shape circle" style="width: 300px; height: 300px; top: -100px; right: -50px;"></div>
+        <div class="geometric-shape rectangle" style="width: 200px; height: 200px; bottom: -50px; left: 100px;"></div>
+        <div class="geometric-shape circle" style="width: 150px; height: 150px; bottom: 100px; right: 200px;"></div>
+        
+        <!-- Main content -->
+        <div class="content flex flex-col items-center justify-center text-white w-full h-full px-20 py-16">
+            <!-- AI Icon -->
+            <div class="mb-10">
+                <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2a5 5 0 0 1 5 5v6a5 5 0 0 1-10 0V7a5 5 0 0 1 5-5Z"></path>
+                    <path d="M15 22h-6a4 4 0 0 1-4-4v-5a7 7 0 0 1 14 0v5a4 4 0 0 1-4 4Z"></path>
+                    <circle cx="12" cy="11" r="2"></circle>
+                    <path d="M11 15c.5.5 1.5.5 2 0"></path>
+                    <path d="m18 22 1-5"></path>
+                    <path d="m5 22 1-5"></path>
+                </svg>
+            </div>
+            
+            <h1 class="text-6xl font-bold mb-6 text-center title-glow tracking-wide">企業の生成AI導入</h1>
+            
+            <div class="tech-line w-1/3 mb-6"></div>
+            
+            <h2 class="text-3xl font-light mb-10 text-center">ビジネス変革への次世代テクノロジー</h2>
+            
+            <!-- Futuristic element -->
+            <div class="mt-8 flex space-x-6">
+                <div class="px-5 py-2 border border-white border-opacity-30 rounded-lg bg-white bg-opacity-10 backdrop-filter backdrop-blur-sm">
+                    <span class="text-lg">業務効率化</span>
+                </div>
+                <div class="px-5 py-2 border border-white border-opacity-30 rounded-lg bg-white bg-opacity-10 backdrop-filter backdrop-blur-sm">
+                    <span class="text-lg">コスト削減</span>
+                </div>
+                <div class="px-5 py-2 border border-white border-opacity-30 rounded-lg bg-white bg-opacity-10 backdrop-filter backdrop-blur-sm">
+                    <span class="text-lg">イノベーション</span>
+                </div>
+            </div>
+            
+            <!-- Bottom info -->
+            <div class="absolute bottom-8 right-8 flex items-center">
+                <div class="text-sm font-light opacity-80">提案資料 | 1/6</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生成AIとは | 企業の生成AI導入 提案資料</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Segoe UI', 'Meiryo UI', sans-serif;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #0078d4 0%, #5c2d91 100%);
+        }
+        .geometric-shape {
+            position: absolute;
+            opacity: 0.15;
+            z-index: 0;
+        }
+        .circle {
+            border-radius: 50%;
+            background: white;
+        }
+        .rectangle {
+            transform: rotate(45deg);
+            background: white;
+        }
+        .grid-lines {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: 0;
+        }
+        .content {
+            position: relative;
+            z-index: 10;
+        }
+        .title-glow {
+            text-shadow: 0 0 15px rgba(255,255,255,0.3);
+        }
+        .tech-line {
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #ffffff, transparent);
+        }
+        .ai-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+        }
+        .flow-arrow {
+            position: relative;
+            width: 3rem;
+            height: 2px;
+            background-color: white;
+            margin: 0 0.5rem;
+        }
+        .flow-arrow:after {
+            content: '';
+            position: absolute;
+            right: -2px;
+            top: -4px;
+            width: 10px;
+            height: 10px;
+            border-top: 2px solid white;
+            border-right: 2px solid white;
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container gradient-bg flex flex-col">
+        <!-- Geometric background elements -->
+        <div class="grid-lines"></div>
+        <div class="geometric-shape circle" style="width: 400px; height: 400px; top: -200px; left: -150px;"></div>
+        <div class="geometric-shape rectangle" style="width: 200px; height: 200px; bottom: -100px; right: 100px;"></div>
+        <div class="geometric-shape circle" style="width: 150px; height: 150px; top: 200px; right: -50px;"></div>
+        
+        <!-- Header -->
+        <div class="content flex flex-col text-white w-full h-full px-20 py-12">
+            <h1 class="text-4xl font-bold mb-4 title-glow">生成AIとは</h1>
+            <div class="tech-line w-32 mb-8"></div>
+            
+            <!-- Definition Box -->
+            <div class="ai-card p-6 mb-8">
+                <h2 class="text-2xl font-semibold mb-2">定義</h2>
+                <p class="text-lg">生成AIとは、新しいコンテンツを作成できる人工知能です。テキスト、画像、音声、コードなどを学習し、人間の指示に基づいて創造的なアウトプットを生成します。</p>
+            </div>
+            
+            <!-- How it works - Flow Diagram -->
+            <h2 class="text-2xl font-semibold mb-4">生成AIの仕組み</h2>
+            <div class="flex justify-center items-center mb-10">
+                <div class="ai-card px-6 py-4 flex flex-col items-center">
+                    <div class="text-4xl mb-2">🔤</div>
+                    <div class="text-lg font-medium">入力</div>
+                    <div class="text-sm opacity-80">テキスト指示・質問</div>
+                </div>
+                <div class="flow-arrow"></div>
+                <div class="ai-card px-8 py-6 flex flex-col items-center">
+                    <div class="text-4xl mb-2">🧠</div>
+                    <div class="text-lg font-medium">AI処理</div>
+                    <div class="text-sm opacity-80">大規模言語モデル</div>
+                </div>
+                <div class="flow-arrow"></div>
+                <div class="ai-card px-6 py-4 flex flex-col items-center">
+                    <div class="text-4xl mb-2">✨</div>
+                    <div class="text-lg font-medium">出力</div>
+                    <div class="text-sm opacity-80">クリエイティブな成果物</div>
+                </div>
+            </div>
+            
+            <!-- Key Capabilities -->
+            <h2 class="text-2xl font-semibold mb-4">主な機能</h2>
+            <div class="grid grid-cols-2 gap-6">
+                <div class="ai-card p-5 flex items-start">
+                    <div class="text-3xl mr-4">📝</div>
+                    <div>
+                        <h3 class="text-xl font-medium mb-1">テキスト生成</h3>
+                        <p class="text-sm opacity-90">文章作成、要約、翻訳、Q&A対応など</p>
+                    </div>
+                </div>
+                <div class="ai-card p-5 flex items-start">
+                    <div class="text-3xl mr-4">🖼️</div>
+                    <div>
+                        <h3 class="text-xl font-medium mb-1">画像生成</h3>
+                        <p class="text-sm opacity-90">指示に基づくビジュアル作成、編集、変換</p>
+                    </div>
+                </div>
+                <div class="ai-card p-5 flex items-start">
+                    <div class="text-3xl mr-4">💻</div>
+                    <div>
+                        <h3 class="text-xl font-medium mb-1">コード作成</h3>
+                        <p class="text-sm opacity-90">プログラミング支援、デバッグ、最適化</p>
+                    </div>
+                </div>
+                <div class="ai-card p-5 flex items-start">
+                    <div class="text-3xl mr-4">📊</div>
+                    <div>
+                        <h3 class="text-xl font-medium mb-1">データ分析</h3>
+                        <p class="text-sm opacity-90">パターン検出、予測、インサイト抽出</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom info -->
+            <div class="absolute bottom-8 right-8 flex items-center">
+                <div class="text-sm font-light opacity-80">提案資料 | 2/6</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>企業導入のメリット | 企業の生成AI導入 提案資料</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Segoe UI', 'Meiryo UI', sans-serif;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #0078d4 0%, #5c2d91 100%);
+        }
+        .geometric-shape {
+            position: absolute;
+            opacity: 0.15;
+            z-index: 0;
+        }
+        .circle {
+            border-radius: 50%;
+            background: white;
+        }
+        .rectangle {
+            transform: rotate(45deg);
+            background: white;
+        }
+        .grid-lines {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: 0;
+        }
+        .content {
+            position: relative;
+            z-index: 10;
+        }
+        .title-glow {
+            text-shadow: 0 0 15px rgba(255,255,255,0.3);
+        }
+        .tech-line {
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #ffffff, transparent);
+        }
+        .benefit-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        .stat-highlight {
+            font-size: 2rem;
+            font-weight: bold;
+            background: linear-gradient(90deg, #00ddff, #ff00aa);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+        .icon-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container gradient-bg flex flex-col">
+        <!-- Geometric background elements -->
+        <div class="grid-lines"></div>
+        <div class="geometric-shape circle" style="width: 300px; height: 300px; top: -150px; right: -100px;"></div>
+        <div class="geometric-shape rectangle" style="width: 250px; height: 250px; bottom: -100px; left: -50px;"></div>
+        <div class="geometric-shape circle" style="width: 180px; height: 180px; top: 300px; left: 200px;"></div>
+        
+        <!-- Header -->
+        <div class="content flex flex-col text-white w-full h-full px-20 py-12">
+            <h1 class="text-4xl font-bold mb-4 title-glow">企業導入のメリット</h1>
+            <div class="tech-line w-32 mb-8"></div>
+            
+            <!-- ROI Highlight -->
+            <div class="benefit-card p-6 mb-8 flex items-center">
+                <div class="flex-1">
+                    <h2 class="text-2xl font-semibold mb-2">ビジネスインパクト</h2>
+                    <p class="text-lg mb-2">生成AIを導入した企業の<span class="stat-highlight">76%</span>が業務効率の向上を報告</p>
+                    <p class="text-lg">導入企業の<span class="stat-highlight">40%</span>がコスト削減に成功</p>
+                </div>
+                <div class="w-1/3 flex justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 16V12L9.5 10.5"></path>
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
+            </div>
+            
+            <!-- Benefits Grid -->
+            <div class="grid grid-cols-3 gap-6">
+                <div class="benefit-card p-6 flex flex-col items-center text-center">
+                    <div class="icon-circle">
+                        <i class="fas fa-tachometer-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">業務効率化</h3>
+                    <p class="text-sm">反復的なタスクの自動化と高速化により、従業員の生産性を向上</p>
+                </div>
+                
+                <div class="benefit-card p-6 flex flex-col items-center text-center">
+                    <div class="icon-circle">
+                        <i class="fas fa-chart-line text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">収益拡大</h3>
+                    <p class="text-sm">新規サービス創出、顧客体験の向上によるビジネス機会の拡大</p>
+                </div>
+                
+                <div class="benefit-card p-6 flex flex-col items-center text-center">
+                    <div class="icon-circle">
+                        <i class="fas fa-coins text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">コスト削減</h3>
+                    <p class="text-sm">人的リソースの最適化と業務プロセスの効率化によるコスト削減</p>
+                </div>
+                
+                <div class="benefit-card p-6 flex flex-col items-center text-center">
+                    <div class="icon-circle">
+                        <i class="fas fa-lightbulb text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">イノベーション促進</h3>
+                    <p class="text-sm">創造的な問題解決と新たなアイデア創出による革新的な製品開発</p>
+                </div>
+                
+                <div class="benefit-card p-6 flex flex-col items-center text-center">
+                    <div class="icon-circle">
+                        <i class="fas fa-users text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">顧客体験向上</h3>
+                    <p class="text-sm">パーソナライズされたサービスと24時間対応による顧客満足度の向上</p>
+                </div>
+                
+                <div class="benefit-card p-6 flex flex-col items-center text-center">
+                    <div class="icon-circle">
+                        <i class="fas fa-brain text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">意思決定の強化</h3>
+                    <p class="text-sm">大量データからの洞察抽出による、より正確なビジネス判断の実現</p>
+                </div>
+            </div>
+            
+            <!-- Bottom info -->
+            <div class="absolute bottom-8 right-8 flex items-center">
+                <div class="text-sm font-light opacity-80">提案資料 | 3/6</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>導入事例 | 企業の生成AI導入 提案資料</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Segoe UI', 'Meiryo UI', sans-serif;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #0078d4 0%, #5c2d91 100%);
+        }
+        .geometric-shape {
+            position: absolute;
+            opacity: 0.15;
+            z-index: 0;
+        }
+        .circle {
+            border-radius: 50%;
+            background: white;
+        }
+        .rectangle {
+            transform: rotate(45deg);
+            background: white;
+        }
+        .grid-lines {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: 0;
+        }
+        .content {
+            position: relative;
+            z-index: 10;
+        }
+        .title-glow {
+            text-shadow: 0 0 15px rgba(255,255,255,0.3);
+        }
+        .tech-line {
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #ffffff, transparent);
+        }
+        .case-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        .case-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        .metric-highlight {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(0, 221, 255, 0.7);
+        }
+        .industry-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container gradient-bg flex flex-col">
+        <!-- Geometric background elements -->
+        <div class="grid-lines"></div>
+        <div class="geometric-shape circle" style="width: 350px; height: 350px; top: -150px; left: -100px;"></div>
+        <div class="geometric-shape rectangle" style="width: 200px; height: 200px; bottom: -80px; right: -50px;"></div>
+        <div class="geometric-shape circle" style="width: 150px; height: 150px; bottom: 150px; left: 100px;"></div>
+        
+        <!-- Header -->
+        <div class="content flex flex-col text-white w-full h-full px-20 py-12">
+            <h1 class="text-4xl font-bold mb-4 title-glow">導入事例と成功実績</h1>
+            <div class="tech-line w-32 mb-6"></div>
+            
+            <!-- Introduction -->
+            <div class="case-card p-5 mb-6">
+                <p class="text-lg">さまざまな業界で企業が生成AIを活用し、ビジネス変革を実現しています。実際の導入事例からその効果を見てみましょう。</p>
+            </div>
+            
+            <!-- Case Studies Grid -->
+            <div class="grid grid-cols-2 gap-6">
+                <!-- Financial Services -->
+                <div class="case-card p-6">
+                    <div class="flex items-start mb-3">
+                        <div class="industry-icon mr-4">
+                            <i class="fas fa-university text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold">金融サービス</h3>
+                            <p class="text-sm opacity-80">大手銀行グループ</p>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <h4 class="text-base font-medium mb-1">課題</h4>
+                        <p class="text-sm">顧客問い合わせ対応の効率化と投資レポート作成時間の短縮</p>
+                    </div>
+                    <div class="mb-3">
+                        <h4 class="text-base font-medium mb-1">AI活用方法</h4>
+                        <p class="text-sm">AIチャットボットの導入と投資分析レポート自動生成システム</p>
+                    </div>
+                    <div>
+                        <h4 class="text-base font-medium mb-1">成果</h4>
+                        <p class="text-sm">問い合わせ対応時間 <span class="metric-highlight">65%削減</span></p>
+                        <p class="text-sm">レポート作成時間 <span class="metric-highlight">80%短縮</span></p>
+                    </div>
+                </div>
+                
+                <!-- Manufacturing -->
+                <div class="case-card p-6">
+                    <div class="flex items-start mb-3">
+                        <div class="industry-icon mr-4">
+                            <i class="fas fa-industry text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold">製造業</h3>
+                            <p class="text-sm opacity-80">自動車部品メーカー</p>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <h4 class="text-base font-medium mb-1">課題</h4>
+                        <p class="text-sm">製品設計プロセスの最適化と不良品予測の精度向上</p>
+                    </div>
+                    <div class="mb-3">
+                        <h4 class="text-base font-medium mb-1">AI活用方法</h4>
+                        <p class="text-sm">設計支援AIと予測分析システムの導入</p>
+                    </div>
+                    <div>
+                        <h4 class="text-base font-medium mb-1">成果</h4>
+                        <p class="text-sm">新製品開発期間 <span class="metric-highlight">40%短縮</span></p>
+                        <p class="text-sm">不良品率 <span class="metric-highlight">25%削減</span></p>
+                    </div>
+                </div>
+                
+                <!-- Retail -->
+                <div class="case-card p-6">
+                    <div class="flex items-start mb-3">
+                        <div class="industry-icon mr-4">
+                            <i class="fas fa-shopping-cart text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold">小売業</h3>
+                            <p class="text-sm opacity-80">大手ECプラットフォーム</p>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <h4 class="text-base font-medium mb-1">課題</h4>
+                        <p class="text-sm">商品説明の作成効率化とパーソナライズ推奨の強化</p>
+                    </div>
+                    <div class="mb-3">
+                        <h4 class="text-base font-medium mb-1">AI活用方法</h4>
+                        <p class="text-sm">商品説明生成AIとレコメンデーションエンジンの統合</p>
+                    </div>
+                    <div>
+                        <h4 class="text-base font-medium mb-1">成果</h4>
+                        <p class="text-sm">商品登録時間 <span class="metric-highlight">70%削減</span></p>
+                        <p class="text-sm">コンバージョン率 <span class="metric-highlight">32%向上</span></p>
+                    </div>
+                </div>
+                
+                <!-- Healthcare -->
+                <div class="case-card p-6">
+                    <div class="flex items-start mb-3">
+                        <div class="industry-icon mr-4">
+                            <i class="fas fa-heartbeat text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold">医療・ヘルスケア</h3>
+                            <p class="text-sm opacity-80">医療機関グループ</p>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <h4 class="text-base font-medium mb-1">課題</h4>
+                        <p class="text-sm">医療記録の要約作成と研究論文のレビュー効率化</p>
+                    </div>
+                    <div class="mb-3">
+                        <h4 class="text-base font-medium mb-1">AI活用方法</h4>
+                        <p class="text-sm">医療テキスト処理AIと研究支援システムの導入</p>
+                    </div>
+                    <div>
+                        <h4 class="text-base font-medium mb-1">成果</h4>
+                        <p class="text-sm">記録作成時間 <span class="metric-highlight">50%削減</span></p>
+                        <p class="text-sm">研究効率 <span class="metric-highlight">45%向上</span></p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom info -->
+            <div class="absolute bottom-8 right-8 flex items-center">
+                <div class="text-sm font-light opacity-80">提案資料 | 4/6</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>実装ステップ | 企業の生成AI導入 提案資料</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Segoe UI', 'Meiryo UI', sans-serif;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #0078d4 0%, #5c2d91 100%);
+        }
+        .geometric-shape {
+            position: absolute;
+            opacity: 0.15;
+            z-index: 0;
+        }
+        .circle {
+            border-radius: 50%;
+            background: white;
+        }
+        .rectangle {
+            transform: rotate(45deg);
+            background: white;
+        }
+        .grid-lines {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: 0;
+        }
+        .content {
+            position: relative;
+            z-index: 10;
+        }
+        .title-glow {
+            text-shadow: 0 0 15px rgba(255,255,255,0.3);
+        }
+        .tech-line {
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #ffffff, transparent);
+        }
+        .step-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        .step-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 0.3);
+            position: absolute;
+            top: -10px;
+            right: 10px;
+        }
+        .step-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+        }
+        .timeline-connector {
+            width: 2px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.3);
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container gradient-bg flex flex-col">
+        <!-- Geometric background elements -->
+        <div class="grid-lines"></div>
+        <div class="geometric-shape circle" style="width: 350px; height: 350px; bottom: -150px; right: -100px;"></div>
+        <div class="geometric-shape rectangle" style="width: 200px; height: 200px; top: -80px; left: -50px;"></div>
+        <div class="geometric-shape circle" style="width: 150px; height: 150px; top: 150px; right: 100px;"></div>
+        
+        <!-- Header -->
+        <div class="content flex flex-col text-white w-full h-full px-20 py-12">
+            <h1 class="text-4xl font-bold mb-4 title-glow">実装ステップ</h1>
+            <div class="tech-line w-32 mb-6"></div>
+            
+            <!-- Introduction -->
+            <div class="step-card p-5 mb-6">
+                <p class="text-lg">生成AIの企業導入は段階的に進めることで、リスクを最小限に抑えながら最大の効果を得られます。以下の5ステップで確実に進めましょう。</p>
+            </div>
+            
+            <!-- Implementation Steps -->
+            <div class="flex flex-col space-y-3">
+                <!-- Step 1 -->
+                <div class="step-card p-5 relative">
+                    <div class="step-number">01</div>
+                    <div class="flex items-center">
+                        <div class="step-icon">
+                            <i class="fas fa-search text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold">ニーズ分析と戦略策定</h3>
+                            <p class="text-sm mt-1">自社のどの業務プロセスが生成AIによって改善できるか分析し、明確な目標と成功指標を設定します。</p>
+                            <div class="flex space-x-2 mt-2">
+                                <span class="bg-white bg-opacity-20 px-2 py-1 rounded-md text-xs">業務フロー分析</span>
+                                <span class="bg-white bg-opacity-20 px-2 py-1 rounded-md text-xs">KPI設定</span>
+                                <span class="bg-white bg-opacity-20 px-2 py-1 rounded-md text-xs">ROI試算</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-connector"></div>
+                
+                <!-- Step 2 -->
+                <div class="step-card p-5 relative">
+                    <div class="step-number">02</div>
+                    <div class="flex items-center">
+                        <div class="step-icon">
+                            <i class="fas fa-tools text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold">技術選定とプロトタイプ開発</h3>
+                            <p class="text-sm mt-1">目的に最適なAIモデル・プラットフォームを選定し、小規模なプロトタイプで効果検証を行います。</p>
+                            <div class="flex space-x-2 mt-2">
+                                <span class="bg-white bg-opacity-20 px-2 py-1 rounded-md text-xs">技術評価</span>
+                                <span class="bg-white bg-opacity-20 px-2 py-1 rounded-md text-xs">POC開発</span>
+                                <span class="bg-white bg-opacity-20 px-2 py-1 rounded-md text-xs">フィードバック収集</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-connector"></div>
+                
+                <!-- Step 3 -->
+                <div class="step-card p-5 relative">
+                    <div class="step-number">03</div>
+                    <div class="flex items-center">
+                        <div class="step-icon">
+                            <i class="fas fa-cogs text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold">システム統合と最適化</h3>
+                            <p class="text-sm mt-1">既存システムとの連携を構築し、業務フローに合わせた調整と最適化を行います。</p>
+                            <div class="flex space-x-2 mt-2">
+                                <span class="bg-white bg-opacity-20 px-2 py-1 rounded-md text-xs">API連携</span>
+                                <span class="bg-white bg-opacity-20 px-2 py-1 rounded-md text-xs">データ整備</span>
+                                <span class="bg-white bg-opacity-20 px-2 py-1 rounded-md text-xs">微調整</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-connector"></div>
+                
+                <!-- Step 4 -->
+                <div class="step-card p-5 relative">
+                    <div class="step-number">04</div>
+                    <div class="flex items-center">
+                        <div class="step-icon">
+                            <i class="fas fa-user-graduate text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold">社内トレーニングと展開</h3>
+                            <p class="text-sm mt-1">従業員向けトレーニングを実施し、段階的に全社展開を進めます。変化管理も並行して行います。</p>
+                            <div class="flex space-x-2 mt-2">
+                                <span class="bg-white bg-opacity-20 px-2 py-1 rounded-md text-xs">ユーザートレーニング</span>
+                                <span class="bg-white bg-opacity-20 px-2 py-1 rounded-md text-xs">マニュアル整備</span>
+                                <span class="bg-white bg-opacity-20 px-2 py-1 rounded-md text-xs">段階的ロールアウト</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-connector"></div>
+                
+                <!-- Step 5 -->
+                <div class="step-card p-5 relative">
+                    <div class="step-number">05</div>
+                    <div class="flex items-center">
+                        <div class="step-icon">
+                            <i class="fas fa-chart-line text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold">効果測定と継続的改善</h3>
+                            <p class="text-sm mt-1">定期的に効果を測定し、フィードバックを収集。AIモデルとプロセスの継続的な改善を行います。</p>
+                            <div class="flex space-x-2 mt-2">
+                                <span class="bg-white bg-opacity-20 px-2 py-1 rounded-md text-xs">パフォーマンス分析</span>
+                                <span class="bg-white bg-opacity-20 px-2 py-1 rounded-md text-xs">ユーザーフィードバック</span>
+                                <span class="bg-white bg-opacity-20 px-2 py-1 rounded-md text-xs">モデル更新</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom info -->
+            <div class="absolute bottom-8 right-8 flex items-center">
+                <div class="text-sm font-light opacity-80">提案資料 | 5/6</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成功への鍵 | 企業の生成AI導入 提案資料</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Segoe UI', 'Meiryo UI', sans-serif;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #0078d4 0%, #5c2d91 100%);
+        }
+        .geometric-shape {
+            position: absolute;
+            opacity: 0.15;
+            z-index: 0;
+        }
+        .circle {
+            border-radius: 50%;
+            background: white;
+        }
+        .rectangle {
+            transform: rotate(45deg);
+            background: white;
+        }
+        .grid-lines {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: 0;
+        }
+        .content {
+            position: relative;
+            z-index: 10;
+        }
+        .title-glow {
+            text-shadow: 0 0 15px rgba(255,255,255,0.3);
+        }
+        .tech-line {
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #ffffff, transparent);
+        }
+        .key-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        .key-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        .key-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+        }
+        .pulse-btn {
+            position: relative;
+        }
+        .pulse-btn:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.4);
+            z-index: -1;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.7;
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 0.3;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0.7;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container gradient-bg flex flex-col">
+        <!-- Geometric background elements -->
+        <div class="grid-lines"></div>
+        <div class="geometric-shape circle" style="width: 300px; height: 300px; top: -100px; right: -50px;"></div>
+        <div class="geometric-shape rectangle" style="width: 250px; height: 250px; bottom: -100px; left: -50px;"></div>
+        <div class="geometric-shape circle" style="width: 180px; height: 180px; bottom: 200px; right: 150px;"></div>
+        
+        <!-- Header -->
+        <div class="content flex flex-col text-white w-full h-full px-20 py-12">
+            <h1 class="text-4xl font-bold mb-4 title-glow">成功への鍵</h1>
+            <div class="tech-line w-32 mb-6"></div>
+            
+            <!-- Introduction -->
+            <div class="key-card p-5 mb-6">
+                <p class="text-lg">生成AIの導入成功には、技術だけでなく組織的な取り組みが不可欠です。以下の5つの要素が成功への鍵となります。</p>
+            </div>
+            
+            <!-- Success Factors -->
+            <div class="grid grid-cols-2 gap-5 mb-8">
+                <!-- Factor 1 -->
+                <div class="key-card p-4 flex items-start">
+                    <div class="key-icon">
+                        <i class="fas fa-compass text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-1">明確な戦略と目標設定</h3>
+                        <p class="text-sm">ビジネス目標に直結する明確なAI活用計画と測定可能なKPIを設定。「技術のための技術」を避ける。</p>
+                    </div>
+                </div>
+                
+                <!-- Factor 2 -->
+                <div class="key-card p-4 flex items-start">
+                    <div class="key-icon">
+                        <i class="fas fa-users-cog text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-1">組織文化と変革管理</h3>
+                        <p class="text-sm">AIへの抵抗感を軽減し、全社的な理解と協力を得るための変革管理とトレーニングプログラムの実施。</p>
+                    </div>
+                </div>
+                
+                <!-- Factor 3 -->
+                <div class="key-card p-4 flex items-start">
+                    <div class="key-icon">
+                        <i class="fas fa-database text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-1">データ品質とガバナンス</h3>
+                        <p class="text-sm">高品質なデータの確保とAI活用における倫理的ガイドラインとセキュリティポリシーの策定と遵守。</p>
+                    </div>
+                </div>
+                
+                <!-- Factor 4 -->
+                <div class="key-card p-4 flex items-start">
+                    <div class="key-icon">
+                        <i class="fas fa-hands-helping text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-1">人間とAIの協調</h3>
+                        <p class="text-sm">AIを従業員の能力を拡張するツールとして位置づけ、人間の強みとAIの強みを組み合わせたハイブリッドアプローチの推進。</p>
+                    </div>
+                </div>
+                
+                <!-- Factor 5 -->
+                <div class="key-card p-4 flex items-start">
+                    <div class="key-icon">
+                        <i class="fas fa-sync-alt text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-1">継続的な学習と適応</h3>
+                        <p class="text-sm">AIモデルとその活用方法を継続的に改善し、最新技術動向と市場変化に柔軟に対応するアジリティの確保。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Next Steps -->
+            <h2 class="text-2xl font-semibold mb-3">次のステップ</h2>
+            <div class="key-card p-5 mb-6 flex items-center justify-between">
+                <div class="flex-1">
+                    <p class="text-lg mb-3">貴社の状況に合わせた生成AI導入戦略の策定をサポートいたします。まずは無料コンサルテーションで、貴社のビジネスにおけるAI活用の可能性を探りましょう。</p>
+                    <p class="text-sm opacity-80">お問い合わせ: ai-consulting@example.com</p>
+                </div>
+                <div class="ml-6">
+                    <div class="pulse-btn">
+                        <button class="px-6 py-3 bg-white text-purple-800 font-bold rounded-lg shadow-lg hover:bg-opacity-90 transition duration-300">
+                            無料相談を予約する
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Quote -->
+            <div class="key-card p-6 bg-opacity-30 italic">
+                <p class="text-lg text-center">"生成AIは、単なるツールではなく、ビジネス変革の触媒です。<br>今、行動を起こす企業が未来の競争優位性を確立します。"</p>
+            </div>
+            
+            <!-- Bottom info -->
+            <div class="absolute bottom-8 right-8 flex items-center">
+                <div class="text-sm font-light opacity-80">提案資料 | 6/6</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>物価高騰による家計への影響</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            background-color: #1a2942;
+            color: #f0f4f8;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+            line-height: 1.3;
+        }
+        .gradient-overlay {
+            background: linear-gradient(135deg, rgba(26, 41, 66, 0.9) 0%, rgba(19, 30, 49, 0.8) 100%);
+        }
+        .coin {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+            opacity: 0.3;
+        }
+        .coin-1 {
+            background-color: #f9c846;
+            top: 15%;
+            left: 15%;
+            animation-delay: 0s;
+        }
+        .coin-2 {
+            background-color: #e6e6e6;
+            bottom: 20%;
+            right: 12%;
+            animation-delay: 1s;
+        }
+        .coin-3 {
+            background-color: #dc9c4c;
+            top: 40%;
+            right: 25%;
+            animation-delay: 2s;
+        }
+        .coin-4 {
+            background-color: #e6e6e6;
+            bottom: 30%;
+            left: 20%;
+            animation-delay: 3s;
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container flex items-center justify-center relative">
+        <!-- Background decoration elements -->
+        <div class="coin coin-1"></div>
+        <div class="coin coin-2"></div>
+        <div class="coin coin-3"></div>
+        <div class="coin coin-4"></div>
+        
+        <!-- Overlay with gradient -->
+        <div class="gradient-overlay absolute inset-0"></div>
+        
+        <!-- Content container -->
+        <div class="z-10 px-16 py-12 text-center">
+            <div class="mb-10">
+                <i class="fas fa-wallet text-6xl text-yellow-300 opacity-80 mb-8"></i>
+            </div>
+            
+            <h1 class="title mb-10">物価高騰による<br>家計への影響</h1>
+            
+            <div class="flex items-center justify-center mt-12">
+                <div class="border-t border-gray-400 w-24 mr-6"></div>
+                <p class="text-gray-300 text-xl">厳しさを増す家計の現状</p>
+                <div class="border-t border-gray-400 w-24 ml-6"></div>
+            </div>
+            
+            <div class="mt-16 flex justify-center">
+                <div class="flex items-center bg-gray-700 bg-opacity-40 rounded-full px-8 py-3">
+                    <i class="fas fa-chart-line text-red-400 mr-3"></i>
+                    <span class="text-gray-300">2024年度版</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>物価高騰の現状 - 物価高騰による家計への影響</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            background-color: #1a2942;
+            color: #f0f4f8;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(135deg, #1a2942 0%, #0f1a2a 100%);
+        }
+        .chart-container {
+            height: 280px;
+            position: relative;
+        }
+        .chart-bar {
+            position: absolute;
+            bottom: 0;
+            width: 80px;
+            transition: height 1s ease-in-out;
+            border-radius: 8px 8px 0 0;
+        }
+        .price-item {
+            transition: all 0.3s ease;
+        }
+        .price-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        }
+        .page-number {
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container p-12 relative">
+        <!-- Header -->
+        <div class="mb-8">
+            <h1 class="text-4xl font-bold text-blue-200 mb-2">物価高騰の現状</h1>
+            <div class="w-32 h-1 bg-yellow-400 rounded-full opacity-70"></div>
+        </div>
+        
+        <!-- Main content in two columns -->
+        <div class="flex gap-8">
+            <!-- Left column: Inflation rate chart -->
+            <div class="w-1/2 bg-gray-800 bg-opacity-40 rounded-xl p-6">
+                <h2 class="text-2xl font-medium text-blue-200 mb-4">
+                    <i class="fas fa-chart-line mr-2 text-yellow-400"></i>
+                    日本のインフレ率推移
+                </h2>
+                
+                <div class="chart-container mt-8 mb-4 relative">
+                    <!-- Chart X-axis (years) -->
+                    <div class="absolute bottom-0 left-0 right-0 h-0.5 bg-gray-500 flex justify-between px-10">
+                        <span class="relative -bottom-6 text-center w-14">2022年</span>
+                        <span class="relative -bottom-6 text-center w-14">2023年</span>
+                        <span class="relative -bottom-6 text-center w-14">2024年</span>
+                        <span class="relative -bottom-6 text-center w-14">2025年<br>(予測)</span>
+                    </div>
+                    
+                    <!-- Chart bars -->
+                    <div class="chart-bar bg-blue-400 opacity-80" style="left: 130px; height: 100px;" data-value="2.5%"></div>
+                    <div class="chart-bar bg-blue-500 opacity-80" style="left: 330px; height: 152px;" data-value="3.8%"></div>
+                    <div class="chart-bar bg-blue-600 opacity-80" style="left: 530px; height: 128px;" data-value="3.2%"></div>
+                    <div class="chart-bar bg-blue-700 opacity-80" style="left: 730px; height: 96px;" data-value="2.4%"></div>
+                    
+                    <!-- Chart values -->
+                    <div class="absolute left-130 bottom-[104px] -mb-6 text-center w-14 font-medium" style="left: 130px;">2.5%</div>
+                    <div class="absolute left-330 bottom-[156px] -mb-6 text-center w-14 font-medium" style="left: 330px;">3.8%</div>
+                    <div class="absolute left-530 bottom-[132px] -mb-6 text-center w-14 font-medium" style="left: 530px;">3.2%</div>
+                    <div class="absolute left-730 bottom-[100px] -mb-6 text-center w-14 font-medium" style="left: 730px;">2.4%</div>
+                </div>
+                
+                <div class="mt-12 text-gray-300">
+                    <p class="mb-2"><i class="fas fa-circle text-xs text-yellow-400 mr-2"></i>2023年のインフレ率は3.8%と40年ぶりの高水準</p>
+                    <p class="mb-2"><i class="fas fa-circle text-xs text-yellow-400 mr-2"></i>2025年も2%を上回るインフレが継続見込み</p>
+                    <p><i class="fas fa-circle text-xs text-yellow-400 mr-2"></i>物価上昇が3年以上続く異例の状況</p>
+                </div>
+            </div>
+            
+            <!-- Right column: Price increase items -->
+            <div class="w-1/2">
+                <h2 class="text-2xl font-medium text-blue-200 mb-6">
+                    <i class="fas fa-tags mr-2 text-yellow-400"></i>
+                    主な物価上昇品目
+                </h2>
+                
+                <div class="grid grid-cols-2 gap-4">
+                    <!-- Food items -->
+                    <div class="price-item bg-red-900 bg-opacity-40 p-4 rounded-lg">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-utensils text-2xl text-red-400 mr-3"></i>
+                            <h3 class="text-xl font-medium">食料品</h3>
+                        </div>
+                        <p class="mb-2 text-sm">食料費前年比: <span class="font-bold text-red-300">+3.9%</span></p>
+                        <ul class="text-sm text-gray-300 pl-5 list-disc">
+                            <li>米価格の大幅上昇（+10.4%）</li>
+                            <li>野菜・海藻（+4.0%）</li>
+                            <li>果物（+3.1%）</li>
+                            <li>外食（+8.0%）</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Energy costs -->
+                    <div class="price-item bg-yellow-900 bg-opacity-30 p-4 rounded-lg">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-bolt text-2xl text-yellow-400 mr-3"></i>
+                            <h3 class="text-xl font-medium">光熱・水道</h3>
+                        </div>
+                        <p class="mb-2 text-sm">政府補助金縮小の影響</p>
+                        <ul class="text-sm text-gray-300 pl-5 list-disc">
+                            <li>電気代（前年比-2.1%だが高止まり）</li>
+                            <li>ガス代（-8.9%だが依然高水準）</li>
+                            <li>ガソリン・灯油価格の高騰</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Housing -->
+                    <div class="price-item bg-blue-900 bg-opacity-30 p-4 rounded-lg">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-home text-2xl text-blue-400 mr-3"></i>
+                            <h3 class="text-xl font-medium">住居費</h3>
+                        </div>
+                        <p class="mb-2 text-sm">住居費前年比: <span class="font-bold">+0.4%</span></p>
+                        <ul class="text-sm text-gray-300 pl-5 list-disc">
+                            <li>家賃地代（+1.2%）</li>
+                            <li>設備修繕・維持（-0.2%）</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Transportation/Communication -->
+                    <div class="price-item bg-green-900 bg-opacity-30 p-4 rounded-lg">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-car text-2xl text-green-400 mr-3"></i>
+                            <h3 class="text-xl font-medium">交通・通信</h3>
+                        </div>
+                        <p class="mb-2 text-sm">交通・通信費前年比: <span class="font-bold text-red-300">-2.6%</span></p>
+                        <ul class="text-sm text-gray-300 pl-5 list-disc">
+                            <li>自動車関連費（-2.7%）</li>
+                            <li>通信費（-3.4%）</li>
+                            <li>郵便料金の大幅値上げ</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-5 bg-gray-800 bg-opacity-50 p-4 rounded-lg">
+                    <h3 class="text-lg font-medium text-yellow-200 mb-2">
+                        <i class="fas fa-exclamation-triangle mr-2"></i>
+                        物価高騰の特徴
+                    </h3>
+                    <p class="text-sm text-gray-300">原材料費上昇だけでなく、人件費上昇による価格転嫁が増加。食料品を中心に値上げが常態化しつつある。エネルギー補助の縮小が家計への重石に。</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Page number -->
+        <div class="page-number">2 / 6</div>
+    </div>
+    
+    <script>
+        // Add animation to chart bars on load
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                const bars = document.querySelectorAll('.chart-bar');
+                bars.forEach(bar => {
+                    const currentHeight = bar.style.height;
+                    bar.style.height = '0';
+                    setTimeout(() => {
+                        bar.style.height = currentHeight;
+                    }, 100);
+                });
+            }, 300);
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>家計支出への影響 - 物価高騰による家計への影響</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            background-color: #1a2942;
+            color: #f0f4f8;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(135deg, #1a2942 0%, #0f1a2a 100%);
+        }
+        .impact-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .impact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+        .engel-progress {
+            height: 24px;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+        .engel-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0;
+            transition: width 1.5s ease-out;
+            background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+        }
+        .engel-marker {
+            position: absolute;
+            top: -8px;
+            width: 4px;
+            height: 40px;
+            background-color: #f9c846;
+            transform: translateX(-2px);
+        }
+        .financial-burden-chart {
+            position: relative;
+            height: 200px;
+        }
+        .burden-bar {
+            position: absolute;
+            bottom: 0;
+            width: 80px;
+            transition: height 1s ease-in-out;
+            border-radius: 8px 8px 0 0;
+        }
+        .page-number {
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container p-12 relative">
+        <!-- Header -->
+        <div class="mb-8">
+            <h1 class="text-4xl font-bold text-blue-200 mb-2">家計支出への影響</h1>
+            <div class="w-32 h-1 bg-yellow-400 rounded-full opacity-70"></div>
+        </div>
+        
+        <!-- Main content in two columns -->
+        <div class="flex gap-8">
+            <!-- Left column -->
+            <div class="w-1/2 space-y-6">
+                <!-- Consumer spending decrease -->
+                <div class="impact-card bg-gray-800 bg-opacity-60 rounded-xl p-6">
+                    <h2 class="text-2xl font-medium text-blue-200 mb-4">
+                        <i class="fas fa-shopping-cart mr-2 text-red-400"></i>
+                        消費支出の実質減少
+                    </h2>
+                    
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="text-center px-4 py-3 bg-red-900 bg-opacity-30 rounded-lg">
+                            <p class="text-sm text-gray-300 mb-1">全世帯</p>
+                            <p class="text-3xl font-bold text-red-300">-1.6%</p>
+                            <p class="text-xs text-gray-400">前年比実質</p>
+                        </div>
+                        <div class="text-center px-4 py-3 bg-red-900 bg-opacity-30 rounded-lg">
+                            <p class="text-sm text-gray-300 mb-1">二人以上世帯</p>
+                            <p class="text-3xl font-bold text-red-300">-1.1%</p>
+                            <p class="text-xs text-gray-400">前年比実質</p>
+                        </div>
+                        <div class="text-center px-4 py-3 bg-red-900 bg-opacity-30 rounded-lg">
+                            <p class="text-sm text-gray-300 mb-1">単身世帯</p>
+                            <p class="text-3xl font-bold text-red-300">-2.0%</p>
+                            <p class="text-xs text-gray-400">前年比実質</p>
+                        </div>
+                    </div>
+                    
+                    <div class="text-sm text-gray-300 space-y-2">
+                        <p><i class="fas fa-circle text-xs text-yellow-400 mr-2"></i>2年連続の実質消費支出減少</p>
+                        <p><i class="fas fa-circle text-xs text-yellow-400 mr-2"></i>物価高騰で購買力が低下</p>
+                        <p><i class="fas fa-circle text-xs text-yellow-400 mr-2"></i>特に単身世帯の減少率が大きい</p>
+                    </div>
+                </div>
+                
+                <!-- Financial burden increase -->
+                <div class="impact-card bg-gray-800 bg-opacity-60 rounded-xl p-6">
+                    <h2 class="text-2xl font-medium text-blue-200 mb-4">
+                        <i class="fas fa-wallet mr-2 text-orange-400"></i>
+                        家計負担の増加額
+                    </h2>
+                    
+                    <div class="financial-burden-chart my-6 px-10">
+                        <div class="absolute left-0 right-0 bottom-0 h-0.5 bg-gray-500"></div>
+                        <div class="burden-bar bg-blue-500 opacity-80" style="left: 140px; height: 140px;" data-value="2023年度"></div>
+                        <div class="burden-bar bg-orange-500 opacity-80" style="left: 320px; height: 180px;" data-value="2024年度"></div>
+                        <div class="burden-bar bg-red-500 opacity-80" style="left: 500px; height: 160px;" data-value="2025年度"></div>
+                        
+                        <div class="absolute text-center w-20" style="left: 130px; bottom: -30px;">2023年度</div>
+                        <div class="absolute text-center w-20" style="left: 310px; bottom: -30px;">2024年度</div>
+                        <div class="absolute text-center w-20" style="left: 490px; bottom: -30px;">2025年度</div>
+                        
+                        <div class="absolute text-center font-medium" style="left: 140px; bottom: 144px;">約7万円</div>
+                        <div class="absolute text-center font-medium" style="left: 320px; bottom: 184px;">約9.6万円</div>
+                        <div class="absolute text-center font-medium" style="left: 500px; bottom: 164px;">約8.7万円</div>
+                    </div>
+                    
+                    <div class="text-sm text-gray-300 mt-10">
+                        <p><i class="fas fa-info-circle text-yellow-400 mr-2"></i>4人家族では年間約35万円の負担増</p>
+                        <p class="mt-2 text-xs text-gray-400">※2021年度と比較した1世帯あたりの年間負担増加額</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right column -->
+            <div class="w-1/2 space-y-6">
+                <!-- Engel coefficient increase -->
+                <div class="impact-card bg-gray-800 bg-opacity-60 rounded-xl p-6">
+                    <h2 class="text-2xl font-medium text-blue-200 mb-4">
+                        <i class="fas fa-utensils mr-2 text-green-400"></i>
+                        エンゲル係数の上昇
+                    </h2>
+                    
+                    <div class="text-center mb-4">
+                        <p class="text-sm text-gray-300 mb-2">消費支出に占める食料費の割合</p>
+                        <div class="flex items-baseline justify-center">
+                            <span class="text-5xl font-bold text-yellow-300">28.3</span>
+                            <span class="text-2xl ml-1 text-gray-300">%</span>
+                        </div>
+                        <p class="text-sm text-red-300 mt-1">前年比 +0.5ポイント</p>
+                    </div>
+                    
+                    <div class="mt-6 mb-8">
+                        <p class="text-sm text-gray-300 mb-2">2000年以降で最高水準</p>
+                        <div class="engel-progress bg-gray-700">
+                            <div class="engel-bar" id="engelBar"></div>
+                            <div class="engel-marker" style="left: 73%;" data-year="2020年"></div>
+                            <div class="engel-marker" style="left: 79%;" data-year="2021年"></div>
+                            <div class="engel-marker" style="left: 85%;" data-year="2022年"></div>
+                            <div class="engel-marker" style="left: 94%;" data-year="2023年"></div>
+                        </div>
+                        <div class="flex justify-between text-xs text-gray-400 mt-1">
+                            <span>24%</span>
+                            <span>26%</span>
+                            <span>28%</span>
+                            <span>30%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="text-sm text-gray-300 space-y-2">
+                        <p><i class="fas fa-circle text-xs text-yellow-400 mr-2"></i>食料品の価格上昇が他の品目よりも大きい</p>
+                        <p><i class="fas fa-circle text-xs text-yellow-400 mr-2"></i>エンゲル係数上昇は家計の余裕の減少を示す</p>
+                    </div>
+                </div>
+                
+                <!-- Specific impact on items -->
+                <div class="impact-card bg-gray-800 bg-opacity-60 rounded-xl p-6">
+                    <h2 class="text-2xl font-medium text-blue-200 mb-4">
+                        <i class="fas fa-chart-pie mr-2 text-purple-400"></i>
+                        項目別の影響
+                    </h2>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div class="bg-red-900 bg-opacity-20 rounded-lg p-3">
+                            <h3 class="text-lg font-medium text-red-200 mb-2">食料</h3>
+                            <p class="text-xl font-bold">-0.4%<span class="text-sm ml-1">実質</span></p>
+                            <p class="text-xs text-gray-400 mt-1">野菜・海藻 -4.2%</p>
+                            <p class="text-xs text-gray-400">果物 -6.9%</p>
+                        </div>
+                        
+                        <div class="bg-blue-900 bg-opacity-20 rounded-lg p-3">
+                            <h3 class="text-lg font-medium text-blue-200 mb-2">光熱・水道</h3>
+                            <p class="text-xl font-bold">-6.8%<span class="text-sm ml-1">実質</span></p>
+                            <p class="text-xs text-gray-400 mt-1">電気代 -8.8%</p>
+                            <p class="text-xs text-gray-400">ガス代 -9.0%</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-green-900 bg-opacity-20 rounded-lg p-3">
+                            <h3 class="text-lg font-medium text-green-200 mb-2">交通・通信</h3>
+                            <p class="text-xl font-bold">-4.1%<span class="text-sm ml-1">実質</span></p>
+                            <p class="text-xs text-gray-400 mt-1">自動車関連 -5.0%</p>
+                            <p class="text-xs text-gray-400">通信 -2.6%</p>
+                        </div>
+                        
+                        <div class="bg-yellow-900 bg-opacity-20 rounded-lg p-3">
+                            <h3 class="text-lg font-medium text-yellow-200 mb-2">教養娯楽</h3>
+                            <p class="text-xl font-bold">-3.6%<span class="text-sm ml-1">実質</span></p>
+                            <p class="text-xs text-gray-400 mt-1">サービス -4.1%</p>
+                            <p class="text-xs text-gray-400">書籍・印刷物 -6.5%</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quote -->
+                <div class="mt-6 p-4 bg-gray-700 bg-opacity-30 rounded-lg border-l-4 border-yellow-400">
+                    <p class="text-sm italic text-gray-300">「必需品である米は購入を控えることができない。年金暮らしなので、考えながら買い物をしないと生活は大変です」</p>
+                    <p class="text-xs text-gray-400 mt-2">- 70代女性、家計調査より</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Page number -->
+        <div class="page-number">3 / 6</div>
+    </div>
+    
+    <script>
+        // Animation for Engel coefficient bar
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                const engelBar = document.getElementById('engelBar');
+                engelBar.style.width = '100%';
+            }, 300);
+            
+            // Animation for burden bars
+            setTimeout(() => {
+                const bars = document.querySelectorAll('.burden-bar');
+                bars.forEach(bar => {
+                    const currentHeight = bar.style.height;
+                    bar.style.height = '0';
+                    setTimeout(() => {
+                        bar.style.height = currentHeight;
+                    }, 100);
+                });
+            }, 300);
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>家計の対応策 - 物価高騰による家計への影響</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            background-color: #1a2942;
+            color: #f0f4f8;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(135deg, #1a2942 0%, #0f1a2a 100%);
+        }
+        .countermeasure-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .countermeasure-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+        .expense-item {
+            transition: all 0.3s ease;
+        }
+        .expense-item:hover {
+            transform: scale(1.05);
+        }
+        .pie-chart {
+            position: relative;
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: conic-gradient(
+                #4b6cb7 0% 27%,
+                #3b82f6 27% 46%,
+                #60a5fa 46% 63%,
+                #93c5fd 63% 81%,
+                #bfdbfe 81% 100%
+            );
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .pie-center {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            top: 50px;
+            left: 50px;
+            background-color: #1a2942;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+        .progress-bar {
+            height: 16px;
+            border-radius: 8px;
+            background-color: #2c4066;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            transition: width 1.2s ease-out;
+        }
+        .page-number {
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container p-12 relative">
+        <!-- Header -->
+        <div class="mb-8">
+            <h1 class="text-4xl font-bold text-blue-200 mb-2">家計の対応策</h1>
+            <div class="w-32 h-1 bg-yellow-400 rounded-full opacity-70"></div>
+        </div>
+        
+        <!-- Main content in two columns -->
+        <div class="flex gap-8">
+            <!-- Left column -->
+            <div class="w-1/2 space-y-6">
+                <!-- Implementation rate -->
+                <div class="countermeasure-card bg-gray-800 bg-opacity-60 rounded-xl p-6">
+                    <h2 class="text-2xl font-medium text-blue-200 mb-5">
+                        <i class="fas fa-cut mr-2 text-red-400"></i>
+                        支出削減・節約の実施状況
+                    </h2>
+                    
+                    <div class="flex items-center justify-center gap-8">
+                        <div class="relative flex items-center justify-center">
+                            <div class="pie-chart"></div>
+                            <div class="pie-center">
+                                <div class="text-center">
+                                    <span class="text-3xl font-bold text-yellow-300">72.7%</span>
+                                    <p class="text-xs text-gray-300 mt-1">実施率</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="text-sm">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-300">実施している</span>
+                                    <span class="text-yellow-300 font-medium">72.7%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill bg-gradient-to-r from-yellow-500 to-yellow-300" style="width: 0%" data-width="72.7%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="text-sm">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-300">実施していない</span>
+                                    <span class="text-gray-400 font-medium">27.3%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill bg-gray-500" style="width: 0%" data-width="27.3%"></div>
+                                </div>
+                            </div>
+                            
+                            <p class="text-xs text-gray-400 mt-3">※物価高騰の影響を受けている家庭のうち</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-5 text-sm text-gray-300">
+                        <p><i class="fas fa-info-circle text-yellow-400 mr-2"></i>物価高騰の長期化により、7割以上の家庭で支出削減や節約が実施されている</p>
+                    </div>
+                </div>
+                
+                <!-- Reduction items -->
+                <div class="countermeasure-card bg-gray-800 bg-opacity-60 rounded-xl p-6">
+                    <h2 class="text-2xl font-medium text-blue-200 mb-4">
+                        <i class="fas fa-list-ul mr-2 text-green-400"></i>
+                        削減している費目
+                    </h2>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="expense-item bg-red-900 bg-opacity-30 rounded-lg p-3 flex items-center">
+                            <i class="fas fa-utensils text-xl text-red-300 mr-3"></i>
+                            <div>
+                                <p class="text-lg font-medium">食費</p>
+                                <p class="text-2xl font-bold text-yellow-300">44.2%</p>
+                            </div>
+                        </div>
+                        
+                        <div class="expense-item bg-blue-900 bg-opacity-30 rounded-lg p-3 flex items-center">
+                            <i class="fas fa-puzzle-piece text-xl text-blue-300 mr-3"></i>
+                            <div>
+                                <p class="text-lg font-medium">趣味費</p>
+                                <p class="text-2xl font-bold text-yellow-300">21.6%</p>
+                            </div>
+                        </div>
+                        
+                        <div class="expense-item bg-green-900 bg-opacity-30 rounded-lg p-3 flex items-center">
+                            <i class="fas fa-tshirt text-xl text-green-300 mr-3"></i>
+                            <div>
+                                <p class="text-lg font-medium">被服費</p>
+                                <p class="text-2xl font-bold text-yellow-300">21.4%</p>
+                            </div>
+                        </div>
+                        
+                        <div class="expense-item bg-purple-900 bg-opacity-30 rounded-lg p-3 flex items-center">
+                            <i class="fas fa-users text-xl text-purple-300 mr-3"></i>
+                            <div>
+                                <p class="text-lg font-medium">交際費</p>
+                                <p class="text-2xl font-bold text-yellow-300">20.6%</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-5 flex gap-4">
+                        <div class="expense-item bg-yellow-900 bg-opacity-30 rounded-lg p-3 flex items-center">
+                            <i class="fas fa-wallet text-xl text-yellow-300 mr-3"></i>
+                            <div>
+                                <p class="text-lg font-medium">自身の小遣い</p>
+                                <p class="text-2xl font-bold text-yellow-300">19.4%</p>
+                            </div>
+                        </div>
+                        
+                        <div class="expense-item bg-indigo-900 bg-opacity-30 rounded-lg p-3 flex items-center">
+                            <i class="fas fa-lightbulb text-xl text-indigo-300 mr-3"></i>
+                            <div>
+                                <p class="text-lg font-medium">電気代</p>
+                                <p class="text-2xl font-bold text-yellow-300">19.9%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right column -->
+            <div class="w-1/2 space-y-6">
+                <!-- Personal allowance reduction -->
+                <div class="countermeasure-card bg-gray-800 bg-opacity-60 rounded-xl p-6">
+                    <h2 class="text-2xl font-medium text-blue-200 mb-4">
+                        <i class="fas fa-chart-bar mr-2 text-purple-400"></i>
+                        自身の小遣いの削減額
+                    </h2>
+                    
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="text-center">
+                            <p class="text-gray-300 mb-1">削減前</p>
+                            <p class="text-3xl font-bold text-blue-300">36,607<span class="text-lg">円</span></p>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <i class="fas fa-long-arrow-alt-right text-2xl text-yellow-400 mx-3"></i>
+                        </div>
+                        
+                        <div class="text-center">
+                            <p class="text-gray-300 mb-1">削減後</p>
+                            <p class="text-3xl font-bold text-green-300">22,269<span class="text-lg">円</span></p>
+                        </div>
+                        
+                        <div class="text-center px-4 py-3 bg-red-900 bg-opacity-40 rounded-lg">
+                            <p class="text-gray-300 mb-1">削減額</p>
+                            <p class="text-3xl font-bold text-red-300">14,338<span class="text-lg">円</span></p>
+                            <p class="text-xs text-gray-400">月平均</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-700 bg-opacity-40 rounded-lg p-4 mb-4">
+                        <h3 class="text-lg font-medium text-blue-200 mb-3">年代別の削減状況</h3>
+                        
+                        <div class="space-y-3">
+                            <div>
+                                <div class="flex justify-between mb-1 text-sm">
+                                    <span class="text-gray-300">40代</span>
+                                    <span class="text-red-300 font-medium">17,813円</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill bg-red-500" style="width: 0%" data-width="100%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-1 text-sm">
+                                    <span class="text-gray-300">50代</span>
+                                    <span class="text-orange-300 font-medium">15,362円</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill bg-orange-500" style="width: 0%" data-width="86.2%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-1 text-sm">
+                                    <span class="text-gray-300">60代</span>
+                                    <span class="text-yellow-300 font-medium">13,729円</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill bg-yellow-500" style="width: 0%" data-width="77.1%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-1 text-sm">
+                                    <span class="text-gray-300">20代</span>
+                                    <span class="text-green-300 font-medium">13,118円</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill bg-green-500" style="width: 0%" data-width="73.6%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-1 text-sm">
+                                    <span class="text-gray-300">30代</span>
+                                    <span class="text-blue-300 font-medium">10,910円</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill bg-blue-500" style="width: 0%" data-width="61.2%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-sm text-gray-300">
+                        <p><i class="fas fa-circle text-xs text-yellow-400 mr-2"></i>40代の削減額が最大で、削減後の金額も最低（19,669円）</p>
+                        <p><i class="fas fa-circle text-xs text-yellow-400 mr-2"></i>小遣いを削る状況は、家計のひっ迫度を表す指標に</p>
+                    </div>
+                </div>
+                
+                <!-- Voice of consumers -->
+                <div class="countermeasure-card bg-gray-800 bg-opacity-60 rounded-xl p-6">
+                    <h2 class="text-2xl font-medium text-blue-200 mb-4">
+                        <i class="fas fa-comment-alt mr-2 text-yellow-400"></i>
+                        消費者の声
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-gray-700 bg-opacity-40 rounded-lg p-4 border-l-4 border-red-400">
+                            <p class="text-sm italic text-gray-300">「物価高と円安の影響を受けています。給料が上がらないのに生活費が全て微妙に上がっている状況です」</p>
+                            <p class="text-xs text-gray-400 mt-2 text-right">- 30代男性</p>
+                        </div>
+                        
+                        <div class="bg-gray-700 bg-opacity-40 rounded-lg p-4 border-l-4 border-blue-400">
+                            <p class="text-sm italic text-gray-300">「将来に不安を感じるので貯蓄額を上げました。その分、日々の支出を削らざるを得ません」</p>
+                            <p class="text-xs text-gray-400 mt-2 text-right">- 40代女性</p>
+                        </div>
+                        
+                        <div class="bg-gray-700 bg-opacity-40 rounded-lg p-4 border-l-4 border-green-400">
+                            <p class="text-sm italic text-gray-300">「物価高騰に見合う賃金アップがないため、生活必需品以外の支出を控えています」</p>
+                            <p class="text-xs text-gray-400 mt-2 text-right">- 50代男性</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 text-sm text-center text-yellow-200">
+                        <p>「辛い」「悲しい」という声も多数</p>
+                    </div>
+                </div>
+                
+                <!-- Unique adaptation measures -->
+                <div class="bg-gray-700 bg-opacity-30 p-4 rounded-lg mt-6">
+                    <h3 class="text-lg font-medium text-yellow-200 mb-2">
+                        <i class="fas fa-lightbulb mr-2"></i>
+                        工夫を重ねる家計の例
+                    </h3>
+                    <ul class="text-sm text-gray-300 space-y-2 pl-6 list-disc">
+                        <li>価格が比較的安い根菜類を中心に購入</li>
+                        <li>大容量の肉を買って小分けに冷凍し、必要分だけ使用</li>
+                        <li>家庭菜園でブロッコリーや大根を自家栽培</li>
+                        <li>野菜は芯まで使うなど無駄を削減</li>
+                        <li>夫と子供の散髪を自宅で行い、年間約3万円節約</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Page number -->
+        <div class="page-number">4 / 6</div>
+    </div>
+    
+    <script>
+        // Animation for progress bars
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                const fills = document.querySelectorAll('.progress-fill');
+                fills.forEach(fill => {
+                    const width = fill.getAttribute('data-width');
+                    fill.style.width = width;
+                });
+            }, 300);
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>今後の見通し - 物価高騰による家計への影響</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            background-color: #1a2942;
+            color: #f0f4f8;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(135deg, #1a2942 0%, #0f1a2a 100%);
+        }
+        .forecast-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .forecast-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+        .progress-bar {
+            height: 16px;
+            border-radius: 8px;
+            background-color: #2c4066;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            transition: width 1.2s ease-out;
+        }
+        .burden-item {
+            transition: all 0.3s ease;
+        }
+        .burden-item:hover {
+            transform: scale(1.03);
+        }
+        .wage-chart {
+            height: 200px;
+            position: relative;
+        }
+        .chart-line {
+            position: absolute;
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: dash 2s ease-in-out forwards;
+        }
+        @keyframes dash {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+        .chart-point {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            animation: fadeIn 0.5s ease-in-out forwards;
+            animation-delay: 1.5s;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        .page-number {
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container p-12 relative">
+        <!-- Header -->
+        <div class="mb-8">
+            <h1 class="text-4xl font-bold text-blue-200 mb-2">今後の見通し</h1>
+            <div class="w-32 h-1 bg-yellow-400 rounded-full opacity-70"></div>
+        </div>
+        
+        <!-- Main content in two columns -->
+        <div class="flex gap-8">
+            <!-- Left column -->
+            <div class="w-1/2 space-y-6">
+                <!-- Price outlook -->
+                <div class="forecast-card bg-gray-800 bg-opacity-60 rounded-xl p-6">
+                    <h2 class="text-2xl font-medium text-blue-200 mb-4">
+                        <i class="fas fa-chart-line mr-2 text-yellow-400"></i>
+                        2025年度の物価見通し
+                    </h2>
+                    
+                    <div class="flex items-center justify-center mb-5">
+                        <div class="text-center px-10 py-5 bg-blue-900 bg-opacity-30 rounded-lg">
+                            <p class="text-sm text-gray-300 mb-1">コアCPI前年比伸び率</p>
+                            <p class="text-5xl font-bold text-yellow-300">+2.4<span class="text-3xl">%</span></p>
+                            <p class="text-xs text-gray-400 mt-2">※生鮮食品を除く消費者物価指数</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-700 bg-opacity-40 rounded-lg p-4">
+                        <h3 class="text-lg font-medium text-blue-200 mb-3">物価上昇の要因</h3>
+                        
+                        <div class="space-y-3">
+                            <div>
+                                <div class="flex justify-between mb-1 text-sm">
+                                    <span class="text-gray-300">食料品の値上げ</span>
+                                    <span class="text-yellow-300 font-medium">影響大</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill bg-gradient-to-r from-yellow-600 to-yellow-400" style="width: 0%" data-width="85%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-1 text-sm">
+                                    <span class="text-gray-300">エネルギー補助金縮小</span>
+                                    <span class="text-yellow-300 font-medium">影響中</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill bg-gradient-to-r from-yellow-600 to-yellow-400" style="width: 0%" data-width="65%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-1 text-sm">
+                                    <span class="text-gray-300">人件費上昇の価格転嫁</span>
+                                    <span class="text-yellow-300 font-medium">影響増加中</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill bg-gradient-to-r from-yellow-600 to-yellow-400" style="width: 0%" data-width="70%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-1 text-sm">
+                                    <span class="text-gray-300">高校授業料無償化</span>
+                                    <span class="text-blue-300 font-medium">影響-0.2%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill bg-blue-500" style="width: 0%" data-width="20%"></div>
+                                </div>
+                                <p class="text-xs text-gray-400 italic mt-1">※物価押し下げ要因</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-sm text-gray-300 mt-4">
+                        <p><i class="fas fa-circle text-xs text-yellow-400 mr-2"></i>2025年も2%を上回るインフレが継続</p>
+                        <p><i class="fas fa-circle text-xs text-yellow-400 mr-2"></i>値上げの要因が原材料費から人件費へとシフト</p>
+                    </div>
+                </div>
+                
+                <!-- Real wage trends -->
+                <div class="forecast-card bg-gray-800 bg-opacity-60 rounded-xl p-6">
+                    <h2 class="text-2xl font-medium text-blue-200 mb-4">
+                        <i class="fas fa-money-bill-wave mr-2 text-green-400"></i>
+                        実質賃金の動向予測
+                    </h2>
+                    
+                    <div class="wage-chart mb-6 p-4">
+                        <!-- Chart axes -->
+                        <div class="absolute bottom-0 left-0 w-full h-0.5 bg-gray-500"></div>
+                        <div class="absolute bottom-0 left-0 h-full w-0.5 bg-gray-500"></div>
+                        
+                        <!-- Year labels -->
+                        <div class="absolute bottom-[-20px] left-[12%] text-xs text-gray-400">2022</div>
+                        <div class="absolute bottom-[-20px] left-[37%] text-xs text-gray-400">2023</div>
+                        <div class="absolute bottom-[-20px] left-[62%] text-xs text-gray-400">2024</div>
+                        <div class="absolute bottom-[-20px] left-[87%] text-xs text-gray-400">2025(予)</div>
+                        
+                        <!-- Horizontal guide lines -->
+                        <div class="absolute bottom-[100px] left-0 w-full h-[0.5px] bg-gray-700"></div>
+                        <div class="absolute bottom-[50px] left-0 w-full h-[0.5px] bg-gray-700"></div>
+                        <div class="absolute bottom-[150px] left-0 w-full h-[0.5px] bg-gray-700"></div>
+                        
+                        <!-- Chart line -->
+                        <svg class="absolute bottom-0 left-0 w-full h-full" viewBox="0 0 400 200" preserveAspectRatio="none">
+                            <path class="chart-line" d="M 50 150 L 150 180 L 250 160 L 350 140" fill="none" stroke="#34D399" stroke-width="3" />
+                        </svg>
+                        
+                        <!-- Data points -->
+                        <div class="chart-point bg-green-400" style="bottom: 150px; left: 12%"></div>
+                        <div class="chart-point bg-green-400" style="bottom: 40px; left: 37%"></div>
+                        <div class="chart-point bg-green-400" style="bottom: 50px; left: 62%"></div>
+                        <div class="chart-point bg-green-400" style="bottom: 70px; left: 87%"></div>
+                        
+                        <!-- Values -->
+                        <div class="absolute bottom-[155px] left-[12%] text-xs text-green-300">-1.0%</div>
+                        <div class="absolute bottom-[25px] left-[37%] text-xs text-red-300">-4.8%</div>
+                        <div class="absolute bottom-[35px] left-[62%] text-xs text-red-300">-2.5%</div>
+                        <div class="absolute bottom-[75px] left-[87%] text-xs text-green-300">+0.4%</div>
+                    </div>
+                    
+                    <div class="flex gap-4">
+                        <div class="bg-green-900 bg-opacity-30 rounded-lg p-3 w-1/2">
+                            <h3 class="text-lg font-medium text-green-200 mb-2">2025年度予測</h3>
+                            <p class="text-3xl font-bold text-green-300">+0.4%</p>
+                            <p class="text-xs text-gray-400 mt-1">実質賃金前年比</p>
+                        </div>
+                        
+                        <div class="bg-red-900 bg-opacity-30 rounded-lg p-3 w-1/2">
+                            <h3 class="text-lg font-medium text-red-200 mb-2">累積影響</h3>
+                            <p class="text-3xl font-bold text-red-300">-7.9%</p>
+                            <p class="text-xs text-gray-400 mt-1">2022年度以降の累積落ち込み</p>
+                        </div>
+                    </div>
+                    
+                    <div class="text-sm text-gray-300 mt-4">
+                        <p><i class="fas fa-exclamation-circle text-red-400 mr-2"></i>実質賃金のプラス転化は実現するも、過去の落ち込みを取り戻すには至らず</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right column -->
+            <div class="w-1/2 space-y-6">
+                <!-- Household burden -->
+                <div class="forecast-card bg-gray-800 bg-opacity-60 rounded-xl p-6">
+                    <h2 class="text-2xl font-medium text-blue-200 mb-4">
+                        <i class="fas fa-wallet mr-2 text-red-400"></i>
+                        家計負担の見込み額（2025年度）
+                    </h2>
+                    
+                    <div class="flex items-center justify-center mb-6">
+                        <div class="text-center px-10 py-5 bg-red-900 bg-opacity-30 rounded-lg">
+                            <p class="text-sm text-gray-300 mb-1">1世帯あたりの年間負担増加額</p>
+                            <p class="text-5xl font-bold text-red-300">8.7<span class="text-3xl">万円</span></p>
+                            <p class="text-xs text-gray-400 mt-2">※2021年度と比較した場合</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-lg font-medium text-blue-200 mb-3">負担内訳（前年度からの増加額）</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="burden-item bg-red-900 bg-opacity-30 rounded-lg p-4 flex items-center justify-between">
+                            <div class="flex items-center">
+                                <i class="fas fa-utensils text-xl text-red-300 mr-3"></i>
+                                <div>
+                                    <p class="text-lg font-medium">食料関連</p>
+                                    <p class="text-xs text-gray-300">外食を含む</p>
+                                </div>
+                            </div>
+                            <p class="text-2xl font-bold text-red-300">+4.2<span class="text-lg">万円</span></p>
+                        </div>
+                        
+                        <div class="burden-item bg-yellow-900 bg-opacity-30 rounded-lg p-4 flex items-center justify-between">
+                            <div class="flex items-center">
+                                <i class="fas fa-bolt text-xl text-yellow-300 mr-3"></i>
+                                <div>
+                                    <p class="text-lg font-medium">エネルギー関連</p>
+                                    <p class="text-xs text-gray-300">電気・ガス・ガソリン等</p>
+                                </div>
+                            </div>
+                            <p class="text-2xl font-bold text-yellow-300">+1.9<span class="text-lg">万円</span></p>
+                        </div>
+                        
+                        <div class="burden-item bg-blue-900 bg-opacity-30 rounded-lg p-4 flex items-center justify-between">
+                            <div class="flex items-center">
+                                <i class="fas fa-shopping-bag text-xl text-blue-300 mr-3"></i>
+                                <div>
+                                    <p class="text-lg font-medium">その他関連</p>
+                                    <p class="text-xs text-gray-300">日用品・サービス・家具・衣類等</p>
+                                </div>
+                            </div>
+                            <p class="text-2xl font-bold text-blue-300">+2.7<span class="text-lg">万円</span></p>
+                        </div>
+                        
+                        <div class="burden-item bg-purple-900 bg-opacity-30 rounded-lg p-4 flex items-center justify-between">
+                            <div class="flex items-center">
+                                <i class="fas fa-users text-xl text-purple-300 mr-3"></i>
+                                <div>
+                                    <p class="text-lg font-medium">4人家族の場合</p>
+                                    <p class="text-xs text-gray-300">1世帯あたりの換算</p>
+                                </div>
+                            </div>
+                            <p class="text-2xl font-bold text-purple-300">+11.0<span class="text-lg">万円</span></p>
+                        </div>
+                    </div>
+                    
+                    <div class="text-sm text-gray-300 mt-4">
+                        <p><i class="fas fa-circle text-xs text-yellow-400 mr-2"></i>円高による輸入コスト減少で物価上昇率は減速見込み</p>
+                        <p><i class="fas fa-circle text-xs text-yellow-400 mr-2"></i>しかし、人件費上昇分の価格転嫁が進み負担は継続</p>
+                    </div>
+                </div>
+                
+                <!-- Consumer sentiment -->
+                <div class="forecast-card bg-gray-800 bg-opacity-60 rounded-xl p-6">
+                    <h2 class="text-2xl font-medium text-blue-200 mb-4">
+                        <i class="fas fa-heart mr-2 text-purple-400"></i>
+                        消費者マインドの見通し
+                    </h2>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div class="bg-indigo-900 bg-opacity-30 rounded-lg p-4 flex flex-col items-center">
+                            <div class="w-12 h-12 rounded-full bg-indigo-700 flex items-center justify-center mb-2">
+                                <i class="fas fa-frown text-2xl text-indigo-300"></i>
+                            </div>
+                            <p class="text-lg font-medium text-center">暮らし向き</p>
+                            <p class="text-sm text-gray-300 mt-1 text-center">引き続き悪化傾向</p>
+                        </div>
+                        
+                        <div class="bg-purple-900 bg-opacity-30 rounded-lg p-4 flex flex-col items-center">
+                            <div class="w-12 h-12 rounded-full bg-purple-700 flex items-center justify-center mb-2">
+                                <i class="fas fa-balance-scale text-2xl text-purple-300"></i>
+                            </div>
+                            <p class="text-lg font-medium text-center">節約志向</p>
+                            <p class="text-sm text-gray-300 mt-1 text-center">再び強まる傾向</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-700 bg-opacity-40 rounded-lg p-4 mb-4">
+                        <h3 class="text-lg font-medium text-yellow-200 mb-3">
+                            <i class="fas fa-lightbulb mr-2"></i>
+                            課題と対策
+                        </h3>
+                        <ul class="text-sm text-gray-300 space-y-2 pl-6 list-disc">
+                            <li>実質賃金の持続的な上昇には労働生産性の向上が必要</li>
+                            <li>労働分配率の引き上げが重要な課題に</li>
+                            <li>物価上昇と賃金上昇のバランスの改善が急務</li>
+                            <li>消費者マインド改善には実質賃金の加速が必要</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="p-4 bg-yellow-900 bg-opacity-20 rounded-lg border-l-4 border-yellow-500">
+                        <p class="text-sm italic text-gray-300">「実質賃金の改善ペースの鈍さが消費者マインド改善の足かせとなる可能性が高い」</p>
+                        <p class="text-xs text-gray-400 mt-2 text-right">- みずほリサーチ＆テクノロジーズ レポートより</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Page number -->
+        <div class="page-number">5 / 6</div>
+    </div>
+    
+    <script>
+        // Animation for progress bars
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                const fills = document.querySelectorAll('.progress-fill');
+                fills.forEach(fill => {
+                    const width = fill.getAttribute('data-width');
+                    fill.style.width = width;
+                });
+            }, 300);
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>まとめ - 物価高騰による家計への影響</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            background-color: #1a2942;
+            color: #f0f4f8;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(135deg, #1a2942 0%, #0f1a2a 100%);
+        }
+        .summary-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .summary-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+        .strategy-item {
+            transition: all 0.3s ease;
+        }
+        .strategy-item:hover {
+            transform: scale(1.03);
+        }
+        .conclusion-point {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.5s ease forwards;
+        }
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .page-number {
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container p-12 relative">
+        <!-- Header -->
+        <div class="mb-8">
+            <h1 class="text-4xl font-bold text-blue-200 mb-2">まとめ</h1>
+            <div class="w-32 h-1 bg-yellow-400 rounded-full opacity-70"></div>
+        </div>
+        
+        <!-- Main content in two columns -->
+        <div class="flex gap-8">
+            <!-- Left column -->
+            <div class="w-1/2 space-y-6">
+                <!-- Long-term impact -->
+                <div class="summary-card bg-gray-800 bg-opacity-60 rounded-xl p-6">
+                    <h2 class="text-2xl font-medium text-blue-200 mb-5">
+                        <i class="fas fa-history mr-2 text-red-400"></i>
+                        物価高騰の長期化による影響
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <div class="conclusion-point flex items-start" style="animation-delay: 0.1s;">
+                            <div class="min-w-[40px] h-10 flex items-center justify-center bg-red-900 bg-opacity-40 rounded-full mr-3">
+                                <i class="fas fa-chart-line text-red-300"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-medium text-red-200">継続するインフレ</h3>
+                                <p class="text-sm text-gray-300">2025年も2%を超えるインフレが継続し、3年以上に渡り家計を圧迫</p>
+                            </div>
+                        </div>
+                        
+                        <div class="conclusion-point flex items-start" style="animation-delay: 0.3s;">
+                            <div class="min-w-[40px] h-10 flex items-center justify-center bg-yellow-900 bg-opacity-40 rounded-full mr-3">
+                                <i class="fas fa-wallet text-yellow-300"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-medium text-yellow-200">累積的な負担増</h3>
+                                <p class="text-sm text-gray-300">2021年度比で年間約8.7万円の負担増。4人家族では約35万円の負担に</p>
+                            </div>
+                        </div>
+                        
+                        <div class="conclusion-point flex items-start" style="animation-delay: 0.5s;">
+                            <div class="min-w-[40px] h-10 flex items-center justify-center bg-blue-900 bg-opacity-40 rounded-full mr-3">
+                                <i class="fas fa-shopping-cart text-blue-300"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-medium text-blue-200">消費支出の実質減少</h3>
+                                <p class="text-sm text-gray-300">2年連続の実質消費支出減少。特に食料品など必需品の価格上昇が顕著</p>
+                            </div>
+                        </div>
+                        
+                        <div class="conclusion-point flex items-start" style="animation-delay: 0.7s;">
+                            <div class="min-w-[40px] h-10 flex items-center justify-center bg-green-900 bg-opacity-40 rounded-full mr-3">
+                                <i class="fas fa-money-bill-wave text-green-300"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-medium text-green-200">実質賃金の停滞</h3>
+                                <p class="text-sm text-gray-300">2025年にようやくプラス転化するも、過去の落ち込みを取り戻すには至らず</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Psychological impact -->
+                <div class="summary-card bg-gray-800 bg-opacity-60 rounded-xl p-6">
+                    <h2 class="text-2xl font-medium text-blue-200 mb-4">
+                        <i class="fas fa-brain mr-2 text-purple-400"></i>
+                        心理的影響
+                    </h2>
+                    
+                    <div class="conclusion-point bg-purple-900 bg-opacity-20 rounded-lg p-4" style="animation-delay: 0.9s;">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-heart-broken text-xl text-purple-300 mr-3"></i>
+                            <h3 class="text-lg font-medium">消費者マインドの悪化</h3>
+                        </div>
+                        <ul class="text-sm text-gray-300 space-y-2 pl-5 list-disc">
+                            <li>「暮らし向き」に対する悲観的な見方が増加</li>
+                            <li>食料品などの節約志向が再び強まる傾向</li>
+                            <li>将来への不安から消費よりも貯蓄を優先する家庭も</li>
+                            <li>「辛い」「悲しい」などのネガティブな感情の増加</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mt-4 conclusion-point p-4 bg-gray-700 bg-opacity-30 rounded-lg border-l-4 border-yellow-500" style="animation-delay: 1.1s;">
+                        <p class="text-sm italic text-gray-300">「物価高騰が長期化することで、家計の節約疲れや消費マインドの冷え込みが深刻化することが懸念されます」</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right column -->
+            <div class="w-1/2 space-y-6">
+                <!-- Response strategies -->
+                <div class="summary-card bg-gray-800 bg-opacity-60 rounded-xl p-6">
+                    <h2 class="text-2xl font-medium text-blue-200 mb-4">
+                        <i class="fas fa-shield-alt mr-2 text-yellow-400"></i>
+                        対応策の重要性
+                    </h2>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div class="strategy-item bg-indigo-900 bg-opacity-30 rounded-lg p-4 conclusion-point" style="animation-delay: 1.3s;">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-search-dollar text-xl text-indigo-300 mr-2"></i>
+                                <h3 class="text-lg font-medium">賢い買い物</h3>
+                            </div>
+                            <ul class="text-sm text-gray-300 pl-4 list-disc space-y-1">
+                                <li>価格比較の徹底</li>
+                                <li>まとめ買いで単価削減</li>
+                                <li>セール・特売の活用</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="strategy-item bg-green-900 bg-opacity-30 rounded-lg p-4 conclusion-point" style="animation-delay: 1.5s;">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-leaf text-xl text-green-300 mr-2"></i>
+                                <h3 class="text-lg font-medium">自給自足の工夫</h3>
+                            </div>
+                            <ul class="text-sm text-gray-300 pl-4 list-disc space-y-1">
+                                <li>家庭菜園の活用</li>
+                                <li>手作り食品の増加</li>
+                                <li>無駄を出さない調理法</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="strategy-item bg-blue-900 bg-opacity-30 rounded-lg p-4 conclusion-point" style="animation-delay: 1.7s;">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-hand-holding-usd text-xl text-blue-300 mr-2"></i>
+                                <h3 class="text-lg font-medium">家計管理の徹底</h3>
+                            </div>
+                            <ul class="text-sm text-gray-300 pl-4 list-disc space-y-1">
+                                <li>家計簿による支出分析</li>
+                                <li>固定費の見直し</li>
+                                <li>優先順位の明確化</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="strategy-item bg-red-900 bg-opacity-30 rounded-lg p-4 conclusion-point" style="animation-delay: 1.9s;">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-users text-xl text-red-300 mr-2"></i>
+                                <h3 class="text-lg font-medium">情報共有の場</h3>
+                            </div>
+                            <ul class="text-sm text-gray-300 pl-4 list-disc space-y-1">
+                                <li>地域での節約勉強会</li>
+                                <li>知恵やノウハウの交換</li>
+                                <li>共同購入の検討</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-yellow-900 bg-opacity-20 rounded-lg p-4 conclusion-point" style="animation-delay: 2.1s;">
+                        <h3 class="text-lg font-medium text-yellow-200 mb-2">
+                            <i class="fas fa-lightbulb mr-2"></i>
+                            社会全体としての取り組み
+                        </h3>
+                        <ul class="text-sm text-gray-300 space-y-2 pl-5 list-disc">
+                            <li>労働生産性向上による持続的な賃金上昇</li>
+                            <li>物価と賃金のバランスを考慮した政策展開</li>
+                            <li>弱者への支援強化と格差是正</li>
+                            <li>家計の金融リテラシー向上支援</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Final thoughts -->
+                <div class="summary-card bg-gray-800 bg-opacity-60 rounded-xl p-6 conclusion-point" style="animation-delay: 2.3s;">
+                    <h2 class="text-2xl font-medium text-blue-200 mb-4">
+                        <i class="fas fa-arrow-circle-right mr-2 text-blue-400"></i>
+                        今後に向けて
+                    </h2>
+                    
+                    <div class="mb-4">
+                        <div class="bg-gray-700 bg-opacity-40 p-5 rounded-lg">
+                            <p class="text-lg text-center text-gray-300 mb-3">物価高騰は一時的な現象ではなく、</p>
+                            <p class="text-2xl text-center font-medium text-yellow-200 mb-3">「新しい日常」として適応が必要</p>
+                            <p class="text-lg text-center text-gray-300">家計防衛のための知恵と工夫が重要に</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center gap-3 justify-center mt-6">
+                        <div class="w-3 h-3 rounded-full bg-blue-400"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                        <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                        <div class="w-3 h-3 rounded-full bg-purple-400"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Page number -->
+        <div class="page-number">6 / 6</div>
+    </div>
+</body>
+</html>

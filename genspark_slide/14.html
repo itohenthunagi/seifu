@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Japan: Tourist Destinations Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', 'Noto Sans JP', sans-serif;
+            background-color: #f8f8f8;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            overflow: hidden;
+            position: relative;
+        }
+        .slide-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://thursd.com/storage/media/20941/5-best-cherry-blossom-spots-feature-2.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.8;
+            z-index: 0;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+            z-index: 1;
+        }
+        .content {
+            position: relative;
+            z-index: 2;
+            padding: 4rem;
+            color: white;
+        }
+        .japanese-pattern {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background-image: url('https://cdn.jsdelivr.net/gh/tailwindlabs/heropatterns@0.4.2/opacity-lines.svg');
+            background-color: rgba(255, 255, 255, 0.1);
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="slide-bg"></div>
+        <div class="overlay"></div>
+        <div class="content flex flex-col justify-center h-full">
+            <div class="max-w-4xl">
+                <h1 class="text-6xl font-bold mb-4 tracking-tight">Discover Japan</h1>
+                <h2 class="text-3xl font-light mb-12 tracking-wide">A Land of Tradition, Innovation, and Natural Beauty</h2>
+                
+                <div class="mt-16">
+                    <p class="text-xl mb-6 leading-relaxed">Japan offers a unique blend of ancient traditions and cutting-edge modernity, making it a premier destination for travelers seeking authentic cultural experiences.</p>
+                    
+                    <div class="grid grid-cols-3 gap-8 mt-12">
+                        <div class="text-center">
+                            <div class="text-4xl mb-2">四季</div>
+                            <p class="text-lg">Four Distinct Seasons</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl mb-2">文化</div>
+                            <p class="text-lg">Rich Cultural Heritage</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl mb-2">美食</div>
+                            <p class="text-lg">World-Renowned Cuisine</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="absolute bottom-8 right-8 text-sm opacity-80">Presentation for Travel Agencies</p>
+            </div>
+        </div>
+        <div class="japanese-pattern"></div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japan Tourism - Key Destinations</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.30.0/tabler-icons.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            background-color: white;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        .destination-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+        .destination-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        .japanese-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, #E83C4B, #F97C5F, #FDB458, #B4E089, #70CAD1, #8B90C0, #C389BC);
+        }
+        .dot-pattern {
+            background-image: radial-gradient(#e0e0e0 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container flex flex-col">
+        <div class="japanese-pattern"></div>
+        
+        <!-- Header -->
+        <header class="px-16 pt-12 pb-6">
+            <h1 class="text-3xl font-medium text-gray-800 mb-3">Key Destinations in Japan</h1>
+            <p class="text-gray-600 max-w-3xl">Japan offers diverse experiences from bustling modern cities to serene natural landscapes and historic cultural sites.</p>
+        </header>
+        
+        <!-- Main Content -->
+        <main class="px-16 py-6 flex-grow">
+            <div class="grid grid-cols-3 gap-8">
+                <!-- Tokyo -->
+                <div class="destination-card bg-white rounded-lg overflow-hidden border border-gray-100">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://media.cntraveler.com/photos/598202951209f576909acb19/master/pass/Shibuya-Crossing-GettyImages-533959897.jpg" alt="Tokyo Shibuya Crossing" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-semibold mb-2 flex items-center">
+                            <span class="pr-2">Tokyo</span>
+                            <span class="text-sm text-gray-500 font-normal">東京</span>
+                        </h3>
+                        <p class="text-gray-600 text-sm">Modern metropolis offering cutting-edge technology, shopping districts, and vibrant nightlife alongside historic temples and gardens.</p>
+                        <div class="mt-3 flex items-center text-sm text-gray-500">
+                            <i class="ti ti-star-filled text-yellow-500 mr-1"></i>
+                            <span>Shibuya Crossing, Tokyo Tower, Asakusa</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Kyoto -->
+                <div class="destination-card bg-white rounded-lg overflow-hidden border border-gray-100">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://boutiquejapan.com/wp-content/uploads/2014/01/Kinkakuji-Golden-Pavilion-Kyoto-Japan-1140.png" alt="Kyoto Golden Pavilion" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-semibold mb-2 flex items-center">
+                            <span class="pr-2">Kyoto</span>
+                            <span class="text-sm text-gray-500 font-normal">京都</span>
+                        </h3>
+                        <p class="text-gray-600 text-sm">Cultural heart of Japan with over 1,600 Buddhist temples, 400 Shinto shrines, and 17 UNESCO World Heritage sites.</p>
+                        <div class="mt-3 flex items-center text-sm text-gray-500">
+                            <i class="ti ti-star-filled text-yellow-500 mr-1"></i>
+                            <span>Kinkaku-ji, Fushimi Inari Shrine, Gion District</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mount Fuji -->
+                <div class="destination-card bg-white rounded-lg overflow-hidden border border-gray-100">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://thursd.com/storage/media/20941/5-best-cherry-blossom-spots-feature-2.jpg" alt="Mount Fuji with Cherry Blossoms" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-semibold mb-2 flex items-center">
+                            <span class="pr-2">Mount Fuji</span>
+                            <span class="text-sm text-gray-500 font-normal">富士山</span>
+                        </h3>
+                        <p class="text-gray-600 text-sm">Japan's iconic 3,776m active volcano and cultural symbol. Offers hiking in summer and spectacular views year-round from surrounding areas.</p>
+                        <div class="mt-3 flex items-center text-sm text-gray-500">
+                            <i class="ti ti-star-filled text-yellow-500 mr-1"></i>
+                            <span>Fuji Five Lakes, Hakone, Chureito Pagoda</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-8 mt-8">
+                <!-- Osaka -->
+                <div class="destination-card bg-white rounded-lg overflow-hidden border border-gray-100 flex">
+                    <div class="w-1/3 overflow-hidden">
+                        <img src="https://www.japan-guide.com/g22/6022_01.jpg" alt="Osaka Castle" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5 w-2/3">
+                        <h3 class="text-xl font-semibold mb-2 flex items-center">
+                            <span class="pr-2">Osaka</span>
+                            <span class="text-sm text-gray-500 font-normal">大阪</span>
+                        </h3>
+                        <p class="text-gray-600 text-sm">Japan's kitchen with vibrant street food culture, friendly locals, and exciting nightlife. Home to historic Osaka Castle and Universal Studios Japan.</p>
+                        <div class="mt-3 flex items-center text-sm text-gray-500">
+                            <i class="ti ti-star-filled text-yellow-500 mr-1"></i>
+                            <span>Dotonbori, Osaka Castle, Kuromon Market</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hokkaido -->
+                <div class="destination-card bg-white rounded-lg overflow-hidden border border-gray-100 flex">
+                    <div class="w-1/3 overflow-hidden">
+                        <img src="https://www.japan-guide.com/blog/sakura23/g/230409_fuji_13.jpg" alt="Hokkaido Landscape" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5 w-2/3">
+                        <h3 class="text-xl font-semibold mb-2 flex items-center">
+                            <span class="pr-2">Hokkaido</span>
+                            <span class="text-sm text-gray-500 font-normal">北海道</span>
+                        </h3>
+                        <p class="text-gray-600 text-sm">Japan's northernmost island known for pristine wilderness, natural hot springs, ski resorts, and fresh seafood. Popular for winter festivals and summer outdoor activities.</p>
+                        <div class="mt-3 flex items-center text-sm text-gray-500">
+                            <i class="ti ti-star-filled text-yellow-500 mr-1"></i>
+                            <span>Sapporo Snow Festival, Furano, Blue Pond</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="px-16 pb-8 pt-2 flex justify-between items-center">
+            <div class="text-sm text-gray-400">
+                <span class="dot-pattern inline-block h-3 w-3 rounded-full mr-2"></span>
+                Experience the perfect blend of tradition and innovation
+            </div>
+            <div class="text-right text-gray-400 text-sm">Page 2 of 6</div>
+        </footer>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Seasons to Visit Japan</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.30.0/tabler-icons.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            background-color: white;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        .japanese-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, #E83C4B, #F97C5F, #FDB458, #B4E089, #70CAD1, #8B90C0, #C389BC);
+        }
+        .season-card {
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .season-card:hover {
+            transform: translateY(-5px);
+        }
+        .season-image {
+            transition: transform 0.5s ease;
+        }
+        .season-card:hover .season-image {
+            transform: scale(1.05);
+        }
+        .season-overlay {
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60%;
+            z-index: 1;
+        }
+        .dot-pattern {
+            background-image: radial-gradient(#e0e0e0 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container flex flex-col">
+        <div class="japanese-pattern"></div>
+        
+        <!-- Header -->
+        <header class="px-16 pt-12 pb-6">
+            <h1 class="text-3xl font-medium text-gray-800 mb-3">Best Seasons to Visit Japan</h1>
+            <p class="text-gray-600 max-w-3xl">Japan offers distinct seasonal experiences throughout the year, each with unique attractions and natural beauty. Understanding these seasons helps create perfect travel itineraries.</p>
+        </header>
+        
+        <!-- Main Content -->
+        <main class="px-16 py-4 flex-grow">
+            <div class="grid grid-cols-4 gap-6">
+                <!-- Spring -->
+                <div class="season-card rounded-lg overflow-hidden shadow-sm">
+                    <div class="relative h-40">
+                        <img src="https://thursd.com/storage/media/20941/5-best-cherry-blossom-spots-feature-2.jpg" alt="Cherry blossoms in Spring" class="w-full h-full object-cover season-image">
+                        <div class="season-overlay"></div>
+                        <div class="absolute bottom-0 left-0 p-4 z-10">
+                            <h3 class="text-white font-medium text-xl">Spring</h3>
+                            <span class="text-gray-200 text-sm">March - May</span>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-white">
+                        <div class="text-sm text-gray-600 mb-2">
+                            <i class="ti ti-temperature text-pink-500 mr-1"></i>
+                            <span>10-20°C (50-68°F)</span>
+                        </div>
+                        <p class="text-sm text-gray-700 mb-3">Cherry blossom season (sakura) attracts visitors worldwide. Mild temperatures and blooming landscapes make this a peak tourist season.</p>
+                        <div class="flex items-center text-xs text-gray-500">
+                            <i class="ti ti-calendar-event text-pink-500 mr-1"></i>
+                            <span>Cherry Blossom Festivals, Golden Week</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Summer -->
+                <div class="season-card rounded-lg overflow-hidden shadow-sm">
+                    <div class="relative h-40">
+                        <img src="https://www.japanspecialist.co.uk/wp-content/uploads/2018/10/Traditional-festivals-in-Japan-1-1200x800.jpg" alt="Summer Festivals in Japan" class="w-full h-full object-cover season-image">
+                        <div class="season-overlay"></div>
+                        <div class="absolute bottom-0 left-0 p-4 z-10">
+                            <h3 class="text-white font-medium text-xl">Summer</h3>
+                            <span class="text-gray-200 text-sm">June - August</span>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-white">
+                        <div class="text-sm text-gray-600 mb-2">
+                            <i class="ti ti-temperature text-orange-500 mr-1"></i>
+                            <span>20-32°C (68-90°F), Humid</span>
+                        </div>
+                        <p class="text-sm text-gray-700 mb-3">Lively festival season with many traditional matsuri. Hiking in northern regions and beach activities in southern islands.</p>
+                        <div class="flex items-center text-xs text-gray-500">
+                            <i class="ti ti-calendar-event text-orange-500 mr-1"></i>
+                            <span>Gion Matsuri, Aomori Nebuta Festival</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Autumn -->
+                <div class="season-card rounded-lg overflow-hidden shadow-sm">
+                    <div class="relative h-40">
+                        <img src="https://www.tripsavvy.com/thmb/U1YTrR46jC1b7YbUmkfEZHjsvZE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/autumn-leaves-kyoto-garden-5be1ba0ec9e77c0051b3d13c.jpg" alt="Autumn Foliage in Japan" class="w-full h-full object-cover season-image">
+                        <div class="season-overlay"></div>
+                        <div class="absolute bottom-0 left-0 p-4 z-10">
+                            <h3 class="text-white font-medium text-xl">Autumn</h3>
+                            <span class="text-gray-200 text-sm">September - November</span>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-white">
+                        <div class="text-sm text-gray-600 mb-2">
+                            <i class="ti ti-temperature text-amber-600 mr-1"></i>
+                            <span>10-25°C (50-77°F)</span>
+                        </div>
+                        <p class="text-sm text-gray-700 mb-3">Vibrant autumn foliage (koyo) creates picturesque landscapes. Comfortable temperatures and fewer crowds than spring.</p>
+                        <div class="flex items-center text-xs text-gray-500">
+                            <i class="ti ti-calendar-event text-amber-600 mr-1"></i>
+                            <span>Autumn Foliage Festivals, Takayama Festival</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Winter -->
+                <div class="season-card rounded-lg overflow-hidden shadow-sm">
+                    <div class="relative h-40">
+                        <img src="https://cdn.cheapoguides.com/wp-content/uploads/sites/2/2022/12/sapporo-snow-festival-iStock-522630097.jpg" alt="Sapporo Snow Festival" class="w-full h-full object-cover season-image">
+                        <div class="season-overlay"></div>
+                        <div class="absolute bottom-0 left-0 p-4 z-10">
+                            <h3 class="text-white font-medium text-xl">Winter</h3>
+                            <span class="text-gray-200 text-sm">December - February</span>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-white">
+                        <div class="text-sm text-gray-600 mb-2">
+                            <i class="ti ti-temperature text-blue-500 mr-1"></i>
+                            <span>-5-10°C (23-50°F)</span>
+                        </div>
+                        <p class="text-sm text-gray-700 mb-3">World-class skiing and winter sports in Hokkaido. Snow festivals, illuminations and hot spring experiences with fewer tourists.</p>
+                        <div class="flex items-center text-xs text-gray-500">
+                            <i class="ti ti-calendar-event text-blue-500 mr-1"></i>
+                            <span>Sapporo Snow Festival, Winter Illuminations</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Travel Tips Box -->
+            <div class="mt-8 bg-gray-50 rounded-lg p-6 border border-gray-100 flex items-start">
+                <div class="text-3xl text-indigo-500 mr-4">
+                    <i class="ti ti-bulb"></i>
+                </div>
+                <div>
+                    <h3 class="text-lg font-medium text-gray-800 mb-2">Travel Agent Tips</h3>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li class="flex items-center">
+                            <i class="ti ti-check text-green-500 mr-2"></i>
+                            <span>The best times to visit for most travelers are <span class="font-medium">March-May</span> and <span class="font-medium">September-November</span></span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ti ti-check text-green-500 mr-2"></i>
+                            <span>Cherry blossom season is extremely popular - book accommodations 6-12 months in advance</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ti ti-check text-green-500 mr-2"></i>
+                            <span>Avoid Golden Week (late April-early May) and Obon holidays (mid-August) unless specifically interested in these cultural events</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="px-16 pb-8 pt-2 flex justify-between items-center">
+            <div class="text-sm text-gray-400">
+                <span class="dot-pattern inline-block h-3 w-3 rounded-full mr-2"></span>
+                Experience Japan in its most beautiful seasons
+            </div>
+            <div class="text-right text-gray-400 text-sm">Page 3 of 6</div>
+        </footer>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Cultural Experiences</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.30.0/tabler-icons.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            background-color: white;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        .japanese-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, #E83C4B, #F97C5F, #FDB458, #B4E089, #70CAD1, #8B90C0, #C389BC);
+        }
+        .experience-card {
+            transition: all 0.3s ease;
+            border: 1px solid #f0f0f0;
+            overflow: hidden;
+        }
+        .experience-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border-color: #e0e0e0;
+        }
+        .experience-image {
+            transition: transform 0.5s ease;
+        }
+        .experience-card:hover .experience-image {
+            transform: scale(1.05);
+        }
+        .dot-pattern {
+            background-image: radial-gradient(#e0e0e0 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.3;
+        }
+        .subtle-bg {
+            background-color: #f9f9f9;
+            background-image: url("https://www.transparenttextures.com/patterns/rice-paper-3.png");
+            background-size: 300px;
+            opacity: 0.1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container flex flex-col">
+        <div class="japanese-pattern"></div>
+        <div class="subtle-bg"></div>
+        
+        <!-- Header -->
+        <header class="px-16 pt-12 pb-6 relative z-10">
+            <h1 class="text-3xl font-medium text-gray-800 mb-3">Traditional Japanese Cultural Experiences</h1>
+            <p class="text-gray-600 max-w-3xl">Japan offers unique cultural experiences that can't be found anywhere else. These authentic activities allow visitors to immerse themselves in Japanese traditions.</p>
+        </header>
+        
+        <!-- Main Content -->
+        <main class="px-16 py-4 flex-grow relative z-10">
+            <div class="grid grid-cols-2 gap-8">
+                <!-- Tea Ceremony -->
+                <div class="experience-card rounded-lg overflow-hidden bg-white">
+                    <div class="flex">
+                        <div class="w-2/5 overflow-hidden">
+                            <img src="https://blog.sakura.co/wp-content/uploads/2021/06/shutterstock_1439055482-1.jpg" alt="Japanese Tea Ceremony" class="w-full h-full object-cover experience-image">
+                        </div>
+                        <div class="w-3/5 p-5">
+                            <div class="flex items-center mb-2">
+                                <h3 class="text-xl font-semibold">Tea Ceremony</h3>
+                                <span class="text-sm text-gray-500 ml-2">茶道 (Sadō)</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-3">A refined ritual where matcha green tea is prepared and served with precise movements and deep cultural significance. The ceremony embodies harmony, respect, purity, and tranquility.</p>
+                            <div class="flex items-center text-xs text-gray-500">
+                                <i class="ti ti-map-pin text-green-600 mr-1"></i>
+                                <span>Available in: Kyoto, Tokyo, Kanazawa, and major tourist areas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Ryokan Stay -->
+                <div class="experience-card rounded-lg overflow-hidden bg-white">
+                    <div class="flex">
+                        <div class="w-2/5 overflow-hidden">
+                            <img src="https://www.insidejapantours.com/blog/wp-content/uploads/2019/07/best-Ryokan-in-Kyoto-Japan.jpg" alt="Traditional Ryokan" class="w-full h-full object-cover experience-image">
+                        </div>
+                        <div class="w-3/5 p-5">
+                            <div class="flex items-center mb-2">
+                                <h3 class="text-xl font-semibold">Ryokan Stay</h3>
+                                <span class="text-sm text-gray-500 ml-2">旅館 (Ryokan)</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-3">Traditional Japanese inns featuring tatami-matted rooms, futon bedding, communal hot spring baths, and elaborate kaiseki meals. An authentic way to experience Japanese hospitality.</p>
+                            <div class="flex items-center text-xs text-gray-500">
+                                <i class="ti ti-map-pin text-green-600 mr-1"></i>
+                                <span>Best in: Hakone, Kyoto, Gunma, and hot spring regions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Kimono Experience -->
+                <div class="experience-card rounded-lg overflow-hidden bg-white">
+                    <div class="flex">
+                        <div class="w-2/5 overflow-hidden">
+                            <img src="https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/02/a0002487/img/basic/a0002487_main.jpg" alt="Kimono Experience" class="w-full h-full object-cover experience-image">
+                        </div>
+                        <div class="w-3/5 p-5">
+                            <div class="flex items-center mb-2">
+                                <h3 class="text-xl font-semibold">Kimono Experience</h3>
+                                <span class="text-sm text-gray-500 ml-2">着物体験 (Kimono Taiken)</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-3">Visitors can rent traditional kimonos, get professionally dressed, and explore historic districts. Perfect for memorable photos and experiencing Japan's textile heritage.</p>
+                            <div class="flex items-center text-xs text-gray-500">
+                                <i class="ti ti-map-pin text-green-600 mr-1"></i>
+                                <span>Popular in: Kyoto (Gion), Tokyo (Asakusa), and historic areas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Traditional Festivals -->
+                <div class="experience-card rounded-lg overflow-hidden bg-white">
+                    <div class="flex">
+                        <div class="w-2/5 overflow-hidden">
+                            <img src="https://www.japantimes.co.jp/uploads/imported_images/uploads/2019/07/p12-matsuri-a-20190731.jpg" alt="Traditional Japanese Festival" class="w-full h-full object-cover experience-image">
+                        </div>
+                        <div class="w-3/5 p-5">
+                            <div class="flex items-center mb-2">
+                                <h3 class="text-xl font-semibold">Traditional Festivals</h3>
+                                <span class="text-sm text-gray-500 ml-2">祭り (Matsuri)</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-3">Vibrant cultural events featuring processions, folk performances, food stalls, and historical reenactments. Each region has unique festivals deeply rooted in local customs.</p>
+                            <div class="flex items-center text-xs text-gray-500">
+                                <i class="ti ti-map-pin text-green-600 mr-1"></i>
+                                <span>Highlights: Gion Matsuri (Kyoto), Aomori Nebuta, Sapporo Snow Festival</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- More Experiences -->
+            <div class="grid grid-cols-3 gap-6 mt-8">
+                <!-- Onsen Experience -->
+                <div class="experience-card rounded-lg overflow-hidden bg-white">
+                    <div class="h-32 overflow-hidden">
+                        <img src="https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/00/a0000013/img/basic/a0000013_main.jpg" alt="Japanese Onsen" class="w-full h-full object-cover experience-image">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-base font-medium mb-1 flex items-center">
+                            <span>Onsen Experience</span>
+                            <span class="text-xs text-gray-500 ml-2">温泉 (Onsen)</span>
+                        </h3>
+                        <p class="text-xs text-gray-600">Traditional hot spring bathing in mineral-rich waters, often in picturesque settings. A cornerstone of Japanese relaxation culture.</p>
+                    </div>
+                </div>
+                
+                <!-- Sake Tasting -->
+                <div class="experience-card rounded-lg overflow-hidden bg-white">
+                    <div class="h-32 overflow-hidden">
+                        <img src="https://cdn.cheapoguides.com/wp-content/uploads/sites/2/2019/05/sake-iStock-Torsakarin-1024x683.jpg" alt="Sake Tasting" class="w-full h-full object-cover experience-image">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-base font-medium mb-1 flex items-center">
+                            <span>Sake Tasting</span>
+                            <span class="text-xs text-gray-500 ml-2">酒蔵見学 (Sakagura Kengaku)</span>
+                        </h3>
+                        <p class="text-xs text-gray-600">Visit traditional breweries to learn about Japan's national beverage, its production process, and regional varieties.</p>
+                    </div>
+                </div>
+                
+                <!-- Meditation & Zen -->
+                <div class="experience-card rounded-lg overflow-hidden bg-white">
+                    <div class="h-32 overflow-hidden">
+                        <img src="https://resources.matcha-jp.com/resize/720x2000/2022/03/31-127573.jpeg" alt="Zen Meditation" class="w-full h-full object-cover experience-image">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-base font-medium mb-1 flex items-center">
+                            <span>Temple Meditation</span>
+                            <span class="text-xs text-gray-500 ml-2">座禅 (Zazen)</span>
+                        </h3>
+                        <p class="text-xs text-gray-600">Experience Zen meditation at Buddhist temples, with opportunities for temple stays (shukubo) at sacred sites like Mount Koya.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Travel Agent Tips Box -->
+            <div class="mt-8 bg-gray-50 rounded-lg p-5 border border-gray-100">
+                <h3 class="text-lg font-medium text-gray-800 mb-2 flex items-center">
+                    <i class="ti ti-bulb text-yellow-500 mr-2"></i>
+                    <span>Travel Agent Tips</span>
+                </h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="ti ti-check text-green-500 mr-2 mt-0.5"></i>
+                                <span>Book tea ceremonies and kimono experiences at least 1-2 weeks in advance during peak seasons</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="ti ti-check text-green-500 mr-2 mt-0.5"></i>
+                                <span>Premium ryokans in popular areas should be booked 3-6 months ahead, especially during cherry blossom season</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="ti ti-check text-green-500 mr-2 mt-0.5"></i>
+                                <span>Consider combining several experiences in one area (e.g., kimono rental, tea ceremony and temple visits in Kyoto)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="ti ti-check text-green-500 mr-2 mt-0.5"></i>
+                                <span>Many cultural experiences offer English-speaking guides or instructors - request these when booking</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="px-16 pb-8 pt-2 flex justify-between items-center relative z-10">
+            <div class="text-sm text-gray-400">
+                <span class="dot-pattern inline-block h-3 w-3 rounded-full mr-2"></span>
+                Immerse in authentic Japanese traditions and create lasting memories
+            </div>
+            <div class="text-right text-gray-400 text-sm">Page 4 of 6</div>
+        </footer>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regional Travel Routes in Japan</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.30.0/tabler-icons.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            background-color: white;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        .japanese-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, #E83C4B, #F97C5F, #FDB458, #B4E089, #70CAD1, #8B90C0, #C389BC);
+        }
+        .route-card {
+            transition: all 0.3s ease;
+            background-color: white;
+            border: 1px solid #eaeaea;
+        }
+        .route-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border-color: #d0d0d0;
+        }
+        .dot-pattern {
+            background-image: radial-gradient(#e0e0e0 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.3;
+        }
+        .subtle-map-bg {
+            background-image: url('https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.11.0/flags/4x3/jp.svg');
+            background-size: 600px;
+            background-position: right -150px top -100px;
+            background-repeat: no-repeat;
+            opacity: 0.03;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container flex flex-col">
+        <div class="japanese-pattern"></div>
+        <div class="subtle-map-bg"></div>
+        
+        <!-- Header -->
+        <header class="px-16 pt-12 pb-6 relative z-10">
+            <h1 class="text-3xl font-medium text-gray-800 mb-3">Regional Travel Routes in Japan</h1>
+            <p class="text-gray-600 max-w-3xl">Japan offers diverse experiences through its regional travel circuits. These popular routes can be customized for different interests, durations, and seasons.</p>
+        </header>
+        
+        <!-- Main Content -->
+        <main class="px-16 py-4 flex-grow relative z-10">
+            <div class="grid grid-cols-2 gap-8">
+                <!-- Golden Route -->
+                <div class="route-card rounded-lg overflow-hidden">
+                    <div class="p-5 border-b border-gray-100">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl font-semibold text-gray-800">Golden Route</h3>
+                            <span class="text-sm bg-amber-50 text-amber-700 px-3 py-1 rounded-full">Most Popular</span>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-2">The classic introduction to Japan, connecting Tokyo, Mt. Fuji, Kyoto, and Osaka. Perfect for first-time visitors wanting to see Japan's most iconic destinations.</p>
+                    </div>
+                    <div class="p-5 bg-gray-50">
+                        <div class="flex items-center text-sm text-gray-700 mb-2">
+                            <i class="ti ti-map-pin text-red-500 mr-2"></i>
+                            <span class="font-medium">Tokyo</span>
+                            <i class="ti ti-arrow-right mx-2 text-gray-400"></i>
+                            <span>Mt. Fuji/Hakone</span>
+                            <i class="ti ti-arrow-right mx-2 text-gray-400"></i>
+                            <span>Kyoto</span>
+                            <i class="ti ti-arrow-right mx-2 text-gray-400"></i>
+                            <span>Osaka</span>
+                        </div>
+                        <div class="flex items-center justify-between text-sm">
+                            <div class="flex items-center text-gray-600">
+                                <i class="ti ti-clock mr-1"></i>
+                                <span>7-10 days recommended</span>
+                            </div>
+                            <div class="flex items-center text-gray-600">
+                                <i class="ti ti-train mr-1"></i>
+                                <span>JR Pass efficient</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Northern Japan -->
+                <div class="route-card rounded-lg overflow-hidden">
+                    <div class="p-5 border-b border-gray-100">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl font-semibold text-gray-800">Hokkaido Circuit</h3>
+                            <span class="text-sm bg-blue-50 text-blue-700 px-3 py-1 rounded-full">Nature Lovers</span>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-2">Explore Japan's northernmost island with its distinctive seasons, pristine wilderness, and delicious seafood. Renowned for winter sports, summer lavender, and hot springs.</p>
+                    </div>
+                    <div class="p-5 bg-gray-50">
+                        <div class="flex items-center text-sm text-gray-700 mb-2">
+                            <i class="ti ti-map-pin text-red-500 mr-2"></i>
+                            <span class="font-medium">Sapporo</span>
+                            <i class="ti ti-arrow-right mx-2 text-gray-400"></i>
+                            <span>Otaru</span>
+                            <i class="ti ti-arrow-right mx-2 text-gray-400"></i>
+                            <span>Furano/Biei</span>
+                            <i class="ti ti-arrow-right mx-2 text-gray-400"></i>
+                            <span>Shiretoko</span>
+                        </div>
+                        <div class="flex items-center justify-between text-sm">
+                            <div class="flex items-center text-gray-600">
+                                <i class="ti ti-clock mr-1"></i>
+                                <span>5-7 days recommended</span>
+                            </div>
+                            <div class="flex items-center text-gray-600">
+                                <i class="ti ti-car mr-1"></i>
+                                <span>Car rental recommended</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Kansai Highlight -->
+                <div class="route-card rounded-lg overflow-hidden">
+                    <div class="p-5 border-b border-gray-100">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl font-semibold text-gray-800">Kansai Highlights</h3>
+                            <span class="text-sm bg-green-50 text-green-700 px-3 py-1 rounded-full">Cultural Focus</span>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-2">Deep dive into Japan's cultural and historical heartland. Includes Kyoto's historic temples, Nara's ancient capital, Osaka's vibrant food scene, and scenic Kobe.</p>
+                    </div>
+                    <div class="p-5 bg-gray-50">
+                        <div class="flex items-center text-sm text-gray-700 mb-2">
+                            <i class="ti ti-map-pin text-red-500 mr-2"></i>
+                            <span class="font-medium">Kyoto</span>
+                            <i class="ti ti-arrow-right mx-2 text-gray-400"></i>
+                            <span>Nara</span>
+                            <i class="ti ti-arrow-right mx-2 text-gray-400"></i>
+                            <span>Osaka</span>
+                            <i class="ti ti-arrow-right mx-2 text-gray-400"></i>
+                            <span>Kobe</span>
+                        </div>
+                        <div class="flex items-center justify-between text-sm">
+                            <div class="flex items-center text-gray-600">
+                                <i class="ti ti-clock mr-1"></i>
+                                <span>5-7 days recommended</span>
+                            </div>
+                            <div class="flex items-center text-gray-600">
+                                <i class="ti ti-id mr-1"></i>
+                                <span>Kansai-Hiroshima Pass ideal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tohoku -->
+                <div class="route-card rounded-lg overflow-hidden">
+                    <div class="p-5 border-b border-gray-100">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl font-semibold text-gray-800">Off-the-Beaten Path: Tohoku</h3>
+                            <span class="text-sm bg-purple-50 text-purple-700 px-3 py-1 rounded-full">Hidden Gem</span>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-2">Northern Honshu offers spectacular mountain scenery, historic samurai towns, traditional hot springs, and vibrant festivals with fewer crowds than other regions.</p>
+                    </div>
+                    <div class="p-5 bg-gray-50">
+                        <div class="flex items-center text-sm text-gray-700 mb-2">
+                            <i class="ti ti-map-pin text-red-500 mr-2"></i>
+                            <span class="font-medium">Sendai</span>
+                            <i class="ti ti-arrow-right mx-2 text-gray-400"></i>
+                            <span>Kakunodate</span>
+                            <i class="ti ti-arrow-right mx-2 text-gray-400"></i>
+                            <span>Aomori</span>
+                            <i class="ti ti-arrow-right mx-2 text-gray-400"></i>
+                            <span>Hirosaki</span>
+                        </div>
+                        <div class="flex items-center justify-between text-sm">
+                            <div class="flex items-center text-gray-600">
+                                <i class="ti ti-clock mr-1"></i>
+                                <span>6-8 days recommended</span>
+                            </div>
+                            <div class="flex items-center text-gray-600">
+                                <i class="ti ti-train mr-1"></i>
+                                <span>JR East Pass available</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Travel Tips Box -->
+            <div class="mt-8 bg-gray-50 rounded-lg p-6 border border-gray-100">
+                <h3 class="text-lg font-medium text-gray-800 mb-3 flex items-center">
+                    <i class="ti ti-bulb text-yellow-500 mr-2"></i>
+                    <span>Travel Agent Recommendations</span>
+                </h3>
+                <div class="grid grid-cols-3 gap-6">
+                    <div class="bg-white p-4 rounded-lg border border-gray-100">
+                        <h4 class="font-medium text-gray-800 mb-2 flex items-center">
+                            <i class="ti ti-calendar text-indigo-500 mr-2"></i>
+                            <span>Planning Timeline</span>
+                        </h4>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li class="flex items-start">
+                                <i class="ti ti-check text-green-500 mr-2 mt-0.5"></i>
+                                <span>Recommend booking rail passes 1-2 months ahead for best availability</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="ti ti-check text-green-500 mr-2 mt-0.5"></i>
+                                <span>Consider regional seasonal attractions when planning routes</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white p-4 rounded-lg border border-gray-100">
+                        <h4 class="font-medium text-gray-800 mb-2 flex items-center">
+                            <i class="ti ti-users text-indigo-500 mr-2"></i>
+                            <span>Client Matching</span>
+                        </h4>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li class="flex items-start">
+                                <i class="ti ti-check text-green-500 mr-2 mt-0.5"></i>
+                                <span>First-time visitors: Golden Route is most suitable</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="ti ti-check text-green-500 mr-2 mt-0.5"></i>
+                                <span>Repeat visitors: Consider Tohoku or rural Shikoku/Kyushu</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white p-4 rounded-lg border border-gray-100">
+                        <h4 class="font-medium text-gray-800 mb-2 flex items-center">
+                            <i class="ti ti-route text-indigo-500 mr-2"></i>
+                            <span>Transportation</span>
+                        </h4>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li class="flex items-start">
+                                <i class="ti ti-check text-green-500 mr-2 mt-0.5"></i>
+                                <span>JR Pass: Cost-effective for routes crossing multiple regions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="ti ti-check text-green-500 mr-2 mt-0.5"></i>
+                                <span>Regional passes can offer better value for focused itineraries</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="px-16 pb-8 pt-2 flex justify-between items-center relative z-10">
+            <div class="text-sm text-gray-400">
+                <span class="dot-pattern inline-block h-3 w-3 rounded-full mr-2"></span>
+                Design custom itineraries to match client interests and preferences
+            </div>
+            <div class="text-right text-gray-400 text-sm">Page 5 of 6</div>
+        </footer>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical Information for Travel Agents</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.30.0/tabler-icons.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            background-color: white;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        .japanese-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, #E83C4B, #F97C5F, #FDB458, #B4E089, #70CAD1, #8B90C0, #C389BC);
+        }
+        .resource-card {
+            transition: all 0.3s ease;
+            border: 1px solid #f0f0f0;
+        }
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border-color: #e0e0e0;
+        }
+        .dot-pattern {
+            background-image: radial-gradient(#e0e0e0 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.3;
+        }
+        .subtle-bg {
+            background-image: url("https://cdn.jsdelivr.net/gh/tailwindlabs/heropatterns@0.4.2/topography.svg");
+            opacity: 0.03;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        .cherry-blossom {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 200px;
+            height: 200px;
+            background-image: url('https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/svg/cherry-blossom.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.07;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container flex flex-col">
+        <div class="japanese-pattern"></div>
+        <div class="subtle-bg"></div>
+        <div class="cherry-blossom"></div>
+        
+        <!-- Header -->
+        <header class="px-16 pt-12 pb-6 relative z-10">
+            <h1 class="text-3xl font-medium text-gray-800 mb-3">Practical Information for Travel Agents</h1>
+            <p class="text-gray-600 max-w-3xl">Key resources and recommendations for creating unforgettable Japanese travel experiences for your clients.</p>
+        </header>
+        
+        <!-- Main Content -->
+        <main class="px-16 py-4 flex-grow grid grid-cols-12 gap-8 relative z-10">
+            <!-- Left Column -->
+            <div class="col-span-7">
+                <!-- Travel Tips -->
+                <div class="bg-white p-6 rounded-lg shadow-sm mb-6">
+                    <h3 class="text-xl font-medium text-gray-800 mb-4 flex items-center">
+                        <i class="ti ti-star text-amber-500 mr-2"></i>
+                        Key Recommendations
+                    </h3>
+                    <div class="grid grid-cols-2 gap-5">
+                        <div>
+                            <ul class="text-sm text-gray-600 space-y-3">
+                                <li class="flex items-start">
+                                    <i class="ti ti-check text-green-500 mr-2 mt-0.5"></i>
+                                    <span>Book accommodations <strong>3-6 months in advance</strong> for peak seasons (cherry blossom, autumn foliage)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="ti ti-check text-green-500 mr-2 mt-0.5"></i>
+                                    <span>For first-time visitors, suggest <strong>7-10 day itineraries</strong> focusing on Tokyo, Kyoto, and Osaka</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="ti ti-check text-green-500 mr-2 mt-0.5"></i>
+                                    <span>JR Pass offers excellent value for multi-city itineraries, available only to foreign tourists</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="text-sm text-gray-600 space-y-3">
+                                <li class="flex items-start">
+                                    <i class="ti ti-check text-green-500 mr-2 mt-0.5"></i>
+                                    <span>Include at least one traditional experience: ryokan stay, tea ceremony, or cultural workshop</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="ti ti-check text-green-500 mr-2 mt-0.5"></i>
+                                    <span>Best value seasons are <strong>late May-June</strong> and <strong>late September-early November</strong></span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="ti ti-check text-green-500 mr-2 mt-0.5"></i>
+                                    <span>Prepare clients for cash needs — Japan still relies heavily on cash transactions in many areas</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Transportation Information -->
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-medium text-gray-800 mb-4 flex items-center">
+                        <i class="ti ti-train text-indigo-500 mr-2"></i>
+                        Transportation & Logistics
+                    </h3>
+                    
+                    <div class="flex space-x-4 mb-5">
+                        <div class="flex-1 p-4 bg-gray-50 rounded-lg">
+                            <h4 class="font-medium text-gray-700 mb-2">Rail Passes</h4>
+                            <p class="text-sm text-gray-600">JR Pass (nationwide), JR Regional Passes (East, West, Kyushu, Hokkaido), and private railway passes offer significant savings.</p>
+                        </div>
+                        <div class="flex-1 p-4 bg-gray-50 rounded-lg">
+                            <h4 class="font-medium text-gray-700 mb-2">Airport Transfers</h4>
+                            <p class="text-sm text-gray-600">Narita Express (NEX), Skyliner, and Limousine Bus from Tokyo airports. Direct trains from Kansai Airport to Osaka/Kyoto.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="text-sm text-gray-600">
+                        <p class="flex items-center mb-2">
+                            <i class="ti ti-alert-circle text-amber-500 mr-2"></i>
+                            <span>Advise clients to download Japan Transit Planner and Google Maps for navigation assistance.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Column -->
+            <div class="col-span-5">
+                <!-- Resources -->
+                <div class="bg-white p-6 rounded-lg shadow-sm mb-6">
+                    <h3 class="text-xl font-medium text-gray-800 mb-4 flex items-center">
+                        <i class="ti ti-book text-teal-500 mr-2"></i>
+                        Essential Resources
+                    </h3>
+                    
+                    <div class="space-y-3">
+                        <div class="resource-card p-3 rounded-lg flex items-center">
+                            <div class="w-10 h-10 flex items-center justify-center bg-red-50 text-red-600 rounded-lg mr-3">
+                                <i class="ti ti-world"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-medium text-gray-800 text-sm">Japan National Tourism Organization (JNTO)</h5>
+                                <p class="text-xs text-gray-500">Official tourism information, marketing materials, travel agent training</p>
+                            </div>
+                        </div>
+                        
+                        <div class="resource-card p-3 rounded-lg flex items-center">
+                            <div class="w-10 h-10 flex items-center justify-center bg-blue-50 text-blue-600 rounded-lg mr-3">
+                                <i class="ti ti-train"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-medium text-gray-800 text-sm">Japan Rail Pass Official Site</h5>
+                                <p class="text-xs text-gray-500">Complete information about rail passes, routes, and reservations</p>
+                            </div>
+                        </div>
+                        
+                        <div class="resource-card p-3 rounded-lg flex items-center">
+                            <div class="w-10 h-10 flex items-center justify-center bg-green-50 text-green-600 rounded-lg mr-3">
+                                <i class="ti ti-calendar"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-medium text-gray-800 text-sm">Japan Festival Calendar</h5>
+                                <p class="text-xs text-gray-500">Comprehensive listing of festivals and events throughout the year</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Visa & Entry Requirements -->
+                <div class="bg-white p-6 rounded-lg shadow-sm mb-6">
+                    <h3 class="text-lg font-medium text-gray-800 mb-3 flex items-center">
+                        <i class="ti ti-clipboard-check text-purple-500 mr-2"></i>
+                        Visa & Entry Information
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-3">Many countries enjoy visa-free entry to Japan for tourism (typically 90 days). Check the Ministry of Foreign Affairs website for the latest requirements.</p>
+                    <div class="text-sm text-gray-600 flex items-center">
+                        <i class="ti ti-note text-amber-500 mr-2"></i>
+                        <span>All visitors must complete an online immigration form prior to arrival (Visit Japan Web).</span>
+                    </div>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="bg-indigo-50 p-6 rounded-lg shadow-sm">
+                    <h3 class="text-lg font-medium text-indigo-800 mb-3">Contact Us</h3>
+                    <p class="text-sm text-indigo-600 mb-3">For additional support, custom itinerary development, and partnership opportunities:</p>
+                    <div class="text-sm">
+                        <div class="flex items-center mb-2">
+                            <i class="ti ti-mail text-indigo-500 mr-2"></i>
+                            <span class="text-indigo-700">partners@japantourism.org</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="ti ti-phone text-indigo-500 mr-2"></i>
+                            <span class="text-indigo-700">+81-3-5369-6000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="px-16 pb-8 pt-6 flex justify-between items-center relative z-10 mt-auto">
+            <div class="text-sm text-gray-400">
+                <span class="dot-pattern inline-block h-3 w-3 rounded-full mr-2"></span>
+                Thank you for promoting Japan as a premier travel destination
+            </div>
+            <div class="text-right">
+                <div class="text-gray-400 text-sm">Page 6 of 6</div>
+                <div class="text-gray-600 text-sm mt-1">Discover Japan: Tourist Destinations Guide</div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

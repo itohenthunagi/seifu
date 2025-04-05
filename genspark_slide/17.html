@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>製造業の生産工程</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background-color: white;
+            overflow: hidden;
+        }
+        .slide-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+        .corner-graphic {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            border-top: 4px solid #333;
+            border-right: 4px solid #333;
+            opacity: 0.7;
+        }
+        .corner-graphic-right {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            border-bottom: 4px solid #333;
+            border-left: 4px solid #333;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+    <div class="slide shadow-xl">
+        <!-- Cover Page -->
+        <div class="slide-content px-16 py-12">
+            <div class="corner-graphic"></div>
+            <div class="corner-graphic-right"></div>
+            
+            <div class="text-center z-10">
+                <!-- Factory Icon -->
+                <div class="mb-10 flex justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-32 w-32 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 21V7m0 14H5m14 0h2m-2-7l-5-5V7m5 14v-2m-10 2V11m0 10h2m8-14l-5-5H7m5 5v3m-5-8v8m0-8h2m-2 8v2m10-2V9"/>
+                    </svg>
+                </div>
+                
+                <!-- Title -->
+                <h1 class="text-6xl font-bold tracking-tight text-gray-900 mb-6">製造業の生産工程</h1>
+                
+                <!-- Subtitle -->
+                <p class="text-2xl text-gray-600 mb-16">Manufacturing Process</p>
+                
+                <!-- Company Info -->
+                <div class="mt-16">
+                    <p class="text-xl text-gray-500">サンプル株式会社</p>
+                    <p class="text-lg text-gray-400">2023年10月</p>
+                </div>
+            </div>
+            
+            <!-- Bottom Line -->
+            <div class="absolute bottom-10 w-3/4 h-1 bg-gray-300"></div>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>製造業の生産工程 - 概要</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background-color: white;
+            overflow: hidden;
+        }
+        .header-line {
+            width: 100%;
+            height: 4px;
+            background-color: #333;
+            margin-bottom: 10px;
+        }
+        .process-arrow {
+            width: 0;
+            height: 0;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-left: 20px solid #333;
+            margin: 0 15px;
+        }
+        .process-box {
+            border: 2px solid #333;
+            border-radius: 4px;
+            padding: 12px 16px;
+            width: 160px;
+            text-align: center;
+            font-weight: 600;
+            background-color: white;
+        }
+        .corner-graphic {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            border-top: 4px solid #333;
+            border-right: 4px solid #333;
+            opacity: 0.7;
+            z-index: 0;
+        }
+        .footer {
+            position: absolute;
+            bottom: 16px;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+    <div class="slide shadow-xl">
+        <div class="p-16">
+            <!-- Corner decoration -->
+            <div class="corner-graphic"></div>
+            
+            <!-- Header -->
+            <div class="mb-10">
+                <div class="header-line"></div>
+                <h1 class="text-4xl font-bold text-gray-900">生産工程の概要</h1>
+                <p class="text-xl text-gray-600 mt-2">Manufacturing Process Overview</p>
+            </div>
+            
+            <!-- Main Content -->
+            <div class="mt-16 z-10 relative">
+                <!-- Process Flow Diagram -->
+                <div class="flex justify-center items-center mb-16">
+                    <div class="process-box bg-gray-100">原材料調達</div>
+                    <div class="process-arrow"></div>
+                    <div class="process-box bg-gray-100">生産計画</div>
+                    <div class="process-arrow"></div>
+                    <div class="process-box bg-gray-100">製造・組立</div>
+                    <div class="process-arrow"></div>
+                    <div class="process-box bg-gray-100">品質管理</div>
+                    <div class="process-arrow"></div>
+                    <div class="process-box bg-gray-100">出荷・配送</div>
+                </div>
+                
+                <!-- Process Description -->
+                <div class="grid grid-cols-2 gap-8">
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">1. 原材料調達</h3>
+                            <p class="text-gray-700">高品質な原材料を適切なタイミングで調達し、製造工程の効率化と製品品質の安定化を図ります。サプライヤーとの良好な関係維持が重要です。</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">2. 生産計画</h3>
+                            <p class="text-gray-700">需要予測に基づき生産スケジュールを最適化。資源配分を効率的に行い、納期遵守と在庫の最小化を両立させます。</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">3. 製造・組立</h3>
+                            <p class="text-gray-700">標準作業手順に従い、熟練工による高精度な組立作業を実施。自動化とマニュアル工程の最適な組み合わせで効率と品質を確保します。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">4. 品質管理</h3>
+                            <p class="text-gray-700">全工程での品質管理体制を構築。製品検査だけでなく、プロセス管理による未然防止と継続的な品質改善活動を推進します。</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">5. 出荷・配送</h3>
+                            <p class="text-gray-700">最終検査を通過した製品は適切に梱包され、物流センターを経由して顧客へ。トレーサビリティを確保し、迅速かつ確実な配送体制を整えています。</p>
+                        </div>
+                        
+                        <div class="bg-gray-100 border-l-4 border-gray-500 p-4">
+                            <p class="text-gray-800 font-semibold">生産工程全体を通じて、継続的改善(カイゼン)活動を実施し、効率性と品質の向上を図っています。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <div class="footer">
+                <div class="w-1/3 mx-auto h-0.5 bg-gray-300 mb-2"></div>
+                <p>製造業の生産工程 | Page 2</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>製造業の生産工程 - 原材料調達プロセス</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background-color: white;
+            overflow: hidden;
+        }
+        .header-line {
+            width: 100%;
+            height: 4px;
+            background-color: #333;
+            margin-bottom: 10px;
+        }
+        .corner-graphic {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            border-top: 4px solid #333;
+            border-right: 4px solid #333;
+            opacity: 0.7;
+            z-index: 0;
+        }
+        .process-box {
+            border: 2px solid #333;
+            border-radius: 4px;
+            padding: 12px;
+            background-color: white;
+        }
+        .process-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 8px;
+        }
+        .footer {
+            position: absolute;
+            bottom: 16px;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+    <div class="slide shadow-xl">
+        <div class="p-16">
+            <!-- Corner decoration -->
+            <div class="corner-graphic"></div>
+            
+            <!-- Header -->
+            <div class="mb-10">
+                <div class="header-line"></div>
+                <h1 class="text-4xl font-bold text-gray-900">原材料調達プロセス</h1>
+                <p class="text-xl text-gray-600 mt-2">Raw Material Procurement Process</p>
+            </div>
+            
+            <!-- Main Content -->
+            <div class="mt-10 z-10 relative">
+                <!-- Process Flow Diagram -->
+                <div class="flex justify-center items-center mb-12">
+                    <div class="process-box bg-gray-100 w-40 text-center py-4">
+                        <h3 class="font-bold">サプライヤー選定</h3>
+                    </div>
+                    <div class="process-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </div>
+                    <div class="process-box bg-gray-100 w-40 text-center py-4">
+                        <h3 class="font-bold">品質評価</h3>
+                    </div>
+                    <div class="process-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </div>
+                    <div class="process-box bg-gray-100 w-40 text-center py-4">
+                        <h3 class="font-bold">発注・契約</h3>
+                    </div>
+                    <div class="process-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </div>
+                    <div class="process-box bg-gray-100 w-40 text-center py-4">
+                        <h3 class="font-bold">入荷・検査</h3>
+                    </div>
+                </div>
+                
+                <!-- Detailed content -->
+                <div class="grid grid-cols-2 gap-8 mt-6">
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 border-b border-gray-300 pb-2">調達プロセスの特徴</h2>
+                        <ul class="space-y-4 ml-6">
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 flex-shrink-0 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="text-gray-800"><span class="font-semibold">JIT供給体制：</span>必要な材料を必要な時に必要な量だけ調達する「ジャスト・イン・タイム」方式を採用</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 flex-shrink-0 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="text-gray-800"><span class="font-semibold">複数調達先：</span>同一材料に対して複数のサプライヤーを確保し、供給リスクを分散</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 flex-shrink-0 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="text-gray-800"><span class="font-semibold">調達データ分析：</span>AIを活用した需要予測と原材料調達の最適化</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 flex-shrink-0 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="text-gray-800"><span class="font-semibold">品質基準：</span>厳格な品質基準と検査プロセスによる不良品の混入防止</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <div class="mb-8">
+                            <h2 class="text-2xl font-bold mb-4 border-b border-gray-300 pb-2">原材料管理システム</h2>
+                            <div class="process-box bg-gray-50 p-4">
+                                <p class="text-gray-800 mb-4">統合在庫管理システムにより、原材料の追跡、在庫レベルのリアルタイム監視、および自動発注機能を実現しています。</p>
+                                <div class="flex justify-between text-sm">
+                                    <div class="text-center">
+                                        <div class="border border-gray-400 p-2 mb-1 bg-white">原材料コード</div>
+                                        <div class="text-xs">一意識別子</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="border border-gray-400 p-2 mb-1 bg-white">ロット管理</div>
+                                        <div class="text-xs">トレーサビリティ</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="border border-gray-400 p-2 mb-1 bg-white">入出庫記録</div>
+                                        <div class="text-xs">履歴管理</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="border border-gray-400 p-2 mb-1 bg-white">品質データ</div>
+                                        <div class="text-xs">検査結果</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-100 border-l-4 border-gray-600 p-4">
+                            <h3 class="font-bold text-lg mb-2">調達コスト最適化戦略</h3>
+                            <ul class="ml-4 space-y-1">
+                                <li class="flex items-center">
+                                    <span class="w-2 h-2 bg-gray-600 rounded-full mr-2"></span>
+                                    <span>長期契約による価格安定化</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <span class="w-2 h-2 bg-gray-600 rounded-full mr-2"></span>
+                                    <span>ボリュームディスカウント交渉</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <span class="w-2 h-2 bg-gray-600 rounded-full mr-2"></span>
+                                    <span>サプライヤー評価システムによる継続的改善</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <span class="w-2 h-2 bg-gray-600 rounded-full mr-2"></span>
+                                    <span>共同開発によるコスト削減</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <div class="footer">
+                <div class="w-1/3 mx-auto h-0.5 bg-gray-300 mb-2"></div>
+                <p>製造業の生産工程 | Page 3</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>製造業の生産工程 - 製造・組立工程</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background-color: white;
+            overflow: hidden;
+        }
+        .header-line {
+            width: 100%;
+            height: 4px;
+            background-color: #333;
+            margin-bottom: 10px;
+        }
+        .corner-graphic {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            border-top: 4px solid #333;
+            border-right: 4px solid #333;
+            opacity: 0.7;
+            z-index: 0;
+        }
+        .process-box {
+            border: 2px solid #333;
+            border-radius: 4px;
+            padding: 12px;
+            text-align: center;
+            background-color: white;
+        }
+        .process-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .footer {
+            position: absolute;
+            bottom: 16px;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+    <div class="slide shadow-xl">
+        <div class="p-16">
+            <!-- Corner decoration -->
+            <div class="corner-graphic"></div>
+            
+            <!-- Header -->
+            <div class="mb-10">
+                <div class="header-line"></div>
+                <h1 class="text-4xl font-bold text-gray-900">製造・組立工程</h1>
+                <p class="text-xl text-gray-600 mt-2">Manufacturing & Assembly Process</p>
+            </div>
+            
+            <!-- Main Content -->
+            <div class="mt-8 z-10 relative">
+                <!-- Process Flow Diagram -->
+                <div class="flex justify-center items-center mb-10">
+                    <div class="process-box bg-gray-100 w-40 py-3">
+                        <h3 class="font-bold">部品準備</h3>
+                    </div>
+                    <div class="process-arrow mx-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </div>
+                    <div class="process-box bg-gray-100 w-40 py-3">
+                        <h3 class="font-bold">一次組立</h3>
+                    </div>
+                    <div class="process-arrow mx-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </div>
+                    <div class="process-box bg-gray-100 w-40 py-3">
+                        <h3 class="font-bold">中間検査</h3>
+                    </div>
+                    <div class="process-arrow mx-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </div>
+                    <div class="process-box bg-gray-100 w-40 py-3">
+                        <h3 class="font-bold">最終組立</h3>
+                    </div>
+                </div>
+                
+                <!-- Manufacturing Process Detail -->
+                <div class="grid grid-cols-2 gap-10">
+                    <div>
+                        <h2 class="text-2xl font-bold mb-6 border-b border-gray-300 pb-2">製造工程の特徴</h2>
+                        
+                        <div class="space-y-5">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 border-2 border-gray-700 rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-0.5">
+                                    <span class="font-bold">1</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-1">セル生産方式</h3>
+                                    <p class="text-gray-700">少人数のチームが製品を最初から最後まで一貫して組み立てる方式。柔軟な生産体制と高い品質管理を実現します。</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 border-2 border-gray-700 rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-0.5">
+                                    <span class="font-bold">2</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-1">ロボット自動化</h3>
+                                    <p class="text-gray-700">精密な組立工程や重労働を伴う工程では協働ロボットを活用。人間との協業により生産性と安全性を向上させています。</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 border-2 border-gray-700 rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-0.5">
+                                    <span class="font-bold">3</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-1">標準作業手順書</h3>
+                                    <p class="text-gray-700">すべての製造工程において詳細な標準作業手順（SOP）を整備。作業者のトレーニングと品質の均一化を図っています。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="mb-8">
+                            <h2 class="text-2xl font-bold mb-6 border-b border-gray-300 pb-2">製造ラインの構成</h2>
+                            
+                            <div class="bg-gray-50 border-2 border-gray-300 p-5">
+                                <div class="grid grid-cols-3 gap-4 mb-4">
+                                    <div class="border border-gray-500 p-3 text-center bg-white">
+                                        <p class="font-bold mb-1">A ライン</p>
+                                        <p class="text-sm text-gray-600">小型製品組立</p>
+                                    </div>
+                                    <div class="border border-gray-500 p-3 text-center bg-white">
+                                        <p class="font-bold mb-1">B ライン</p>
+                                        <p class="text-sm text-gray-600">中型製品組立</p>
+                                    </div>
+                                    <div class="border border-gray-500 p-3 text-center bg-white">
+                                        <p class="font-bold mb-1">C ライン</p>
+                                        <p class="text-sm text-gray-600">大型製品組立</p>
+                                    </div>
+                                </div>
+                                
+                                <p class="text-gray-700 text-sm">各生産ラインは製品サイズと複雑さに応じて最適化されています。フレキシブルな設計により、需要変動に合わせた生産調整が可能です。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-100 border-l-4 border-gray-600 p-4">
+                            <h3 class="font-bold text-lg mb-2">製造時の品質管理ポイント</h3>
+                            <ul class="space-y-2">
+                                <li class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>各工程での中間検査によるエラー早期発見</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>トレーサビリティ確保（製造記録の自動化）</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>品質データのリアルタイム監視と分析</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <div class="footer">
+                <div class="w-1/3 mx-auto h-0.5 bg-gray-300 mb-2"></div>
+                <p>製造業の生産工程 | Page 4</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>製造業の生産工程 - 品質管理プロセス</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background-color: white;
+            overflow: hidden;
+        }
+        .header-line {
+            width: 100%;
+            height: 4px;
+            background-color: #333;
+            margin-bottom: 10px;
+        }
+        .corner-graphic {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            border-top: 4px solid #333;
+            border-right: 4px solid #333;
+            opacity: 0.7;
+            z-index: 0;
+        }
+        .process-box {
+            border: 2px solid #333;
+            border-radius: 4px;
+            padding: 12px;
+            text-align: center;
+            background-color: white;
+        }
+        .cycle-arrow {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+        }
+        .footer {
+            position: absolute;
+            bottom: 16px;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+    <div class="slide shadow-xl">
+        <div class="p-16">
+            <!-- Corner decoration -->
+            <div class="corner-graphic"></div>
+            
+            <!-- Header -->
+            <div class="mb-10">
+                <div class="header-line"></div>
+                <h1 class="text-4xl font-bold text-gray-900">品質管理プロセス</h1>
+                <p class="text-xl text-gray-600 mt-2">Quality Control Process</p>
+            </div>
+            
+            <!-- Main Content -->
+            <div class="mt-8 z-10 relative">
+                <!-- PDCA Cycle Diagram -->
+                <div class="flex justify-center mb-10">
+                    <div class="relative w-96 h-96">
+                        <!-- PDCA Circle -->
+                        <div class="absolute inset-0 border-4 border-gray-300 rounded-full"></div>
+                        
+                        <!-- P: Plan -->
+                        <div class="absolute top-4 left-1/2 transform -translate-x-1/2 w-40 bg-white border-2 border-gray-800 rounded-md p-3 text-center">
+                            <h3 class="font-bold text-lg">計画 (Plan)</h3>
+                            <p class="text-sm text-gray-600">品質目標・基準の設定</p>
+                        </div>
+                        
+                        <!-- D: Do -->
+                        <div class="absolute right-4 top-1/2 transform -translate-y-1/2 w-40 bg-white border-2 border-gray-800 rounded-md p-3 text-center">
+                            <h3 class="font-bold text-lg">実行 (Do)</h3>
+                            <p class="text-sm text-gray-600">検査工程の実施</p>
+                        </div>
+                        
+                        <!-- C: Check -->
+                        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-40 bg-white border-2 border-gray-800 rounded-md p-3 text-center">
+                            <h3 class="font-bold text-lg">評価 (Check)</h3>
+                            <p class="text-sm text-gray-600">結果の分析・評価</p>
+                        </div>
+                        
+                        <!-- A: Act -->
+                        <div class="absolute left-4 top-1/2 transform -translate-y-1/2 w-40 bg-white border-2 border-gray-800 rounded-md p-3 text-center">
+                            <h3 class="font-bold text-lg">改善 (Act)</h3>
+                            <p class="text-sm text-gray-600">継続的な改善活動</p>
+                        </div>
+                        
+                        <!-- Center Text -->
+                        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gray-800 rounded-full flex items-center justify-center">
+                            <p class="text-white font-bold">品質管理<br>サイクル</p>
+                        </div>
+                        
+                        <!-- Arrows -->
+                        <svg class="absolute inset-0" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+                                    <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+                                </marker>
+                            </defs>
+                            <path d="M200 50 A150 150 0 0 1 350 200" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+                            <path d="M350 200 A150 150 0 0 1 200 350" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+                            <path d="M200 350 A150 150 0 0 1 50 200" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+                            <path d="M50 200 A150 150 0 0 1 200 50" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+                        </svg>
+                    </div>
+                </div>
+                
+                <!-- Quality Control Details -->
+                <div class="grid grid-cols-2 gap-10">
+                    <div>
+                        <h2 class="text-2xl font-bold mb-6 border-b border-gray-300 pb-2">品質検査プロセス</h2>
+                        
+                        <div class="space-y-4">
+                            <div class="flex">
+                                <div class="flex-shrink-0 w-12 h-12 bg-gray-800 text-white font-bold flex items-center justify-center rounded-full mr-4">
+                                    <span>01</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg">受入検査</h3>
+                                    <p class="text-gray-700">原材料・部品の納入時に行う品質検査。サンプリング検査と全数検査を組み合わせて実施。</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex">
+                                <div class="flex-shrink-0 w-12 h-12 bg-gray-800 text-white font-bold flex items-center justify-center rounded-full mr-4">
+                                    <span>02</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg">工程内検査</h3>
+                                    <p class="text-gray-700">製造工程の各段階で実施する検査。自動検査システムと目視検査を併用し、早期不良検出を実現。</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex">
+                                <div class="flex-shrink-0 w-12 h-12 bg-gray-800 text-white font-bold flex items-center justify-center rounded-full mr-4">
+                                    <span>03</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg">出荷前検査</h3>
+                                    <p class="text-gray-700">完成品の最終チェック。機能テスト、外観検査、安全性テストなど複合的な検査を実施。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h2 class="text-2xl font-bold mb-6 border-b border-gray-300 pb-2">品質管理ツール</h2>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="border-2 border-gray-300 p-4 bg-gray-50">
+                                <h3 class="font-bold text-lg mb-2">統計的工程管理</h3>
+                                <p class="text-sm text-gray-700">SPC（Statistical Process Control）を活用し、製造プロセスの安定性をリアルタイムで監視・分析。</p>
+                            </div>
+                            
+                            <div class="border-2 border-gray-300 p-4 bg-gray-50">
+                                <h3 class="font-bold text-lg mb-2">パレート分析</h3>
+                                <p class="text-sm text-gray-700">80/20の法則に基づき、品質問題の主要原因を特定し、優先的に対処。</p>
+                            </div>
+                            
+                            <div class="border-2 border-gray-300 p-4 bg-gray-50">
+                                <h3 class="font-bold text-lg mb-2">特性要因図</h3>
+                                <p class="text-sm text-gray-700">魚骨図（Fishbone Diagram）を用いて品質問題の根本原因を体系的に分析。</p>
+                            </div>
+                            
+                            <div class="border-2 border-gray-300 p-4 bg-gray-50">
+                                <h3 class="font-bold text-lg mb-2">FMEA分析</h3>
+                                <p class="text-sm text-gray-700">故障モード影響解析により潜在的な品質リスクを事前に評価・対策。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 bg-gray-100 border-l-4 border-gray-600 p-4">
+                            <h3 class="font-bold text-lg mb-2">品質管理の効果</h3>
+                            <ul class="space-y-1">
+                                <li class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>不良率: 前年比30%低減</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>顧客クレーム: 年間20%減少</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>工程内再作業: 40%削減</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <div class="footer">
+                <div class="w-1/3 mx-auto h-0.5 bg-gray-300 mb-2"></div>
+                <p>製造業の生産工程 | Page 5</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>製造業の生産工程 - 物流・配送</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background-color: white;
+            overflow: hidden;
+        }
+        .header-line {
+            width: 100%;
+            height: 4px;
+            background-color: #333;
+            margin-bottom: 10px;
+        }
+        .corner-graphic {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            border-top: 4px solid #333;
+            border-right: 4px solid #333;
+            opacity: 0.7;
+            z-index: 0;
+        }
+        .process-box {
+            border: 2px solid #333;
+            border-radius: 4px;
+            padding: 12px;
+            text-align: center;
+            background-color: white;
+        }
+        .logistics-arrow {
+            position: relative;
+            height: 2px;
+            background-color: #333;
+            flex-grow: 1;
+            margin: 0 8px;
+        }
+        .logistics-arrow:after {
+            content: '';
+            position: absolute;
+            right: -8px;
+            top: -4px;
+            width: 0;
+            height: 0;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-left: 8px solid #333;
+        }
+        .footer {
+            position: absolute;
+            bottom: 16px;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+    <div class="slide shadow-xl">
+        <div class="p-16">
+            <!-- Corner decoration -->
+            <div class="corner-graphic"></div>
+            
+            <!-- Header -->
+            <div class="mb-10">
+                <div class="header-line"></div>
+                <h1 class="text-4xl font-bold text-gray-900">物流・配送</h1>
+                <p class="text-xl text-gray-600 mt-2">Logistics & Distribution</p>
+            </div>
+            
+            <!-- Main Content -->
+            <div class="mt-8 z-10 relative">
+                <!-- Process Flow Diagram -->
+                <div class="flex justify-center items-center mb-12">
+                    <div class="process-box bg-gray-100 w-40 py-3">
+                        <h3 class="font-bold">最終検査</h3>
+                    </div>
+                    <div class="logistics-arrow"></div>
+                    <div class="process-box bg-gray-100 w-40 py-3">
+                        <h3 class="font-bold">梱包</h3>
+                    </div>
+                    <div class="logistics-arrow"></div>
+                    <div class="process-box bg-gray-100 w-40 py-3">
+                        <h3 class="font-bold">出荷準備</h3>
+                    </div>
+                    <div class="logistics-arrow"></div>
+                    <div class="process-box bg-gray-100 w-40 py-3">
+                        <h3 class="font-bold">配送</h3>
+                    </div>
+                    <div class="logistics-arrow"></div>
+                    <div class="process-box bg-gray-100 w-40 py-3">
+                        <h3 class="font-bold">納品確認</h3>
+                    </div>
+                </div>
+                
+                <!-- Content Details -->
+                <div class="grid grid-cols-2 gap-10">
+                    <div>
+                        <h2 class="text-2xl font-bold mb-6 border-b border-gray-300 pb-2">物流管理の特徴</h2>
+                        
+                        <div class="space-y-5">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 border-2 border-gray-700 rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-0.5">
+                                    <span class="font-bold">1</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-1">在庫最適化システム</h3>
+                                    <p class="text-gray-700">AIを活用した需要予測に基づき、適正在庫量を維持。過剰在庫と欠品リスクを同時に低減しながら、柔軟な生産対応を実現しています。</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 border-2 border-gray-700 rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-0.5">
+                                    <span class="font-bold">2</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-1">追跡システム</h3>
+                                    <p class="text-gray-700">RFIDタグとGPSトラッキングを使用した製品追跡。生産から配送まで一貫したトレーサビリティを確保し、緊急対応と顧客サービス向上に貢献しています。</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 border-2 border-gray-700 rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-0.5">
+                                    <span class="font-bold">3</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-1">環境配慮型包装</h3>
+                                    <p class="text-gray-700">持続可能な包装材料と効率的な梱包設計により、環境負荷を低減。同時に製品保護性能も確保した包装ソリューションを導入しています。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="mb-8">
+                            <h2 class="text-2xl font-bold mb-6 border-b border-gray-300 pb-2">配送ネットワーク</h2>
+                            
+                            <div class="bg-gray-50 border-2 border-gray-300 p-5 relative">
+                                <!-- Simple distribution network diagram -->
+                                <div class="flex justify-center items-center mb-6">
+                                    <div class="w-20 h-20 border-2 border-gray-700 flex items-center justify-center">
+                                        <span class="font-bold text-sm">中央<br>物流<br>センター</span>
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <div class="flex items-center mb-4">
+                                            <div class="logistics-arrow w-20"></div>
+                                            <div class="w-16 h-16 border-2 border-gray-700 flex items-center justify-center">
+                                                <span class="font-bold text-sm">北部<br>拠点</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <div class="logistics-arrow w-20"></div>
+                                            <div class="w-16 h-16 border-2 border-gray-700 flex items-center justify-center">
+                                                <span class="font-bold text-sm">南部<br>拠点</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col ml-8">
+                                        <div class="flex items-center mb-4">
+                                            <div class="logistics-arrow w-20"></div>
+                                            <div class="w-16 h-16 border-2 border-gray-700 flex items-center justify-center">
+                                                <span class="font-bold text-sm">東部<br>拠点</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <div class="logistics-arrow w-20"></div>
+                                            <div class="w-16 h-16 border-2 border-gray-700 flex items-center justify-center">
+                                                <span class="font-bold text-sm">西部<br>拠点</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <p class="text-gray-700 text-sm mb-3">全国4拠点の地域物流センターを中央物流センターが統括。各拠点間での在庫共有と配送の最適化により、納期短縮とコスト削減を実現しています。</p>
+                                
+                                <div class="flex justify-between text-xs text-gray-600">
+                                    <div class="text-center">
+                                        <div class="border border-gray-500 p-2 bg-white mb-1">
+                                            <span class="font-bold">24時間以内配送率</span>
+                                        </div>
+                                        <p>国内95%カバー</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="border border-gray-500 p-2 bg-white mb-1">
+                                            <span class="font-bold">輸送効率</span>
+                                        </div>
+                                        <p>前年比15%向上</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="border border-gray-500 p-2 bg-white mb-1">
+                                            <span class="font-bold">CO₂排出量</span>
+                                        </div>
+                                        <p>前年比20%削減</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-100 border-l-4 border-gray-600 p-4">
+                            <h3 class="font-bold text-lg mb-2">物流デジタル変革</h3>
+                            <ul class="space-y-2">
+                                <li class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>ARを活用した倉庫ピッキングシステム</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>自動倉庫管理システム（WMS）との連携</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>リアルタイム配送状況の顧客共有システム</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <div class="footer">
+                <div class="w-1/3 mx-auto h-0.5 bg-gray-300 mb-2"></div>
+                <p>製造業の生産工程 | Page 6</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

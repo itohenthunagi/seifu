@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINEを活用したマーケティングファネル</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4efe9 100%);
+        }
+        .green-accent {
+            background-color: #2ecc71;
+        }
+        .title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            line-height: 1.2;
+        }
+        .line-brand {
+            color: #06C755;
+        }
+        .accent-dot {
+            height: 15px;
+            width: 15px;
+            background-color: #06C755;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .funnel-icon {
+            color: #2ecc71;
+            font-size: 2.5rem;
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <!-- Top green accent bar -->
+        <div class="green-accent h-3 w-full"></div>
+        
+        <!-- Main content -->
+        <div class="flex flex-col justify-center items-center h-full p-16">
+            <div class="mb-8">
+                <i class="fab fa-line text-6xl line-brand"></i>
+            </div>
+            
+            <h1 class="title text-center mb-6">
+                <span class="line-brand">LINE</span>を活用した<br>マーケティングファネル
+            </h1>
+            
+            <div class="flex items-center justify-center mt-8">
+                <i class="fas fa-filter funnel-icon transform rotate-180"></i>
+                <span class="accent-dot"></span>
+                <i class="fas fa-comments funnel-icon"></i>
+                <span class="accent-dot"></span>
+                <i class="fas fa-chart-line funnel-icon"></i>
+            </div>
+            
+            <div class="absolute bottom-16 right-16 text-gray-600">
+                <p class="text-lg">ビジネス戦略部</p>
+                <p class="text-lg">2023年</p>
+            </div>
+        </div>
+        
+        <!-- Bottom green accent bar -->
+        <div class="green-accent h-3 w-full absolute bottom-0"></div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>マーケティングファネルの基本概念</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4efe9 100%);
+        }
+        .green-accent {
+            background-color: #2ecc71;
+        }
+        .title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            line-height: 1.2;
+        }
+        .subtitle {
+            font-size: 1.8rem;
+            color: #06C755;
+            font-weight: 600;
+        }
+        .funnel {
+            position: relative;
+            width: 400px;
+            margin: 0 auto;
+        }
+        .funnel-segment {
+            position: relative;
+            margin: 0 auto;
+            background-color: rgba(46, 204, 113, 0.8);
+            border: 2px solid #27ae60;
+            color: white;
+            text-align: center;
+            padding: 12px 0;
+            font-weight: 600;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .funnel-segment:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+        .funnel-description {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #2c3e50;
+        }
+        .funnel-note {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <!-- Top green accent bar -->
+        <div class="green-accent h-3 w-full"></div>
+        
+        <!-- Header -->
+        <div class="px-16 pt-10">
+            <h1 class="title mb-2">マーケティングファネルの基本概念</h1>
+            <div class="w-24 h-1 bg-green-500 mb-6"></div>
+        </div>
+        
+        <!-- Main content -->
+        <div class="flex px-16 py-6">
+            <!-- Left column: Funnel visualization -->
+            <div class="w-1/2 flex flex-col items-center justify-center">
+                <div class="funnel">
+                    <div class="funnel-segment w-full rounded-t-lg" style="background-color: rgba(46, 204, 113, 0.9);">
+                        認知 (Awareness)
+                    </div>
+                    <div class="funnel-segment w-11/12" style="background-color: rgba(46, 204, 113, 0.85);">
+                        興味 (Interest)
+                    </div>
+                    <div class="funnel-segment w-10/12" style="background-color: rgba(46, 204, 113, 0.8);">
+                        検討 (Consideration)
+                    </div>
+                    <div class="funnel-segment w-9/12" style="background-color: rgba(46, 204, 113, 0.75);">
+                        意図 (Intent)
+                    </div>
+                    <div class="funnel-segment w-8/12" style="background-color: rgba(46, 204, 113, 0.7);">
+                        評価 (Evaluation)
+                    </div>
+                    <div class="funnel-segment w-7/12 rounded-b-lg" style="background-color: rgba(46, 204, 113, 0.65);">
+                        購入 (Purchase)
+                    </div>
+                    <div class="mt-8 flex justify-center space-x-4">
+                        <div class="text-center">
+                            <div class="funnel-segment w-32 rounded-lg" style="background-color: rgba(46, 204, 113, 0.6);">
+                                ロイヤルティ
+                            </div>
+                            <div class="text-xs mt-1 text-gray-600">Loyalty</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="funnel-segment w-32 rounded-lg" style="background-color: rgba(46, 204, 113, 0.6);">
+                                推奨
+                            </div>
+                            <div class="text-xs mt-1 text-gray-600">Advocacy</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right column: Explanation -->
+            <div class="w-1/2 pl-10">
+                <h2 class="subtitle mb-4">ファネルとは？</h2>
+                <p class="funnel-description mb-4">
+                    マーケティングファネルは顧客の購買行動を<strong>じょうごの形</strong>で表したモデルです。
+                    上部（広い部分）から下部（狭い部分）に向かって、顧客は購買プロセスの各段階を進んでいきます。
+                </p>
+                
+                <h2 class="subtitle mb-4 mt-6">ファネルの各段階</h2>
+                <ul class="funnel-description list-disc ml-5 space-y-2">
+                    <li><strong class="text-green-600">認知</strong>: ブランドや商品を知る</li>
+                    <li><strong class="text-green-600">興味</strong>: 詳細情報の取得</li>
+                    <li><strong class="text-green-600">検討</strong>: 他の選択肢との比較</li>
+                    <li><strong class="text-green-600">意図</strong>: 購入の意思決定</li>
+                    <li><strong class="text-green-600">評価</strong>: 最終判断</li>
+                    <li><strong class="text-green-600">購入</strong>: 実際の購買行動</li>
+                </ul>
+                
+                <p class="funnel-note mt-6">
+                    <i class="fas fa-lightbulb text-yellow-500 mr-2"></i>
+                    購入後のロイヤルティと推奨は、リピート購入とクチコミを通して新しい顧客を獲得する重要な段階です。
+                </p>
+            </div>
+        </div>
+        
+        <!-- Bottom green accent bar -->
+        <div class="green-accent h-3 w-full absolute bottom-0"></div>
+        
+        <!-- Page number -->
+        <div class="absolute bottom-5 right-10 text-gray-600">
+            <p class="text-lg">2 / 6</p>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINEとマーケティングファネルの関係性</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4efe9 100%);
+        }
+        .green-accent {
+            background-color: #2ecc71;
+        }
+        .title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            line-height: 1.2;
+        }
+        .subtitle {
+            font-size: 1.8rem;
+            color: #06C755;
+            font-weight: 600;
+        }
+        .line-brand {
+            color: #06C755;
+        }
+        .connection-arrow {
+            width: 80px;
+            height: 40px;
+            position: relative;
+        }
+        .connection-arrow:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #06C755;
+            transform: translateY(-50%);
+        }
+        .connection-arrow:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 12px;
+            height: 12px;
+            border-top: 4px solid #06C755;
+            border-right: 4px solid #06C755;
+            transform: translateY(-50%) rotate(45deg);
+        }
+        .feature-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-left: 5px solid #06C755;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <!-- Top green accent bar -->
+        <div class="green-accent h-3 w-full"></div>
+        
+        <!-- Header -->
+        <div class="px-16 pt-10">
+            <h1 class="title mb-2">LINEとマーケティングファネルの関係性</h1>
+            <div class="w-24 h-1 bg-green-500 mb-6"></div>
+        </div>
+        
+        <!-- Main content -->
+        <div class="px-16 py-4">
+            <div class="flex justify-between items-start">
+                <!-- Left column: Explanation -->
+                <div class="w-5/12">
+                    <h2 class="subtitle mb-4">LINEの強み</h2>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span><span class="font-bold">国内利用率No.1</span>： 日本国内で8,900万人以上が利用する最大級のメッセージングプラットフォーム</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span><span class="font-bold">高い開封率</span>： メール配信の約3倍の開封率（平均70〜80%）</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span><span class="font-bold">One to Oneコミュニケーション</span>： プライベート空間での直接的なコミュニケーション</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span><span class="font-bold">リッチな表現</span>： テキスト、画像、動画、クーポンなど多様なコンテンツ配信が可能</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-8">
+                        <h2 class="subtitle mb-4">ファネル全体をカバー</h2>
+                        <p class="text-gray-700 mb-4">
+                            LINEは認知段階から購入後のフォローまで、<br>マーケティングファネルの<span class="font-bold text-green-600">全段階</span>をカバーできる<br>包括的なプラットフォームです。
+                        </p>
+                        <div class="bg-green-100 border-l-4 border-green-500 p-4 mt-4">
+                            <p class="text-sm text-gray-700">
+                                <i class="fas fa-lightbulb text-yellow-500 mr-2"></i>
+                                LINEの活用は単なる施策ではなく、顧客との長期的な関係構築を可能にする<span class="font-bold">戦略的アプローチ</span>です。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right column: Visualization of LINE and Funnel relationship -->
+                <div class="w-6/12">
+                    <div class="bg-white rounded-lg p-6 shadow-lg">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">ファネル段階別 LINE機能マッピング</h3>
+                        
+                        <div class="space-y-4">
+                            <!-- Awareness -->
+                            <div class="feature-card p-4 flex">
+                                <div class="w-1/4 flex justify-center items-center bg-green-50 rounded-l-lg mr-4">
+                                    <span class="font-bold text-green-700">認知</span>
+                                </div>
+                                <div class="w-3/4">
+                                    <p class="font-medium">LINE広告、QRコード、友だち追加キャンペーン</p>
+                                    <p class="text-sm text-gray-600 mt-1">新規顧客に認知してもらうための入口</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Interest & Consideration -->
+                            <div class="feature-card p-4 flex">
+                                <div class="w-1/4 flex justify-center items-center bg-green-50 rounded-l-lg mr-4">
+                                    <span class="font-bold text-green-700">興味・検討</span>
+                                </div>
+                                <div class="w-3/4">
+                                    <p class="font-medium">リッチメッセージ、LINE LIVE、コンテンツ配信</p>
+                                    <p class="text-sm text-gray-600 mt-1">魅力的な情報提供で興味を深める</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Intent & Evaluation -->
+                            <div class="feature-card p-4 flex">
+                                <div class="w-1/4 flex justify-center items-center bg-green-50 rounded-l-lg mr-4">
+                                    <span class="font-bold text-green-700">意図・評価</span>
+                                </div>
+                                <div class="w-3/4">
+                                    <p class="font-medium">クーポン配信、LINEショッピング連携</p>
+                                    <p class="text-sm text-gray-600 mt-1">購買意欲を高め、決断を促す</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Purchase -->
+                            <div class="feature-card p-4 flex">
+                                <div class="w-1/4 flex justify-center items-center bg-green-50 rounded-l-lg mr-4">
+                                    <span class="font-bold text-green-700">購入</span>
+                                </div>
+                                <div class="w-3/4">
+                                    <p class="font-medium">LINE Pay、ミニアプリ、購入リンク</p>
+                                    <p class="text-sm text-gray-600 mt-1">スムーズな決済体験を提供</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Loyalty & Advocacy -->
+                            <div class="feature-card p-4 flex">
+                                <div class="w-1/4 flex justify-center items-center bg-green-50 rounded-l-lg mr-4">
+                                    <span class="font-bold text-green-700">ロイヤルティ<br>・推奨</span>
+                                </div>
+                                <div class="w-3/4">
+                                    <p class="font-medium">ポイントプログラム、会員特典、シェア機能</p>
+                                    <p class="text-sm text-gray-600 mt-1">リピート購入と口コミを促進</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom green accent bar -->
+        <div class="green-accent h-3 w-full absolute bottom-0"></div>
+        
+        <!-- Page number -->
+        <div class="absolute bottom-5 right-10 text-gray-600">
+            <p class="text-lg">3 / 6</p>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ステージ別LINE活用法</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4efe9 100%);
+        }
+        .green-accent {
+            background-color: #2ecc71;
+        }
+        .title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            line-height: 1.2;
+        }
+        .subtitle {
+            font-size: 1.8rem;
+            color: #06C755;
+            font-weight: 600;
+        }
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+        .card-header {
+            background-color: #06C755;
+            color: white;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            padding: 8px 12px;
+            font-weight: bold;
+        }
+        .tactic-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 6px;
+        }
+        .tactic-icon {
+            background-color: rgba(46, 204, 113, 0.2);
+            color: #06C755;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+        .card-tip {
+            background-color: #e9f7ef;
+            border-left: 3px solid #06C755;
+            padding: 6px 10px;
+            font-size: 0.85rem;
+            margin-top: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <!-- Top green accent bar -->
+        <div class="green-accent h-3 w-full"></div>
+        
+        <!-- Header -->
+        <div class="px-16 pt-10">
+            <h1 class="title mb-2">ステージ別LINE活用法</h1>
+            <div class="w-24 h-1 bg-green-500 mb-6"></div>
+        </div>
+        
+        <!-- Main content -->
+        <div class="px-16 pb-16">
+            <div class="grid grid-cols-3 gap-6 h-full">
+                <!-- Column 1: Awareness & Interest -->
+                <div class="space-y-6">
+                    <!-- Awareness card -->
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="flex items-center">
+                                <i class="fas fa-eye mr-2"></i>
+                                認知 (Awareness)
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="tactic-item">
+                                <div class="tactic-icon"><i class="fas fa-ad"></i></div>
+                                <div>
+                                    <div class="font-semibold">LINE広告</div>
+                                    <div class="text-sm text-gray-600">タイムライン・トークリスト広告</div>
+                                </div>
+                            </div>
+                            <div class="tactic-item">
+                                <div class="tactic-icon"><i class="fas fa-qrcode"></i></div>
+                                <div>
+                                    <div class="font-semibold">カスタムQRコード</div>
+                                    <div class="text-sm text-gray-600">店舗・商品パッケージに設置</div>
+                                </div>
+                            </div>
+                            <div class="tactic-item">
+                                <div class="tactic-icon"><i class="fas fa-hashtag"></i></div>
+                                <div>
+                                    <div class="font-semibold">LINE公式アカウント</div>
+                                    <div class="text-sm text-gray-600">友だち追加キャンペーン</div>
+                                </div>
+                            </div>
+                            <div class="card-tip">
+                                <i class="fas fa-lightbulb text-yellow-500 mr-1"></i>
+                                <span>初回特典・限定情報で友だち追加を促進</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Interest card -->
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="flex items-center">
+                                <i class="fas fa-heart mr-2"></i>
+                                興味 (Interest)
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="tactic-item">
+                                <div class="tactic-icon"><i class="fas fa-image"></i></div>
+                                <div>
+                                    <div class="font-semibold">リッチメッセージ</div>
+                                    <div class="text-sm text-gray-600">画像・カルーセル形式の配信</div>
+                                </div>
+                            </div>
+                            <div class="tactic-item">
+                                <div class="tactic-icon"><i class="fas fa-video"></i></div>
+                                <div>
+                                    <div class="font-semibold">LINE LIVE</div>
+                                    <div class="text-sm text-gray-600">製品解説・デモンストレーション</div>
+                                </div>
+                            </div>
+                            <div class="tactic-item">
+                                <div class="tactic-icon"><i class="fas fa-newspaper"></i></div>
+                                <div>
+                                    <div class="font-semibold">LINE公式アカウント</div>
+                                    <div class="text-sm text-gray-600">定期的なコンテンツ配信</div>
+                                </div>
+                            </div>
+                            <div class="card-tip">
+                                <i class="fas fa-lightbulb text-yellow-500 mr-1"></i>
+                                <span>顧客の悩みを解決する価値ある情報提供</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Column 2: Consideration & Intent -->
+                <div class="space-y-6">
+                    <!-- Consideration card -->
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="flex items-center">
+                                <i class="fas fa-search mr-2"></i>
+                                検討 (Consideration)
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="tactic-item">
+                                <div class="tactic-icon"><i class="fas fa-comments"></i></div>
+                                <div>
+                                    <div class="font-semibold">1:1チャット</div>
+                                    <div class="text-sm text-gray-600">個別問い合わせ対応</div>
+                                </div>
+                            </div>
+                            <div class="tactic-item">
+                                <div class="tactic-icon"><i class="fas fa-robot"></i></div>
+                                <div>
+                                    <div class="font-semibold">チャットボット</div>
+                                    <div class="text-sm text-gray-600">FAQや商品レコメンド</div>
+                                </div>
+                            </div>
+                            <div class="tactic-item">
+                                <div class="tactic-icon"><i class="fas fa-puzzle-piece"></i></div>
+                                <div>
+                                    <div class="font-semibold">LINE Mini App</div>
+                                    <div class="text-sm text-gray-600">診断ツール・商品比較機能</div>
+                                </div>
+                            </div>
+                            <div class="card-tip">
+                                <i class="fas fa-lightbulb text-yellow-500 mr-1"></i>
+                                <span>素早い対応で検討プロセスをスムーズに</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Intent card -->
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="flex items-center">
+                                <i class="fas fa-hand-pointer mr-2"></i>
+                                意図 (Intent)
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="tactic-item">
+                                <div class="tactic-icon"><i class="fas fa-tag"></i></div>
+                                <div>
+                                    <div class="font-semibold">クーポン配信</div>
+                                    <div class="text-sm text-gray-600">期間限定・個別ターゲット</div>
+                                </div>
+                            </div>
+                            <div class="tactic-item">
+                                <div class="tactic-icon"><i class="fas fa-store"></i></div>
+                                <div>
+                                    <div class="font-semibold">LINEショッピング連携</div>
+                                    <div class="text-sm text-gray-600">商品・在庫情報の表示</div>
+                                </div>
+                            </div>
+                            <div class="tactic-item">
+                                <div class="tactic-icon"><i class="fas fa-bell"></i></div>
+                                <div>
+                                    <div class="font-semibold">リマインダー配信</div>
+                                    <div class="text-sm text-gray-600">カート放棄時の通知</div>
+                                </div>
+                            </div>
+                            <div class="card-tip">
+                                <i class="fas fa-lightbulb text-yellow-500 mr-1"></i>
+                                <span>背中を押す限定特典で決断を促進</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Column 3: Purchase & Loyalty -->
+                <div class="space-y-6">
+                    <!-- Purchase card -->
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="flex items-center">
+                                <i class="fas fa-shopping-cart mr-2"></i>
+                                購入 (Purchase)
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="tactic-item">
+                                <div class="tactic-icon"><i class="fas fa-credit-card"></i></div>
+                                <div>
+                                    <div class="font-semibold">LINE Pay</div>
+                                    <div class="text-sm text-gray-600">シームレスな決済体験</div>
+                                </div>
+                            </div>
+                            <div class="tactic-item">
+                                <div class="tactic-icon"><i class="fas fa-link"></i></div>
+                                <div>
+                                    <div class="font-semibold">ワンクリック購入</div>
+                                    <div class="text-sm text-gray-600">商品リンクからの直接購入</div>
+                                </div>
+                            </div>
+                            <div class="tactic-item">
+                                <div class="tactic-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <div>
+                                    <div class="font-semibold">位置情報連動</div>
+                                    <div class="text-sm text-gray-600">近隣店舗への誘導</div>
+                                </div>
+                            </div>
+                            <div class="card-tip">
+                                <i class="fas fa-lightbulb text-yellow-500 mr-1"></i>
+                                <span>購入ハードルを下げるシンプルな導線設計</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Loyalty card -->
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="flex items-center">
+                                <i class="fas fa-gem mr-2"></i>
+                                ロイヤルティ & 推奨
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="tactic-item">
+                                <div class="tactic-icon"><i class="fas fa-gift"></i></div>
+                                <div>
+                                    <div class="font-semibold">会員特典プログラム</div>
+                                    <div class="text-sm text-gray-600">ポイント制度・ランク制度</div>
+                                </div>
+                            </div>
+                            <div class="tactic-item">
+                                <div class="tactic-icon"><i class="fas fa-share-alt"></i></div>
+                                <div>
+                                    <div class="font-semibold">友だち紹介キャンペーン</div>
+                                    <div class="text-sm text-gray-600">シェア機能・紹介特典</div>
+                                </div>
+                            </div>
+                            <div class="tactic-item">
+                                <div class="tactic-icon"><i class="fas fa-calendar-alt"></i></div>
+                                <div>
+                                    <div class="font-semibold">アニバーサリー配信</div>
+                                    <div class="text-sm text-gray-600">誕生日・利用記念日メッセージ</div>
+                                </div>
+                            </div>
+                            <div class="card-tip">
+                                <i class="fas fa-lightbulb text-yellow-500 mr-1"></i>
+                                <span>感情的なつながりを育むパーソナライズ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom green accent bar -->
+        <div class="green-accent h-3 w-full absolute bottom-0"></div>
+        
+        <!-- Page number -->
+        <div class="absolute bottom-5 right-10 text-gray-600">
+            <p class="text-lg">4 / 6</p>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINE活用のワークフロー</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4efe9 100%);
+        }
+        .green-accent {
+            background-color: #2ecc71;
+        }
+        .title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            line-height: 1.2;
+        }
+        .subtitle {
+            font-size: 1.8rem;
+            color: #06C755;
+            font-weight: 600;
+        }
+        .workflow-step {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+        .workflow-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+        }
+        .workflow-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(46, 204, 113, 0.2);
+            color: #06C755;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin: 0 auto 10px;
+        }
+        .workflow-arrow {
+            position: absolute;
+            top: 30px;
+            right: -35px;
+            width: 70px;
+            height: 2px;
+            background-color: #06C755;
+            z-index: 0;
+        }
+        .workflow-arrow:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: -4px;
+            width: 10px;
+            height: 10px;
+            border-top: 2px solid #06C755;
+            border-right: 2px solid #06C755;
+            transform: rotate(45deg);
+        }
+        .workflow-number {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            width: 30px;
+            height: 30px;
+            background-color: #06C755;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        .implementation-card {
+            background-color: #f1f9f5;
+            border-left: 4px solid #2ecc71;
+            border-radius: 6px;
+            padding: 12px;
+            margin-top: 15px;
+        }
+        .implementation-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+        }
+        .implementation-title i {
+            color: #06C755;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <!-- Top green accent bar -->
+        <div class="green-accent h-3 w-full"></div>
+        
+        <!-- Header -->
+        <div class="px-16 pt-10">
+            <h1 class="title mb-2">LINE活用のワークフロー</h1>
+            <div class="w-24 h-1 bg-green-500 mb-6"></div>
+        </div>
+        
+        <!-- Main content -->
+        <div class="px-16 pb-10">
+            <!-- Workflow steps -->
+            <div class="flex justify-between items-start mt-4 mb-8 px-8">
+                <!-- Step 1: Planning -->
+                <div class="workflow-step w-1/6 p-4 text-center relative">
+                    <div class="workflow-number">1</div>
+                    <div class="workflow-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-gray-800">計画</h3>
+                    <p class="text-sm text-gray-600">目標設定と戦略立案</p>
+                    <div class="workflow-arrow"></div>
+                </div>
+                
+                <!-- Step 2: Account Setup -->
+                <div class="workflow-step w-1/6 p-4 text-center relative">
+                    <div class="workflow-number">2</div>
+                    <div class="workflow-icon">
+                        <i class="fab fa-line"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-gray-800">アカウント設定</h3>
+                    <p class="text-sm text-gray-600">公式アカウント作成</p>
+                    <div class="workflow-arrow"></div>
+                </div>
+                
+                <!-- Step 3: Content Strategy -->
+                <div class="workflow-step w-1/6 p-4 text-center relative">
+                    <div class="workflow-number">3</div>
+                    <div class="workflow-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-gray-800">コンテンツ</h3>
+                    <p class="text-sm text-gray-600">メッセージ・配信計画</p>
+                    <div class="workflow-arrow"></div>
+                </div>
+                
+                <!-- Step 4: Audience Building -->
+                <div class="workflow-step w-1/6 p-4 text-center relative">
+                    <div class="workflow-number">4</div>
+                    <div class="workflow-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-gray-800">友だち獲得</h3>
+                    <p class="text-sm text-gray-600">リーチ拡大施策</p>
+                    <div class="workflow-arrow"></div>
+                </div>
+                
+                <!-- Step 5: Engagement -->
+                <div class="workflow-step w-1/6 p-4 text-center relative">
+                    <div class="workflow-number">5</div>
+                    <div class="workflow-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-gray-800">エンゲージメント</h3>
+                    <p class="text-sm text-gray-600">コミュニケーション促進</p>
+                    <div class="workflow-arrow"></div>
+                </div>
+                
+                <!-- Step 6: Analytics -->
+                <div class="workflow-step w-1/6 p-4 text-center relative">
+                    <div class="workflow-number">6</div>
+                    <div class="workflow-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-gray-800">測定・最適化</h3>
+                    <p class="text-sm text-gray-600">効果分析と改善</p>
+                </div>
+            </div>
+            
+            <!-- Detailed Implementation Guide -->
+            <div class="mt-8">
+                <h2 class="subtitle mb-4">段階別実装ガイド</h2>
+                
+                <div class="grid grid-cols-2 gap-6">
+                    <!-- Left Column -->
+                    <div class="space-y-4">
+                        <div class="implementation-card">
+                            <div class="implementation-title">
+                                <i class="fas fa-clipboard-list"></i>
+                                計画段階
+                            </div>
+                            <ul class="text-sm text-gray-700 list-disc ml-8 space-y-1">
+                                <li>ファネル段階ごとのKPI設定（友だち数、開封率、CV率など）</li>
+                                <li>ターゲットユーザーのペルソナ定義</li>
+                                <li>予算・リソース配分の検討</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="implementation-card">
+                            <div class="implementation-title">
+                                <i class="fab fa-line"></i>
+                                アカウント設定段階
+                            </div>
+                            <ul class="text-sm text-gray-700 list-disc ml-8 space-y-1">
+                                <li>LINE公式アカウントの作成と基本設定</li>
+                                <li>アカウントプロフィールの最適化（アイコン、説明文など）</li>
+                                <li>自動応答・挨拶メッセージの設定</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="implementation-card">
+                            <div class="implementation-title">
+                                <i class="fas fa-file-alt"></i>
+                                コンテンツ戦略段階
+                            </div>
+                            <ul class="text-sm text-gray-700 list-disc ml-8 space-y-1">
+                                <li>ファネル段階に合わせたコンテンツカレンダー作成</li>
+                                <li>クリエイティブ素材の準備（画像、動画、テキスト）</li>
+                                <li>リッチメニューとリッチメッセージのデザイン</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column -->
+                    <div class="space-y-4">
+                        <div class="implementation-card">
+                            <div class="implementation-title">
+                                <i class="fas fa-users"></i>
+                                友だち獲得段階
+                            </div>
+                            <ul class="text-sm text-gray-700 list-disc ml-8 space-y-1">
+                                <li>QRコード・LINE URLの設置（店頭、商品パッケージ、Webサイト）</li>
+                                <li>LINE広告の出稿（ターゲティング設定）</li>
+                                <li>友だち追加特典の設計と告知</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="implementation-card">
+                            <div class="implementation-title">
+                                <i class="fas fa-comments"></i>
+                                エンゲージメント段階
+                            </div>
+                            <ul class="text-sm text-gray-700 list-disc ml-8 space-y-1">
+                                <li>ファネルに沿った段階的なメッセージ配信</li>
+                                <li>ONE to ONEコミュニケーションの実施</li>
+                                <li>タイムライン投稿、リッチビデオ配信の実施</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="implementation-card">
+                            <div class="implementation-title">
+                                <i class="fas fa-chart-line"></i>
+                                測定・最適化段階
+                            </div>
+                            <ul class="text-sm text-gray-700 list-disc ml-8 space-y-1">
+                                <li>LINE公式アカウント分析ツールでの効果測定</li>
+                                <li>A/Bテストによるメッセージ最適化</li>
+                                <li>ROI分析とファネル改善プランの作成</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tips Box -->
+            <div class="bg-white p-5 rounded-lg shadow-md mt-6 border-l-4 border-yellow-400">
+                <h3 class="font-bold text-lg flex items-center">
+                    <i class="fas fa-lightbulb text-yellow-500 mr-2"></i>
+                    成功のポイント
+                </h3>
+                <div class="grid grid-cols-3 gap-4 mt-2">
+                    <div class="flex items-start">
+                        <i class="fas fa-clock text-green-600 mt-1 mr-2"></i>
+                        <p class="text-sm">定期的かつ一貫したコミュニケーションの維持</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-user-friends text-green-600 mt-1 mr-2"></i>
+                        <p class="text-sm">個別化されたメッセージングとセグメント配信</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-sync-alt text-green-600 mt-1 mr-2"></i>
+                        <p class="text-sm">データに基づく継続的な改善サイクルの実施</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom green accent bar -->
+        <div class="green-accent h-3 w-full absolute bottom-0"></div>
+        
+        <!-- Page number -->
+        <div class="absolute bottom-5 right-10 text-gray-600">
+            <p class="text-lg">5 / 6</p>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>まとめ・ポイント</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4efe9 100%);
+        }
+        .green-accent {
+            background-color: #2ecc71;
+        }
+        .title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            line-height: 1.2;
+        }
+        .key-point {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #06C755;
+            transition: all 0.3s ease;
+        }
+        .key-point:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+        }
+        .key-icon {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(46, 204, 113, 0.2);
+            color: #06C755;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        .next-step {
+            background-color: rgba(46, 204, 113, 0.1);
+            border: 2px dashed #2ecc71;
+            border-radius: 10px;
+            padding: 15px;
+            transition: all 0.3s ease;
+        }
+        .next-step:hover {
+            background-color: rgba(46, 204, 113, 0.15);
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <!-- Top green accent bar -->
+        <div class="green-accent h-3 w-full"></div>
+        
+        <!-- Header -->
+        <div class="px-16 pt-10">
+            <h1 class="title mb-2">まとめ・ポイント</h1>
+            <div class="w-24 h-1 bg-green-500 mb-6"></div>
+        </div>
+        
+        <!-- Main content -->
+        <div class="px-16 pb-10">
+            <!-- Key points section -->
+            <div class="grid grid-cols-2 gap-6">
+                <!-- Key point 1 -->
+                <div class="key-point p-4 flex items-start">
+                    <div class="key-icon mr-4">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-gray-800 mb-2">顧客体験の一貫性</h3>
+                        <p class="text-gray-600">LINEはマーケティングファネル全体を通じて一貫性のある顧客体験を提供し、購買導線の最適化が可能です。</p>
+                    </div>
+                </div>
+                
+                <!-- Key point 2 -->
+                <div class="key-point p-4 flex items-start">
+                    <div class="key-icon mr-4">
+                        <i class="fas fa-comment-dots"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-gray-800 mb-2">双方向コミュニケーション</h3>
+                        <p class="text-gray-600">一方的な情報発信ではなく、顧客との対話を通じて関係性を深化させ、高いエンゲージメントを実現します。</p>
+                    </div>
+                </div>
+                
+                <!-- Key point 3 -->
+                <div class="key-point p-4 flex items-start">
+                    <div class="key-icon mr-4">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-gray-800 mb-2">パーソナライゼーション</h3>
+                        <p class="text-gray-600">顧客データに基づいた個別最適化メッセージの配信で、より高い反応率とコンバージョン率を達成できます。</p>
+                    </div>
+                </div>
+                
+                <!-- Key point 4 -->
+                <div class="key-point p-4 flex items-start">
+                    <div class="key-icon mr-4">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-gray-800 mb-2">データ駆動型の最適化</h3>
+                        <p class="text-gray-600">配信結果の詳細分析が可能で、継続的な改善サイクルの実施によりROIを最大化できます。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Success metrics section -->
+            <div class="bg-white rounded-lg shadow-md p-5 mt-6">
+                <h3 class="font-bold text-xl text-gray-800 mb-3 flex items-center">
+                    <i class="fas fa-award text-yellow-500 mr-3"></i>
+                    LINE活用で期待できる効果
+                </h3>
+                <div class="grid grid-cols-4 gap-4">
+                    <div class="text-center p-3 bg-green-50 rounded-lg">
+                        <div class="text-3xl font-bold text-green-600 mb-1">70-80%</div>
+                        <div class="text-sm text-gray-600">平均開封率</div>
+                    </div>
+                    <div class="text-center p-3 bg-green-50 rounded-lg">
+                        <div class="text-3xl font-bold text-green-600 mb-1">3-5倍</div>
+                        <div class="text-sm text-gray-600">エンゲージメント率</div>
+                    </div>
+                    <div class="text-center p-3 bg-green-50 rounded-lg">
+                        <div class="text-3xl font-bold text-green-600 mb-1">20%↑</div>
+                        <div class="text-sm text-gray-600">リピート率向上</div>
+                    </div>
+                    <div class="text-center p-3 bg-green-50 rounded-lg">
+                        <div class="text-3xl font-bold text-green-600 mb-1">15-25%</div>
+                        <div class="text-sm text-gray-600">コンバージョン率</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Next steps -->
+            <div class="next-step mt-6">
+                <h3 class="font-bold text-xl text-gray-800 mb-3">次のステップ</h3>
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="flex items-start">
+                        <i class="fas fa-clipboard-check text-green-600 text-xl mt-1 mr-3"></i>
+                        <div>
+                            <div class="font-semibold text-gray-800">既存マーケティング施策の棚卸し</div>
+                            <div class="text-sm text-gray-600">現行ファネルの課題抽出</div>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-tasks text-green-600 text-xl mt-1 mr-3"></i>
+                        <div>
+                            <div class="font-semibold text-gray-800">LINE活用ロードマップ策定</div>
+                            <div class="text-sm text-gray-600">段階的な実装計画の立案</div>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-rocket text-green-600 text-xl mt-1 mr-3"></i>
+                        <div>
+                            <div class="font-semibold text-gray-800">小規模テスト実施</div>
+                            <div class="text-sm text-gray-600">効果検証と改善サイクルの構築</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Final message -->
+            <div class="mt-8 text-center">
+                <div class="inline-block bg-green-600 text-white py-3 px-6 rounded-full font-bold text-lg shadow-lg transform transition hover:scale-105 hover:bg-green-700">
+                    <i class="fab fa-line mr-2"></i>
+                    LINE×マーケティングファネルで顧客との絆を深めましょう
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom green accent bar -->
+        <div class="green-accent h-3 w-full absolute bottom-0"></div>
+        
+        <!-- Page number -->
+        <div class="absolute bottom-5 right-10 text-gray-600">
+            <p class="text-lg">6 / 6</p>
+        </div>
+    </div>
+</body>
+</html>
