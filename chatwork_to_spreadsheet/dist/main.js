@@ -335,19 +335,38 @@ function main() {
                 break; // 時間制限フラグが立っていたらルーム処理ループも抜ける
         } // End of room loop
 
-        // --- 並び替え処理を追加 ---
+        // --- 並び替え処理 (修正版: 配列ソート) ---
         if (!hasError && historySheet.getLastRow() > 1) { // エラーがなく、データ行が1行以上ある場合のみソート
-          console.log(`シート「${historySheetName}」を送信日時（新しい順）で並び替えます...`);
+          console.log(`シート「${historySheetName}」を送信日時（新しい順）で並び替えます (配列ソート)...`);
           try {
+            const headerRows = 1; // ヘッダー行数
             const dataRange = historySheet.getDataRange();
-            // ヘッダー行(1行目)を除いた範囲を取得してソート
-            const sortRange = dataRange.offset(1, 0, dataRange.getNumRows() - 1);
-            sortRange.sort({ column: 7, ascending: false }); // 7列目（送信日時）を降順でソート
-            console.log(`シート「${historySheetName}」の並び替えが完了しました。`);
+            const numRows = dataRange.getNumRows();
+
+            if (numRows <= headerRows) {
+                console.log(`シート「${historySheetName}」にはソート対象のデータ行がありません。`);
+            } else {
+                // ヘッダーを除いたデータ範囲を取得
+                const sortRange = historySheet.getRange(headerRows + 1, 1, numRows - headerRows, dataRange.getNumColumns());
+                const values = sortRange.getValues();
+
+                // 送信日時 (7列目、0-based index で 6) を基準に降順ソート
+                // getTime() を使ってDateオブジェクトを数値比較する
+                values.sort((a, b) => {
+                    // G列の値がDateオブジェクトか確認し、そうでない場合は比較のために0を割り当てる
+                    const timeA = a[6] instanceof Date ? a[6].getTime() : 0;
+                    const timeB = b[6] instanceof Date ? b[6].getTime() : 0;
+                    // 降順なので b - a
+                    return timeB - timeA;
+                });
+
+                // ソート後のデータをシートに書き戻す
+                sortRange.setValues(values);
+                console.log(`シート「${historySheetName}」の並び替えが完了しました。`);
+            }
           } catch (sortError) {
             console.error(`シート「${historySheetName}」の並び替え中にエラーが発生しました: ${sortError}`);
             // ソートエラーは処理全体のエラーとはしない (ログ出力に留める)
-            // エラーが発生しても、以降の処理は継続する
           }
         } else if (hasError) {
              console.log(`メイン処理でエラーが発生したため、シート「${historySheetName}」の並び替えはスキップします。`);
