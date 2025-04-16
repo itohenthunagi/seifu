@@ -1,0 +1,19 @@
+{
+  "name": "chatwork_to_spreadsheet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc && copy appsscript.json dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/google-apps-script": "^1.0.97",
+    "@types/node": "^22.14.1",
+    "typescript": "^5.8.3"
+  }
+}

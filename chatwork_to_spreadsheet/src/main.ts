@@ -132,35 +132,37 @@ function findRoomIdRow(sheet: GoogleAppsScript.Spreadsheet.Sheet, roomId: string
 }
 
 /**
- * ルームごとに最後に処理したメッセージIDを取得します (スプレッドシートから).
+ * [スプレッドシート版] ルームごとに最後に処理したメッセージIDを取得します.
  * @param spreadsheetId スプレッドシートID
  * @param roomIdSheetName ルームIDシート名
  * @param roomId ルームID
- * @returns {string | null} 最終メッセージID、または見つからない場合は null
+ * @returns {string | null} 最終メッセージID、または見つからない/エラーの場合は null
  */
 function getLastMessageId(spreadsheetId: string, roomIdSheetName: string, roomId: string): string | null {
   try {
     const ss = SpreadsheetApp.openById(spreadsheetId);
     const sheet = ss.getSheetByName(roomIdSheetName);
     if (!sheet) {
-      console.error(`ルームIDシートが見つかりません: ${roomIdSheetName}`);
+      console.error(`[getLastMessageId] ルームIDシートが見つかりません: ${roomIdSheetName}`);
       return null;
     }
     const row = findRoomIdRow(sheet, roomId);
     if (row === -1) {
-      console.warn(`ルームIDシートで roomId=${roomId} が見つかりませんでした。`);
-      return null; // A列に RoomID が見つからない場合は null
+      // これはエラーではなく、初回実行などの正常系の場合もあるので warn レベル
+      console.warn(`[getLastMessageId] ルームIDシートで roomId=${roomId} が見つかりませんでした。(初回実行の可能性)`);
+      return null;
     }
     const value = sheet.getRange(row, 2).getValue(); // B列の値を取得
+    // console.log(`[getLastMessageId] ${roomId} の最終IDをシートから取得: ${value}`);
     return value ? String(value) : null;
   } catch (error) {
-    console.error(`最終メッセージID (${roomId}) の取得中にエラー: ${error}`);
-    return null; // エラー時も null を返す
+    console.error(`[getLastMessageId] 最終メッセージID (${roomId}) の取得中にエラーが発生しました: ${error}`);
+    return null;
   }
 }
 
 /**
- * ルームごとに最後に処理したメッセージIDを保存します (スプレッドシートへ).
+ * [スプレッドシート版] ルームごとに最後に処理したメッセージIDを保存します.
  * @param spreadsheetId スプレッドシートID
  * @param roomIdSheetName ルームIDシート名
  * @param roomId ルームID
@@ -171,19 +173,17 @@ function setLastMessageId(spreadsheetId: string, roomIdSheetName: string, roomId
     const ss = SpreadsheetApp.openById(spreadsheetId);
     const sheet = ss.getSheetByName(roomIdSheetName);
     if (!sheet) {
-      console.error(`ルームIDシートが見つかりません: ${roomIdSheetName}`);
+      console.error(`[setLastMessageId] ルームIDシートが見つかりません: ${roomIdSheetName}`);
       return;
     }
     const row = findRoomIdRow(sheet, roomId);
     if (row === -1) {
-       console.error(`最終メッセージID (${roomId}) を保存できませんでした。ルームIDシートに roomId が見つかりません。`);
+       console.error(`[setLastMessageId] 最終メッセージID (${roomId}) を保存できません。ルームIDシートに roomId が見つかりません。`);
        return;
     }
     sheet.getRange(row, 2).setValue(messageId); // B列に書き込み
-    // console.log(`スプレッドシートに最終メッセージIDを更新 (${roomId}): ${messageId}`); // ログは呼び出し元で出すのでここではコメントアウト
   } catch (error) {
-    console.error(`最終メッセージID (${roomId}) の保存中にエラー: ${error}`);
-    // エラーが発生しても処理は続行させる場合が多いので、ここではエラーをスローしない
+    console.error(`[setLastMessageId] 最終メッセージID (${roomId}) の保存中にエラーが発生しました: ${error}`);
   }
 }
 
@@ -261,7 +261,7 @@ function main(): void {
         }
 
         const lastProcessedMessageId = getLastMessageId(spreadsheetId, roomIdSheetName, roomId);
-        console.log(`前回最終メッセージID (${roomId}): ${lastProcessedMessageId || 'なし'}`);
+        console.log(`ルーム ${roomId}: 前回最終メッセージID (シートから取得): ${lastProcessedMessageId || 'なし'}`);
 
         // メッセージIDでソート (昇順) されている前提
         for (let i = 0; i < messages.length; i++) {
@@ -333,20 +333,18 @@ function main(): void {
         // ルーム単位のエラーはログに残し、次のルームへ進む
       } finally {
           // --- ルーム処理終了時の最終メッセージID保存 ---
-          // 時間制限や件数制限で中断した場合でも、書き込みが成功した最後のIDがあれば保存する
           if (lastWrittenMessageIdInRoom) {
               const previousLastId = getLastMessageId(spreadsheetId, roomIdSheetName, roomId);
-              // IDが実際に進んでいる場合のみ更新
               if (!previousLastId || lastWrittenMessageIdInRoom > previousLastId) {
                   setLastMessageId(spreadsheetId, roomIdSheetName, roomId, lastWrittenMessageIdInRoom);
-                  console.log(`スプレッドシートに最終メッセージIDを更新 (${roomId}): ${lastWrittenMessageIdInRoom}`);
+                  console.log(`ルーム ${roomId}: スプレッドシート(B列)に最終メッセージIDを更新しました: ${lastWrittenMessageIdInRoom}`);
               } else {
-                   console.log(`ルーム ${roomId}: 最終メッセージID (${lastWrittenMessageIdInRoom}) は前回 (${previousLastId}) より新しくないため更新しません。`);
+                   console.log(`ルーム ${roomId}: 最終メッセージID (${lastWrittenMessageIdInRoom}) はシートの値 (${previousLastId}) より新しくないため更新しません。`);
               }
           } else {
-             console.log(`ルーム ${roomId}: 今回の実行で書き込み成功したメッセージはありませんでした。最終メッセージIDは更新しません。`);
+             console.log(`ルーム ${roomId}: 今回書き込み成功したメッセージなし。シートの最終メッセージIDは更新しません。`);
           }
-          console.log(`--- ルームID: ${roomId} の処理を終了 (今回処理件数: ${currentRoomProcessedMessages} 件) ---`);
+          console.log(`--- ルームID: ${roomId} の処理完了 (今回処理件数: ${currentRoomProcessedMessages}) ---`);
       }
        if (stoppedDueToTimeLimit) break; // 時間制限フラグが立っていたらルーム処理ループも抜ける
     } // End of room loop
@@ -375,4 +373,4 @@ function main(): void {
 
 // --- 以下、グローバルスコープに関数を公開 --- 
 // これによりGASの実行メニューやトリガーから呼び出せるようになります。
-(global as any).main = main; 
+// (global as any).main = main; // ユーザーの要望により削除 
