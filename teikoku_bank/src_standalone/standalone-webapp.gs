@@ -1,19 +1,21 @@
 // standalone-webapp.gs
 
-function doHeavyCalculation(param1, param2) {
-  // ここに他人に見られたくない複雑な計算や処理を書く
-  console.log("パラメータ1:", param1, "パラメータ2:", param2);
-  // .envにあったGemini APIキーを使う場合はここでAPI呼び出しなどを行う
-  // const apiKey = PropertiesService.getScriptProperties().getProperty('GEMINI_API_KEY');
-  // if (!apiKey) {
-  //   throw new Error("APIキーが設定されていません。");
-  // }
-  // ... API呼び出し処理 ...
-
-  const result = param1 * param2 + 100; // 例
-  Utilities.sleep(1000); // 時間のかかる処理を模倣
-  console.log("計算結果:", result);
-  return result;
+// 企業情報収集のコアロジック（プレースホルダー）
+function fetchCompanyInfoPlaceholder(companyName, presidentName) {
+  console.log(`情報収集中 (プレースホルダー): ${companyName} (${presidentName || '社長名なし'})`);
+  // ここで将来的にウェブ検索やスクレイピング、API呼び出しを行う
+  // 現時点ではダミーデータを返す
+  Utilities.sleep(500); // 処理時間を模倣
+  return {
+    website: `https://dummy-search.com/${encodeURIComponent(companyName)}`,
+    email: `contact@${companyName.replace(/\s+/g, '').toLowerCase()}.dummy`,
+    phone: "01-2345-6789",
+    address: "東京都千代田区 ダミービル 1-1-1",
+    sns: {
+      twitter: `https://x.com/dummy_${companyName.replace(/\s+/g, '').toLowerCase()}`,
+      facebook: null // 見つからない場合は null など
+    }
+  };
 }
 
 // ウェブアプリのエントリポイント (GETリクエスト)
@@ -29,31 +31,92 @@ function doGet(e) {
 
 // ウェブアプリのエントリポイント (POSTリクエスト)
 function doPost(e) {
+  let spreadsheetId = null;
   try {
+    // --- スクリプトプロパティからスプレッドシートIDを取得 ---
+    try {
+      spreadsheetId = PropertiesService.getScriptProperties().getProperty('SPREADSHEET_ID');
+      if (!spreadsheetId) {
+        throw new Error("スクリプトプロパティ 'SPREADSHEET_ID' が設定されていません。");
+      }
+    } catch (propError) {
+      console.error("スクリプトプロパティ取得エラー:", propError);
+      // エラーをJSONで返す
+      return ContentService.createTextOutput(JSON.stringify({
+         success: false, 
+         message: "サーバー設定エラー: スプレッドシートIDが読み取れませんでした。スクリプトプロパティを確認してください。"
+      })).setMimeType(ContentService.MimeType.JSON);
+    }
+
+    // --- リクエストボディの解析 ---
     if (!e || !e.postData || !e.postData.contents) {
       throw new Error("無効なリクエストです。POSTデータがありません。");
     }
     const params = JSON.parse(e.postData.contents);
-    if (params.action === 'executeFunction') {
-      // パラメータを受け取って処理を実行
-      // 入力値のバリデーションを追加
-      const val1 = Number(params.data.value1);
-      const val2 = Number(params.data.value2);
-      if (isNaN(val1) || isNaN(val2)) {
-        throw new Error("無効な数値が入力されました。");
+
+    // --- アクションによる分岐 --- 
+    if (params.action === 'collectInfo') {
+      const companies = params.data;
+      if (!Array.isArray(companies)) {
+        throw new Error("無効なデータ形式です。会社情報の配列が必要です。");
       }
-      const result = doHeavyCalculation(val1, val2);
-      // 結果をJSON形式で返す
-      return ContentService.createTextOutput(JSON.stringify({ success: true, result: result }))
-        .setMimeType(ContentService.MimeType.JSON);
+
+      const ss = SpreadsheetApp.openById(spreadsheetId);
+      const sheet = ss.getActiveSheet(); // TODO: シート名を指定する方が確実かもしれない
+      let processedCount = 0;
+      let errorCount = 0;
+
+      for (const companyData of companies) {
+        const { company, president, row } = companyData;
+        try {
+          // 情報収集実行 (現在はプレースホルダー)
+          const info = fetchCompanyInfoPlaceholder(company, president);
+
+          // スプレッドシートに書き込み (C列からG列)
+          // [ウェブサイトURL, メールアドレス, 電話番号, 会社所在地, SNS(連結)]
+          const outputRowData = [
+            info.website || '',
+            info.email || '',
+            info.phone || '',
+            info.address || '',
+            Object.entries(info.sns || {})
+              .filter(([_, url]) => url)
+              .map(([sns, url]) => `${sns}: ${url}`)
+              .join('\n') // SNSは改行区切りで結合
+          ];
+          // C列から5列分書き込む
+          sheet.getRange(row, 3, 1, 5).setValues([outputRowData]); 
+          processedCount++;
+        } catch (fetchError) {
+          console.error(`[Row ${row}] ${company} の情報収集・書き込みエラー:`, fetchError);
+          // エラー発生行にメモを残すなどしても良い
+          sheet.getRange(row, 1).setNote(`情報収集中にエラーが発生しました: ${fetchError.message}`);
+          errorCount++;
+        }
+         SpreadsheetApp.flush(); // 書き込みを即時反映させる（任意）
+         Utilities.sleep(100); // スプレッドシートAPIの負荷軽減
+      }
+
+      // 処理結果を返す
+      return ContentService.createTextOutput(JSON.stringify({
+        success: true, 
+        result: {
+          message: `処理完了: ${processedCount} 件成功, ${errorCount} 件エラー`,
+          processed: processedCount,
+          errors: errorCount
+        }
+       })).setMimeType(ContentService.MimeType.JSON);
+
     } else {
-      throw new Error("無効なアクションです。");
+      throw new Error("無効なアクションです: " + params.action);
     }
   } catch (error) {
     console.error("doPostエラー:", error);
     // エラー情報をJSONで返す
-    return ContentService.createTextOutput(JSON.stringify({ success: false, message: "サーバー側エラー: " + error.message }))
-      .setMimeType(ContentService.MimeType.JSON);
+    return ContentService.createTextOutput(JSON.stringify({
+       success: false, 
+       message: "サーバー側エラー: " + error.message 
+    })).setMimeType(ContentService.MimeType.JSON);
   }
 }
 
@@ -75,4 +138,5 @@ function setScriptProperties() {
   Logger.log("ウェブアプリで .env の値を使う場合は、PropertiesService.getScriptProperties() を利用してください。");
   Logger.log("APIキーなどを設定するには、エディタの「プロジェクトの設定」>「スクリプト プロパティ」で手動追加するか、");
   Logger.log("上記の setScriptProperties 関数に必要なキーと値を記述し、一度手動で実行してください。");
+  Logger.log("★重要★ 企業情報収集機能を使うには、'SPREADSHEET_ID' に対象スプレッドシートのIDを設定してください。");
 } 
