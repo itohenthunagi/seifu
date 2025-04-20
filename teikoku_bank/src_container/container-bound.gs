@@ -17,30 +17,8 @@ function onOpen() {
   
   SpreadsheetApp.getUi()
       .createMenu('カスタム連携メニュー') // メニュー名を変更
-      .addItem('連携サイドバー表示', 'showSidebarWrapper')
-      .addSeparator() // 区切り線
       .addItem('関数実行 (例: A1*B1+100)', 'callWebAppFunctionExample')
       .addToUi();
-}
-
-// ウェブアプリのサイドバーをiframeで表示するラッパー関数
-function showSidebarWrapper() {
-  if (checkWebAppUrl()) {
-    // ウェブアプリの doGet に action=showSidebar パラメータを付けてアクセス
-    const sidebarUrl = WEB_APP_URL + "?action=showSidebar&t=" + new Date().getTime(); // キャッシュ対策
-
-    // ラッパーHTMLファイルからHtmlTemplateオブジェクトを作成
-    const template = HtmlService.createTemplateFromFile('sidebar_wrapper');
-    // HTMLテンプレートに変数を渡す
-    template.webAppUrl = sidebarUrl;
-
-    // HTMLを評価してHtmlOutputオブジェクトを取得
-    const htmlOutput = template.evaluate()
-        .setTitle('連携サイドバー')
-        .setWidth(320);
-
-    SpreadsheetApp.getUi().showSidebar(htmlOutput);
-  }
 }
 
 // カスタムメニューからウェブアプリの関数実行を呼び出す例
@@ -67,24 +45,6 @@ function callWebAppFunctionExample() {
     SpreadsheetApp.getUi().alert('ウェブアプリの呼び出し中にエラーが発生しました: ' + error.message);
   }
 }
-
-// サイドバーのHTML内 (google.script.run) から呼び出される関数（ウェブアプリを呼び出す）
-function callWebAppFunctionFromSidebar(val1, val2) {
-  if (!checkWebAppUrl()) {
-     throw new Error("ウェブアプリのURLが設定されていません。");
-  } 
-
-  try {
-    // ウェブアプリの 'executeFunction' アクションを呼び出す
-    const result = callWebAppFunction('executeFunction', { value1: val1, value2: val2 });
-    return result; // サイドバーのSuccessHandlerに結果を返す
-  } catch (error) {
-     Logger.log("callWebAppFunctionFromSidebar Error: " + error);
-     // エラーオブジェクト全体ではなく、メッセージのみをサイドバーに返す
-     throw new Error('ウェブアプリ処理エラー: ' + error.message); // サイドバーのFailureHandlerにエラーを投げる
-  }
-}
-
 
 // --- 内部関数 --- 
 
