@@ -1,0 +1,37 @@
+{
+  "name": "meet_to_discord",
+  "version": "1.0.0",
+  "description": "GoogleミーティングからDiscordに議事録を自動通知するシステム",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "deploy:cal-function": "gcloud functions deploy cal-event-handler --runtime nodejs20 --trigger-topic calendar-events --entry-point handler --set-env-vars TOPIC=meeting-events",
+    "deploy:transcript-function": "gcloud functions deploy transcript-handler --runtime python312 --trigger-event-provider=workspace.googleapis.com --trigger-resource=\"meet.google.com/*\" --entry-point main --set-env-vars TOPIC=meeting-events"
+  },
+  "keywords": [
+    "meet",
+    "discord",
+    "google-cloud",
+    "typescript",
+    "python",
+    "gemini"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@google-cloud/aiplatform": "^3.10.0",
+    "@google-cloud/functions-framework": "^3.3.0",
+    "@google-cloud/pubsub": "^4.1.1",
+    "@google-cloud/secret-manager": "^5.6.0",
+    "@google-cloud/storage": "^7.16.0",
+    "googleapis": "^133.0.0",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.19",
+    "jest": "^29.7.0",
+    "typescript": "^5.3.3"
+  }
+}
