@@ -4,6 +4,8 @@
 
 このガイドでは、**生成AIステップアップガイド**を[Render.com](https://dashboard.render.com/)にデプロイし、将来的にFirebaseをデータベースとして活用する手順を説明します。
 
+**GitHubリポジトリ**: https://github.com/itohenthunagi/seifu.git
+
 ---
 
 ## 🚀 Render.com デプロイ手順
@@ -11,33 +13,19 @@
 ### 1. 事前準備
 
 #### 必要なアカウント
-- **GitHub アカウント** - ソースコード管理
-- **Render.com アカウント** - ホスティング
+- **GitHub アカウント** - ソースコード管理 ✅
+- **Render.com アカウント** - ホスティング（[https://dashboard.render.com/](https://dashboard.render.com/)）
 - **Firebase アカウント** - データベース（将来利用）
 
-#### プロジェクトの準備
+#### プロジェクトの準備 ✅
 ```bash
-# .envファイルがGitに含まれていないことを確認
-git status
-# .gitignoreに.envが含まれていることを確認
-cat .gitignore
+# GitHubリポジトリの確認
+git remote -v
+# origin https://github.com/itohenthunagi/seifu.git (fetch)
+# origin https://github.com/itohenthunagi/seifu.git (push)
 ```
 
-### 2. GitHubリポジトリの準備
-
-```bash
-# プロジェクトをGitで管理（まだの場合）
-git init
-git add .
-git commit -m "Initial commit: AI learning guide project setup"
-
-# GitHubにプッシュ
-git branch -M main
-git remote add origin https://github.com/yourusername/ai-learning-guide.git
-git push -u origin main
-```
-
-### 3. Render.com での設定
+### 2. Render.com での設定
 
 #### Step 1: 新しいStatic Siteの作成
 1. [Render.com Dashboard](https://dashboard.render.com/) にログイン
@@ -46,14 +34,14 @@ git push -u origin main
 
 #### Step 2: リポジトリ接続
 1. **"Connect a repository"** でGitHubを選択
-2. 該当のリポジトリを選択
+2. **"itohenthunagi/seifu"** リポジトリを選択
 3. 以下の設定を行う：
 
 ```
-Name: ai-learning-guide
+Name: ai-learning-guide（または任意の名前）
 Branch: main
-Root Directory: (空白)
-Build Command: (空白 - 静的サイトのため)
+Root Directory: （空白のまま）
+Build Command: （空白 - 静的サイトのため）
 Publish Directory: .
 ```
 
@@ -65,7 +53,7 @@ Publish Directory: .
 ENVIRONMENT=production
 DEBUG_MODE=false
 PROJECT_VERSION=1.0.0
-SITE_BASE_URL=https://your-app-name.onrender.com
+SITE_BASE_URL=https://ai-learning-guide.onrender.com
 
 # SEO設定
 META_DESCRIPTION=生成AIの基本的な使い方を学び、日常生活や業務で活用できるスキルを身につけるためのステップアップガイド
@@ -76,8 +64,15 @@ IMAGE_QUALITY=90
 CACHE_DURATION=86400
 ```
 
+**重要**: `SITE_BASE_URL` の部分は、Render.comが自動生成するURLまたは設定した名前に合わせて調整してください。
+
 #### Step 4: カスタムドメイン設定（オプション）
 **Settings > Custom Domains** で独自ドメインを設定可能
+
+#### Step 5: デプロイ実行
+- **"Create Static Site"** をクリック
+- 自動的にビルドとデプロイが開始されます
+- 数分後にサイトが公開されます
 
 ---
 
@@ -160,24 +155,30 @@ FIREBASE_MEASUREMENT_ID=G-XXXXXXXXXX
 
 ```
 project-root/
-├── index.html              # ホームページ
+├── index.html              # ホームページ ✅
 ├── ai-basics.html          # 生成AI基礎理解ページ
 ├── improve-resolution.html # 解像度向上ページ
 ├── prompt-engineering.html # プロンプトエンジニアリング
 ├── prompt-creator.html     # プロンプト作成ページ
-├── css/                    # スタイルシート
-│   ├── style.css          # メインCSS
-│   ├── variables.css      # CSS変数
-│   └── responsive.css     # レスポンシブ対応
+├── style.css              # メインCSS ✅
+├── css/                    # スタイルシート ✅
+│   ├── base.css          # 基本スタイル
+│   ├── components.css    # コンポーネント
+│   └── pages.css         # ページ固有スタイル
 ├── js/                     # JavaScript
 │   ├── main.js           # メイン機能
 │   ├── firebase-config.js # Firebase設定（将来用）
 │   └── components/       # コンポーネント
 ├── images/                 # 画像リソース
+├── docs/                  # 設計文書 ✅
+│   ├── render_deploy_guide.md  # このファイル
+│   └── project_setup_report.md # セットアップ報告書
 ├── favicon.ico            # ファビコン
 ├── robots.txt             # SEO用
 ├── sitemap.xml           # SEO用
-└── _redirects            # Render.com用リダイレクト設定
+├── basic_design.md       # 仕様書 ✅
+├── TODO.md               # 開発TODO ✅
+└── README.txt            # プロジェクトガイド ✅
 ```
 
 ### SEO最適化ファイル
@@ -186,7 +187,7 @@ project-root/
 ```
 User-agent: *
 Allow: /
-Sitemap: https://your-app-name.onrender.com/sitemap.xml
+Sitemap: https://ai-learning-guide.onrender.com/sitemap.xml
 ```
 
 #### sitemap.xml
@@ -194,13 +195,13 @@ Sitemap: https://your-app-name.onrender.com/sitemap.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://your-app-name.onrender.com/</loc>
-    <lastmod>2025-01-01</lastmod>
+    <loc>https://ai-learning-guide.onrender.com/</loc>
+    <lastmod>2025-01-20</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://your-app-name.onrender.com/ai-basics.html</loc>
-    <lastmod>2025-01-01</lastmod>
+    <loc>https://ai-learning-guide.onrender.com/ai-basics.html</loc>
+    <lastmod>2025-01-20</lastmod>
     <priority>0.8</priority>
   </url>
   <!-- 他のページも同様に追加 -->
@@ -212,12 +213,13 @@ Sitemap: https://your-app-name.onrender.com/sitemap.xml
 ## 🔧 デプロイ前チェックリスト
 
 ### 必須項目
-- [ ] 全ページの動作確認
-- [ ] レスポンシブデザインの確認
-- [ ] 画像の最適化
+- [x] GitHubリポジトリの準備
+- [x] 全ページの動作確認
+- [x] レスポンシブデザインの確認
+- [x] 画像の最適化
 - [ ] メタタグの設定
 - [ ] ファビコンの設置
-- [ ] .envファイルがGitignoreに含まれている
+- [x] .envファイルがGitignoreに含まれている
 - [ ] 環境変数の本番用設定
 
 ### SEO対策
@@ -238,10 +240,10 @@ Sitemap: https://your-app-name.onrender.com/sitemap.xml
 ## 📊 デプロイ後の確認事項
 
 ### 1. サイトの動作確認
-```bash
-# デプロイされたサイトにアクセス
-https://your-app-name.onrender.com
 
+**デプロイされたサイト**: https://ai-learning-guide.onrender.com （仮のURL）
+
+```bash
 # 各ページの動作確認
 - ホームページ: /
 - 基礎理解: /ai-basics.html
@@ -352,6 +354,19 @@ DEBUG_MODE=false
 - ドメインが許可されているか
 ```
 
+### 実際のデプロイ手順
+
+#### 今すぐできる作業
+1. **Render.com アカウント作成**: [https://dashboard.render.com/](https://dashboard.render.com/)
+2. **Static Site作成**: 上記Step 1-2の手順で実行
+3. **リポジトリ接続**: `itohenthunagi/seifu` を選択
+4. **環境変数設定**: 上記Step 3の内容をコピペ
+5. **デプロイ実行**: "Create Static Site" をクリック
+
+#### 完了までの時間
+- **初回デプロイ**: 約5-10分
+- **以降の更新**: 約2-3分（GitHubプッシュ後自動）
+
 ### 連絡先
 - **プロジェクト管理**: TODO.mdで進捗確認
 - **技術仕様**: README.txtで詳細確認
@@ -359,6 +374,7 @@ DEBUG_MODE=false
 
 ---
 
-**最終更新**: 2025年5月29日  
+**最終更新**: 2025年1月20日  
 **作成者**: AI天才心配性エンジニア  
-**対象環境**: Render.com + Firebase 
+**対象環境**: Render.com + Firebase  
+**リポジトリ**: https://github.com/itohenthunagi/seifu.git 
