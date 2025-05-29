@@ -1,0 +1,113 @@
+:root {
+  /* ===== カラーパレット（オレンジ基調） ===== */
+  /* メインカラー（オレンジ系） */
+  --color-primary: #FF6B35;        /* メインオレンジ */
+  --color-primary-light: #FF8C5A;  /* ライトオレンジ */
+  --color-primary-dark: #E55A2B;   /* ダークオレンジ */
+  --color-primary-pale: #FFF4F0;   /* 薄いオレンジ（背景用） */
+  
+  /* アクセントカラー */
+  --color-accent: #FFB347;          /* 温かみのあるピーチオレンジ */
+  --color-accent-light: #FFCC80;   /* ライトピーチ */
+  
+  /* ベースカラー */
+  --color-white: #FFFFFF;
+  --color-background: #FAFAFA;      /* 背景グレー */
+  --color-background-light: #F8F9FA; /* より薄い背景 */
+  
+  /* テキストカラー */
+  --color-text-primary: #333333;    /* メインテキスト */
+  --color-text-secondary: #666666;  /* サブテキスト */
+  --color-text-muted: #999999;      /* 薄いテキスト */
+  --color-text-inverse: #FFFFFF;    /* 反転テキスト */
+  
+  /* ボーダー・ライン */
+  --color-border: #E0E0E0;
+  --color-border-light: #F0F0F0;
+  --color-divider: #EEEEEE;
+  
+  /* 状態カラー */
+  --color-success: #4CAF50;
+  --color-warning: #FF9800;
+  --color-error: #F44336;
+  --color-info: #2196F3;
+  
+  /* ===== タイポグラフィ ===== */
+  /* フォントファミリー */
+  --font-family-primary: 'Noto Sans JP', '游ゴシック', 'Yu Gothic', 'Hiragino Sans', 'ヒラギノ角ゴシック', 'Meiryo', 'メイリオ', sans-serif;
+  --font-family-secondary: 'Hiragino Sans', 'ヒラギノ角ゴシック', '游ゴシック', 'Yu Gothic', 'Meiryo', 'メイリオ', sans-serif;
+  
+  /* フォントサイズ */
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.25rem;    /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 1.875rem;  /* 30px */
+  --font-size-4xl: 2.25rem;   /* 36px */
+  --font-size-5xl: 3rem;      /* 48px */
+  
+  /* フォントウェイト */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* 行間 */
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --line-height-loose: 2;
+  
+  /* ===== スペーシング ===== */
+  --spacing-xs: 0.25rem;   /* 4px */
+  --spacing-sm: 0.5rem;    /* 8px */
+  --spacing-md: 1rem;      /* 16px */
+  --spacing-lg: 1.5rem;    /* 24px */
+  --spacing-xl: 2rem;      /* 32px */
+  --spacing-2xl: 3rem;     /* 48px */
+  --spacing-3xl: 4rem;     /* 64px */
+  --spacing-4xl: 6rem;     /* 96px */
+  
+  /* ===== ブレークポイント ===== */
+  --breakpoint-sm: 640px;    /* スマートフォン */
+  --breakpoint-md: 768px;    /* タブレット */
+  --breakpoint-lg: 1024px;   /* デスクトップ */
+  --breakpoint-xl: 1280px;   /* 大型デスクトップ */
+  --breakpoint-2xl: 1536px;  /* 超大型デスクトップ */
+  
+  /* ===== レイアウト ===== */
+  --container-max-width: 1200px;    /* コンテンツ最大幅 */
+  --container-padding: 1rem;        /* コンテナ内余白 */
+  --header-height: 70px;            /* ヘッダー高さ */
+  --footer-height: 60px;            /* フッター高さ */
+  
+  /* ===== ボーダー半径 ===== */
+  --border-radius-sm: 0.25rem;   /* 4px */
+  --border-radius-md: 0.5rem;    /* 8px */
+  --border-radius-lg: 0.75rem;   /* 12px */
+  --border-radius-xl: 1rem;      /* 16px */
+  --border-radius-full: 9999px;  /* 完全に丸い */
+  
+  /* ===== シャドウ ===== */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  /* ===== トランジション ===== */
+  --transition-fast: 0.15s ease-out;
+  --transition-normal: 0.3s ease-out;
+  --transition-slow: 0.5s ease-out;
+  
+  /* ===== Z-index ===== */
+  --z-index-dropdown: 1000;
+  --z-index-sticky: 1020;
+  --z-index-fixed: 1030;
+  --z-index-modal-backdrop: 1040;
+  --z-index-modal: 1050;
+  --z-index-popover: 1060;
+  --z-index-tooltip: 1070;
+} 

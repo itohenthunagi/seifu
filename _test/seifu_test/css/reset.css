@@ -1,0 +1,161 @@
+/*
+  Modern CSS Reset
+  生成AIステップアップガイド向けリセットCSS
+*/
+
+/* ===== Box Sizing Reset ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* ===== Remove Default Margin & Padding ===== */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== HTML & Body ===== */
+html, body {
+  height: 100%;
+}
+
+html {
+  /* フォントサイズをremの基準として設定 */
+  font-size: 16px;
+  /* スムーズスクロール */
+  scroll-behavior: smooth;
+}
+
+body {
+  /* デフォルトのフォント設定は base.css で行う */
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* タップ時のハイライト色を削除（モバイル） */
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ===== 画像・メディア ===== */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== フォーム要素のリセット ===== */
+input, button, textarea, select {
+  font: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="password"], 
+input[type="search"],
+input[type="number"],
+textarea, 
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* ===== リスト ===== */
+ul, ol {
+  list-style: none;
+}
+
+/* ===== リンク ===== */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ===== テーブル ===== */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ===== 見出し・段落 ===== */
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* ===== ブロック要素 ===== */
+blockquote, dl, dd, figure {
+  margin: 0;
+}
+
+/* ===== フィールドセット ===== */
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+/* ===== 引用 ===== */
+q {
+  quotes: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* ===== 水平線 ===== */
+hr {
+  border: none;
+  height: 1px;
+  background: currentColor;
+}
+
+/* ===== フォーカス表示の改善 ===== */
+:focus-visible {
+  outline: 2px solid var(--color-primary, #FF6B35);
+  outline-offset: 2px;
+}
+
+/* ===== 隠し要素 ===== */
+[hidden] {
+  display: none !important;
+}
+
+/* ===== スクリーンリーダー用の隠しテキスト ===== */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ===== Reduced Motion 対応 ===== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+} 
